@@ -43,6 +43,25 @@ def load_env_file(path):
         m = re.match(r"""\s*(?:\$env:|export\s+)(\w+)\s*=\s*['"]?(.*?)['"]?\s*$""", line)
         if m:
             ENV.setdefault(m.group(1), m.group(2))
+    set_label_fonts()
+
+
+def set_label_fonts():
+    """Point the label generator at a real DejaVu face on Windows.
+
+    label_generator looks for /usr/share/fonts/dejavu-sans-fonts/DejaVuSans*.ttf, then a vendored
+    fonts/ folder the release does not ship. Missing both, it falls back to PIL's bitmap font, whose
+    8 px glyphs fail every [LookAt] readability check (UNREADABLE_LABEL, "detail=0.1px/12px").
+    The Isaac env's matplotlib ships the same DejaVu faces.
+    """
+    if not WINDOWS or not ENV.get("ISAAC_PYTHON"):
+        return
+    ttf = Path(ENV["ISAAC_PYTHON"]).parent / "Lib/site-packages/matplotlib/mpl-data/fonts/ttf"
+    for var, name in (("INTERACTIVEWORLD_FONT_BOLD", "DejaVuSans-Bold.ttf"),
+                      ("INTERACTIVEWORLD_FONT_REG", "DejaVuSans.ttf")):
+        if (ttf / name).is_file():
+            ENV.setdefault(var, str(ttf / name))
+            os.environ.setdefault(var, str(ttf / name))  # for in-process recipe builds
 
 
 def launcher(iw, name):
