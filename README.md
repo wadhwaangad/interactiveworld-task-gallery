@@ -1,150 +1,99 @@
-# InteractiveWorld task gallery
+# InteractiveWorld long-horizon gallery
 
 **Site: https://wadhwaangad.github.io/interactiveworld-task-gallery/**
 
-32 TaskPacks across all six InteractiveBench categories, a script that validates each one with the
-oracle and renders its video, and a static website that shows the results.
+28 long cooking, packing and household TaskPacks, a script that validates each one with the oracle and
+renders its video, and a static site that shows the results, longest tasks first.
 
-| Source | Count | What |
-| :--- | ---: | :--- |
-| Bundled | 19 | Chosen from the 120 release tasks to cover every mechanic: recipes and cooking, appliances, aggregate goals, scanned documents, visual state events, blind-user narration, continuous watch, memory with decoys and nested containers. Copied byte-for-byte (LF), so they match the frozen manifest hashes. |
-| Derived | 7 | New tasks built by `build_taskpacks.py` (below). |
-| Reused | 6 | The earlier `PACK-*` packing ports, repaired (see "PACK ports"). |
-
-Derived variants:
-
-| Task | Type | What changes |
+| Theme | Tasks | Oracle steps |
 | :--- | :--- | :--- |
-| `ASK-12802-CF-REPORT` | counterfactual document | The printed report says 1,860 kcal consumed. Same world and speech; the answer becomes the sugar cube. |
-| `ASK-12802-CF-SPOKEN` | counterfactual speech | The person says lunch was 180 kcal. Same world and report; the answer becomes the sugar cube. |
-| `ASK-12802-RETARGET` | retarget destination | The chosen snack goes to the living-room table (as in `examples/05_derive_taskpack.py`). |
-| `WATCH-28008-ES` | multilingual | Same oven-door mistake; every spoken line, including the oracle warning, is in Spanish. |
-| `WATCH-28008-LONGGAP` | memory horizon | Four extra steps between leaving the door open and pressing START. |
-| `FIND-14015-MOVED` | memory update | The missing gift box is moved a second time; only its last observed place is correct. |
-| `GUIDE-14004-REWORDED` | release-bug workaround | GUIDE-14004 with its third oracle line reworded so the handoff parser accepts it (see findings). |
+| Cooking (11) | ORCHESTRATE-46000, -99902, -44001, -28005, -16013, -107002, -14003; GUIDE-99502, -108005, -87017, -14004 (+ GUIDE-14004-REWORDED) | 15–45 |
+| Packing (14) | GUIDE-102000, -109009, -110011, -14015, -14010, -99806; ASK-14011, ASK-13000; FIND-97003; PACK-BEACH-HOLIDAY, -GYM-WEEKEND, -WEEKEND-TRIP, -WINTER-VISIT, -WORK-TRIP | 13–29 |
+| Chores (1) | GUIDE-17001 (+ GUIDE-17001-REWORDED) | 32 |
 
-Not possible: a no-fault "stay silent" WATCH control. The interaction compiler requires a WATCH task's
-unguided plan to differ from the oracle plan.
+The bundled tasks are the release's longest cooking and packing tasks by oracle length. They are copied
+byte-for-byte (LF), so they match the frozen manifest hashes; they come from
+[facebookresearch/InteractiveWorld](https://github.com/facebookresearch/InteractiveWorld) (CC BY-NC 4.0).
+`PACK-*` are the earlier packing ports, repaired (below). The two `-REWORDED` tasks change only oracle
+lines that the release's handoff parser rejects; they share their original's world, actions and video.
 
-## Results on this machine (RTX 4060 laptop, Windows)
+The earlier one-of-each-mechanic gallery (WATCH, NARRATE, counterfactual and multilingual variants) is
+in git history; its builders are still in `build_taskpacks.py`.
 
-Oracle replay (`check`) and oracle-verbal (`verbal`) for every task, 2026-11-14 and 15:
+## What a task has to pass
 
-| Outcome | Tasks |
-| :--- | :--- |
-| Pass both | GUIDE-14011, ORCHESTRATE-99902, ORCHESTRATE-94001, NARRATE-14005, NARRATE-81009, ASK-12802, ASK-13011, FIND-87004, FIND-14015, ASK-12802-CF-REPORT, ASK-12802-CF-SPOKEN, ASK-12802-RETARGET, FIND-14015-MOVED, GUIDE-14004-REWORDED (14) |
-| Pass replay; oracle-verbal n/a | WATCH-28008, WATCH-81020, WATCH-93005, WATCH-47003, WATCH-28008-ES, WATCH-28008-LONGGAP (6) |
-| Release scorer/parser bug (any platform) | GUIDE-14004, NARRATE-87016, ASK-87022 |
-| Pass replay; oracle-verbal fails on Windows physics | ORCHESTRATE-16013 (knife returns settle ~13 cm high and are refused) |
-| Windows physics | GUIDE-109009 (order labels unreadable, 5.3 of 12 px; seeds 0 and 1), FIND-28003 (opening PutInside unstable in 2 of 4 launches; verbal passed) |
-| World cannot be built | the 6 PACK ports (see below) |
+| Stage | Where | Passes when |
+| :--- | :--- | :--- |
+| Static | `build_taskpacks.py`, offline | `TaskSpec.load` accepts it, the interaction compiler (`adapt_taskpack`) compiles it, and the world builder derives a recipe (roles, bodies, scales) |
+| Siting | `preflight_siting.py`, offline | the release's `predict_siting` / `predict_staging` can lay the containers, supports and stands out in the scene |
+| Handoffs | `preflight_guide.py`, offline | the runtime's parser accepts "That's done" after every GUIDE instruction's chunk of actions |
+| Process | `preflight_process.py`, offline | a perfect oracle run meets the contract's process requirements |
+| Oracle replay (`check`) | simulator | after `--prepare-task`, the oracle actions leave the world in the goal state: every goal predicate holds and no prohibition is broken (`score.success`) |
+| Video (`story`) | simulator | the opening plus the oracle actions, unprepared, render `story.mp4` |
+| Oracle-verbal (`verbal`) | simulator + interaction runtime | scripted oracle advice and a scripted person reach `strict_success`: world goal met, process requirements met, verification points met, and the Assistant declares done |
 
-Each task's card on the site shows the cause next to the failing layer.
+## Release findings
 
-### Release findings
-
-All reproduced offline (no simulator) except the physics ones.
-
-* **oracle-verbal cannot run WATCH tasks.** `run_taskpack.py` always uses the scripted Human under
-  `--assistant oracle-verbal` (`human_policy` is hard-coded to `auto`, and no CLI flag changes it). The scripted Human only acts after the
-  Assistant speaks, so it never performs a WATCH opening. The person stands still and the episode times
-  out with `eval_valid=false`. The gallery records these as n/a. Testing WATCH with the oracle in the
-  loop would need a model Human (an API key and a launcher that forces `human_policy="model"`).
-* **GUIDE-14004:** the handoff parser reads "not the tomato" in the third oracle line as part of the
-  Stir step, so the scripted person's "That's done" is never accepted. `preflight_guide.py` finds it;
-  `GUIDE-14004-REWORDED` passes.
-* **NARRATE-87016:** the oracle puts the glass and the bag inside with `@place_spot=0.0:0.0`, but the
-  contract requires the plain `[PutInside]`, and `_process_commands_equivalent` forgives an optional
-  spot only for PutOn. All actions succeed and the world goal is met, but strict success never comes.
-* **ASK-87022:** the oracle sets the backpack down with `[PutOnFloor]`, but the contract requires a bare
-  `[Drop]`, which nothing else matches.
-* `patches/putinside-optional-spot.patch` fixes both scorer bugs (two rules in
-  `_process_commands_equivalent`). It is **not applied** because it changes benchmark scoring. Both
-  recorded runs meet their process requirements with it.
+* **Handoff parser.** GUIDE-14004 ("not the tomato") and GUIDE-17001 ("not on the electronics or paper",
+  and a line that omits returning the cloth) stall under oracle-verbal. Spelling out a wipe ("wipe the mug
+  with the blue sponge") parses correctly but is still rejected by the completion matcher.
+* **Process scoring.** `_process_commands_equivalent` forgives an optional `@place_spot` only for PutOn,
+  and a required bare `[Drop]` matches only itself (found on NARRATE-87016 and ASK-87022 in the earlier
+  gallery). `patches/putinside-optional-spot.patch` fixes both. It is **not applied**, because it changes
+  benchmark scoring.
+* **The public CLI cannot replay runtime commands.** `Action.parse` rejects `@place_spot` and container
+  instance `(0)`. `faithful_simulator.py` sends only those commands through `Simulator._step(validate_action=False)`,
+  the path the task's own prologue uses. With it, the ORCHESTRATE-16013 replay passes.
+* **oracle-verbal cannot run WATCH tasks.** The Human is always scripted under `--assistant oracle-verbal`,
+  and the scripted Human only acts after the Assistant speaks.
+* **Windows physics.** GUIDE-109009's order labels stay unreadable (5.3 of 12 px). ORCHESTRATE-16013's
+  knife returns settle about 13 cm high under oracle-verbal.
 
 ### PACK ports
 
-The earlier `PACK-*` ports had never been built in this simulator. Fixed in `fix_pack`:
-* added `story.source_contract` and non-empty `spoken_cues`;
-* clamped garment scales of 0.44–0.45 to 0.5, since the builder only accepts scales in [0.5, 2.0].
+They never built. The error blamed the packing boxes, but the release's offline siting predictor
+(`preflight_siting.py`) found the real cause. The person's stand at Rs_int's living-room
+`breakfast_table`, among five chairs, is never on walkable floor, so `_layout_ok` rejected every layout.
+`fix_pack` rebinds that support to the room's `bottom_cabinet`. It also:
+* restores `story.source_contract` and `spoken_cues`;
+* clamps garment scales to [0.5, 2.0].
 
-Still open: the builder cannot site three `packing_box` bodies in Rs_int `living_room_0`, although each
-fits alone. Release tasks never use more than one. `pack_layout_probe.py` tries spreading them across
-rooms.
+PACK-MOVE-OUT is left out because no room layout of Rs_int holds its five boxes.
 
-## 1. Build (any machine)
+## 1. Build and check (any machine with the asset env)
 
 ```bash
 python build_taskpacks.py --iw ../InteractiveWorld [--env C:\iw\assets\env.ps1]
+python -X utf8 preflight_siting.py taskpacks/*/*.json
+python -X utf8 preflight_guide.py
+python -X utf8 preflight_process.py
 ```
 
-Writes `taskpacks/` (and `taskpacks/tasks.json` for `--taskpack-batch`) plus `site/catalog.{json,js}`.
-Every pack is checked with:
-* `TaskSpec.load`;
-* the runtime's interaction compiler (`adapt_taskpack`);
-* when the asset env is present, the world builder's recipe derivation (`recipe_for`). This catches
-  role, body and scale errors without Isaac.
+`build_taskpacks.py` writes `taskpacks/` (and `taskpacks/tasks.json` for `--taskpack-batch`) plus
+`site/catalog.{json,js}`. On Windows, set `INTERACTIVEWORLD_GENERATED_LABEL_CACHE` to an absolute
+directory first. Files are written with LF; keep `core.autocrlf` off for this folder, or the pinned
+hashes break.
 
-Room layout and physics are only checked in the simulator.
-
-Two more offline checks predict oracle-verbal failures before any GPU time:
-
-```bash
-python -X utf8 preflight_guide.py     # GUIDE handoffs the parser would reject
-python -X utf8 preflight_process.py   # process requirements a perfect oracle run cannot meet
-```
-
-Files are written with LF line endings. If you move them through git on Windows, disable
-`core.autocrlf` for this folder or the pinned hashes break.
-
-## 2. Validate and render
-
-Three resumable layers per task, written to `site/results/<ID>/`:
-
-| Layer | Command | Pass when |
-| :--- | :--- | :--- |
-| `check` | `simulator run --prepare-task` + oracle actions (WATCH: the full reference program unprepared, since `--prepare-task` refuses continuous-watch tasks) | `score.success`; for an unprepared WATCH replay whose goals are all baseline-excluded, every goal holding and no failed step |
-| `story` | `simulator run` unprepared: the whole opening, then the oracle actions, with `--video` | it renders `story.mp4` (the site's video) |
-| `verbal` | `run_taskpack --assistant oracle-verbal` (skipped for WATCH: n/a) | `native_taskpack_outcome.strict_success` |
-
-Commands are rendered exactly as the runtime renders them (indices, `scalar_arg`, `@place_spot`). An
-earlier build dropped `place_spot`, which made some replays diverge.
-
-The public simulator CLI cannot take those commands as `--action`: `Action.parse` rejects
-`@place_spot` and instance `(0)`. So on Windows the check and story layers run
-`faithful_simulator.py`. It runs the release's `launch/simulator.py` unchanged. Only commands carrying
-those forms are sent through `Simulator._step(validate_action=False)`, the same path the task's own
-prologue uses. Six tasks need this: ORCHESTRATE-99902, ORCHESTRATE-16013, NARRATE-87016,
-NARRATE-81009, ASK-13011 and FIND-87004. With it all six replay and render; the
-ORCHESTRATE-16013 replay, which had failed with lossy commands, passes.
-
-On this Windows machine `run_gallery.py` runs `launch\*.py` under `ISAAC_PYTHON` from
-`C:\iw\assets\env.ps1`, against the Windows-patched clone at `C:\iw\InteractiveWorld`:
+## 2. Validate and render (GPU)
 
 ```powershell
-python -u run_gallery.py                                  # all tasks, all layers
-python -u run_gallery.py --only WATCH-28008-ES --force    # rerun one task
-python -u run_gallery.py --only GUIDE-109009 --layers check --force --seed 1
-.\rerun_after_batch.ps1                                   # the follow-ups listed in it
+.\run_long_gallery.ps1                                    # everything, resumable (~20-25 h)
+python -u run_gallery.py --only GUIDE-102000 --force      # one task, all layers
 ```
 
-On Linux: `source ~/interactiveworld-assets/env.sh; python3 run_gallery.py --iw ~/InteractiveWorld`.
+Each layer writes `site/results/<ID>/`. On Windows, `run_gallery.py` runs `launch\*.py` under
+`ISAAC_PYTHON` from `C:\iw\assets\env.ps1`, against the Windows-patched clone at `C:\iw\InteractiveWorld`.
+The simulator goes through `faithful_simulator.py`. On Linux: `source ~/interactiveworld-assets/env.sh;
+python3 run_gallery.py --iw ~/InteractiveWorld`.
 
-Three things had to be fixed for oracle-verbal on Windows:
-* the frozen JSON under `C:\iw\InteractiveWorld\benchmark` was rewritten as LF (it failed its release
-  hashes with CRLF);
-* `benchmark\tasks\validate.py` needed an `as_posix()` fix;
-* `PYTHONUTF8=1` is set for the subprocesses, because a cp1252 crash after the episode lost
-  `results.jsonl`.
-
-One simulator launch takes about 7–10 minutes, oracle-verbal up to 20.
+Windows fixes needed for oracle-verbal:
+* the frozen JSON under `benchmark\` rewritten as LF;
+* an `as_posix()` fix in `benchmark\tasks\validate.py`;
+* `PYTHONUTF8=1` for the subprocesses.
 
 ## 3. View and publish
 
-`python export_site.py` writes `docs/`, the public copy that GitHub Pages serves. It contains the page,
-catalog, results, videos and TaskPacks, but no logs, raw simulator dumps or local paths. Commit `docs/`
-and push to publish.
+Open `site/index.html`, or serve it with `python -m http.server -d site`.
 
-
-Open `site/index.html` directly, or serve the folder (`python -m http.server -d site`). It reads
-`catalog.js` and `results.js`, plus the videos under `results/`.
+`python export_site.py` writes `docs/`, the public copy GitHub Pages serves. It has the page, catalog,
+results, videos and TaskPacks, but no logs, raw simulator dumps or local paths. Commit `docs/` and push.
