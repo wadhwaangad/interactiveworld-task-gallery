@@ -1,0 +1,3000 @@
+{
+  "taskpack_version": "data-generate-taskpack/1.0",
+  "task_id": "PACK-GYM-WEEKEND",
+  "executable_spec": {
+    "goal": {
+      "aggregate_goals": [],
+      "answer_key": [
+        {
+          "pred": "inside",
+          "subject": "towel",
+          "target": "box_1"
+        },
+        {
+          "pred": "inside",
+          "subject": "tshirts",
+          "target": "box_1"
+        },
+        {
+          "pred": "inside",
+          "subject": "bottle",
+          "target": "box_2"
+        },
+        {
+          "pred": "inside",
+          "subject": "gym_clothes",
+          "target": "box_2"
+        },
+        {
+          "pred": "inside",
+          "subject": "toiletry_bag",
+          "target": "box_3"
+        }
+      ],
+      "arms": null,
+      "goals": [
+        {
+          "pred": "inside",
+          "subject": "towel",
+          "target": "box_1"
+        },
+        {
+          "pred": "inside",
+          "subject": "tshirts",
+          "target": "box_1"
+        },
+        {
+          "pred": "inside",
+          "subject": "bottle",
+          "target": "box_2"
+        },
+        {
+          "pred": "inside",
+          "subject": "gym_clothes",
+          "target": "box_2"
+        },
+        {
+          "pred": "inside",
+          "subject": "toiletry_bag",
+          "target": "box_3"
+        }
+      ],
+      "negatives": [
+        {
+          "pred": "inside",
+          "subject": "notebook",
+          "target": "box_1"
+        },
+        {
+          "pred": "inside",
+          "subject": "notebook",
+          "target": "box_2"
+        },
+        {
+          "pred": "inside",
+          "subject": "notebook",
+          "target": "box_3"
+        }
+      ],
+      "roster": {
+        "objects": [
+          "towel",
+          "tshirts",
+          "bottle",
+          "gym_clothes",
+          "toiletry_bag",
+          "notebook"
+        ],
+        "containers": [
+          "box_1",
+          "box_2",
+          "box_3"
+        ],
+        "nested_containers": []
+      },
+      "rule_table": null,
+      "trace_outcomes": []
+    },
+    "meta": {
+      "design": {
+        "premise": "The person packs for: Gym weekend. 5 items are spread over several rooms and go into 3 open packing boxes in the living room. The notebook is not on the list and must stay out; left alone, the person packs it instead of the small bag.",
+        "cue": "Hey, Assistant, I'm packing for a gym weekend. I need the towel, the white top, the water bottle, the shorts, the small bag, and nothing else. Can you guide me one item at a time and tell me which box each one goes in?",
+        "anti_shortcut": "The person never says which box.",
+        "assistant_must": "Name each listed item and its box in turn. Keep the notebook out."
+      },
+      "difficulty": "hard",
+      "engine_deltas": [],
+      "family": "GUIDE",
+      "grounding": {
+        "cite": "Hey, Assistant, I'm packing for a gym weekend. I need the towel, the white top, the water bottle, the shorts, the small bag, and nothing else. Can you guide me one item at a time and tell me which box each one goes in?",
+        "kind": "authored",
+        "ref": "packing:gym_weekend"
+      },
+      "rule_table": "inside(towel, box_1); inside(tshirts, box_1); inside(bottle, box_2); inside(gym_clothes, box_2); inside(toiletry_bag, box_3)",
+      "scene": "Rs_int",
+      "template": "packing port of gym_weekend",
+      "wave": 1
+    },
+    "program": {
+      "commands": [
+        {
+          "verb": "Walk",
+          "args": [
+            "towel"
+          ]
+        },
+        {
+          "verb": "LookAt",
+          "args": [
+            "towel"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "tshirts"
+          ]
+        },
+        {
+          "verb": "LookAt",
+          "args": [
+            "tshirts"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "bottle"
+          ]
+        },
+        {
+          "verb": "LookAt",
+          "args": [
+            "bottle"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "gym_clothes"
+          ]
+        },
+        {
+          "verb": "LookAt",
+          "args": [
+            "gym_clothes"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "toiletry_bag"
+          ]
+        },
+        {
+          "verb": "LookAt",
+          "args": [
+            "toiletry_bag"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "notebook"
+          ]
+        },
+        {
+          "verb": "LookAt",
+          "args": [
+            "notebook"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "box_1"
+          ]
+        },
+        {
+          "verb": "LookAt",
+          "args": [
+            "box_1"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "box_2"
+          ]
+        },
+        {
+          "verb": "LookAt",
+          "args": [
+            "box_2"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "box_3"
+          ]
+        },
+        {
+          "verb": "LookAt",
+          "args": [
+            "box_3"
+          ]
+        },
+        {
+          "verb": "Wait",
+          "args": []
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "towel"
+          ]
+        },
+        {
+          "verb": "Grab",
+          "args": [
+            "towel"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "box_1"
+          ]
+        },
+        {
+          "verb": "PutInside",
+          "args": [
+            "towel",
+            "box_1"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "tshirts"
+          ]
+        },
+        {
+          "verb": "Grab",
+          "args": [
+            "tshirts"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "box_1"
+          ]
+        },
+        {
+          "verb": "PutInside",
+          "args": [
+            "tshirts",
+            "box_1"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "bottle"
+          ]
+        },
+        {
+          "verb": "Grab",
+          "args": [
+            "bottle"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "box_2"
+          ]
+        },
+        {
+          "verb": "PutInside",
+          "args": [
+            "bottle",
+            "box_2"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "gym_clothes"
+          ]
+        },
+        {
+          "verb": "Grab",
+          "args": [
+            "gym_clothes"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "box_2"
+          ]
+        },
+        {
+          "verb": "PutInside",
+          "args": [
+            "gym_clothes",
+            "box_2"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "toiletry_bag"
+          ]
+        },
+        {
+          "verb": "Grab",
+          "args": [
+            "toiletry_bag"
+          ]
+        },
+        {
+          "verb": "Walk",
+          "args": [
+            "box_3"
+          ]
+        },
+        {
+          "verb": "PutInside",
+          "args": [
+            "toiletry_bag",
+            "box_3"
+          ]
+        },
+        {
+          "verb": "Wait",
+          "args": []
+        }
+      ],
+      "generator": "explicit",
+      "budget": {
+        "expanded_cmds": 40,
+        "expanded_source": "oracle_cmds",
+        "grammar_cmds": 40,
+        "grammar_source": "from_program",
+        "k": null,
+        "k_applies_to": "grammar",
+        "k_source": null
+      }
+    },
+    "provenance": {
+      "authored_by": "packing/export_taskpacks.py",
+      "source_task": "gym_weekend",
+      "port_notes": {
+        "kept": [
+          "packing list",
+          "multi-room walking",
+          "inside() goals",
+          "one item that must stay out",
+          "guidance turns"
+        ],
+        "dropped": [
+          "suitcase (uses open packing_box containers)",
+          "lid, zip, lock, dials, strap, handle, stand-up, roll, fold",
+          "named spots and heavy-first order",
+          "stacking (the simulator packs flat)",
+          "personas and scheduled events"
+        ],
+        "items": "BEHAVIOR stand-ins scaled to folded size; see lineage.stand_ins",
+        "status": "format-validated only; never run in Isaac Sim"
+      }
+    },
+    "report": {
+      "arms_reporting": null,
+      "caps_by_sub_step": [
+        [
+          "C9"
+        ],
+        [
+          "C9"
+        ],
+        [
+          "C9"
+        ],
+        [
+          "C9"
+        ],
+        [
+          "C9"
+        ]
+      ],
+      "chance": {
+        "status": "pending_measurement"
+      },
+      "control": null,
+      "human_frames_withheld": false,
+      "sub_goals": [
+        {
+          "cap": "C9",
+          "cap_dropped": [],
+          "cap_source": "declared",
+          "id": 0,
+          "kind": "inside",
+          "label": null,
+          "neg_kind": null,
+          "subject": "towel",
+          "target": "box_1"
+        },
+        {
+          "cap": "C9",
+          "cap_dropped": [],
+          "cap_source": "declared",
+          "id": 1,
+          "kind": "inside",
+          "label": null,
+          "neg_kind": null,
+          "subject": "tshirts",
+          "target": "box_1"
+        },
+        {
+          "cap": "C9",
+          "cap_dropped": [],
+          "cap_source": "declared",
+          "id": 2,
+          "kind": "inside",
+          "label": null,
+          "neg_kind": null,
+          "subject": "bottle",
+          "target": "box_2"
+        },
+        {
+          "cap": "C9",
+          "cap_dropped": [],
+          "cap_source": "declared",
+          "id": 3,
+          "kind": "inside",
+          "label": null,
+          "neg_kind": null,
+          "subject": "gym_clothes",
+          "target": "box_2"
+        },
+        {
+          "cap": "C9",
+          "cap_dropped": [],
+          "cap_source": "declared",
+          "id": 4,
+          "kind": "inside",
+          "label": null,
+          "neg_kind": null,
+          "subject": "toiletry_bag",
+          "target": "box_3"
+        }
+      ],
+      "sub_steps": [
+        "inside(towel, box_1)",
+        "inside(tshirts, box_1)",
+        "inside(bottle, box_2)",
+        "inside(gym_clothes, box_2)",
+        "inside(toiletry_bag, box_3)"
+      ]
+    },
+    "spec_version": "bts/1.0",
+    "task_id": "PACK-GYM-WEEKEND",
+    "variant": null,
+    "world": {
+      "assertions": {
+        "aabb_disjoint": true,
+        "containers_registered": true,
+        "decoys_constrained": true,
+        "key_is_derived": true,
+        "labels_present": true,
+        "no_pre_satisfied": true,
+        "permutation_within_model": true
+      },
+      "authoring_seed": 1496096143,
+      "containers": {
+        "box_1": {
+          "alt_cats": [],
+          "bind": {
+            "cat": "packing_box",
+            "model": "cjhskr",
+            "source": "import"
+          },
+          "door": {
+            "required": false
+          },
+          "kind": "open_bin",
+          "role": "scored",
+          "room": "living_room_0"
+        },
+        "box_2": {
+          "alt_cats": [],
+          "bind": {
+            "cat": "packing_box",
+            "model": "cjhskr",
+            "source": "import"
+          },
+          "door": {
+            "required": false
+          },
+          "kind": "open_bin",
+          "role": "scored",
+          "room": "living_room_0"
+        },
+        "box_3": {
+          "alt_cats": [],
+          "bind": {
+            "cat": "packing_box",
+            "model": "cjhskr",
+            "source": "import"
+          },
+          "door": {
+            "required": false
+          },
+          "kind": "open_bin",
+          "role": "scored",
+          "room": "living_room_0"
+        }
+      },
+      "decor": [],
+      "fixtures": {
+        "bed": {
+          "room": "bedroom_0",
+          "bind": {
+            "cat": "bed",
+            "source": "scene",
+            "pick": {
+              "asset_sha256": "sha256:3ff8540f47f4ec03c04e4cc5d35893bbdc24ae2b15f99989e50457e1e09796fe",
+              "by": "scene_instance",
+              "instance_digest": "sha256:70623474463e8bf3fa05f308b209b6bac5ac5d49f4a9f1a3781b63042c58b9c2",
+              "name": "bed_zrumze_0",
+              "rank": 0,
+              "stage_prim_path": "/World/b_bed_zrumze_0"
+            }
+          },
+          "seatable": false
+        },
+        "cabinet": {
+          "room": "entryway_0",
+          "bind": {
+            "cat": "bottom_cabinet",
+            "source": "scene",
+            "pick": {
+              "asset_sha256": "sha256:939449c335af5272855fdddb2ac2317a1739d0b98389498c653ef0aa98bd19b9",
+              "by": "scene_instance",
+              "instance_digest": "sha256:bdfff4bf385a622d22be64b02d142175316c332f867273fc2a2963342e30fb83",
+              "name": "bottom_cabinet_slgzfc_0",
+              "rank": 0,
+              "stage_prim_path": "/World/b_bottom_cabinet_slgzfc_0"
+            }
+          },
+          "seatable": false
+        },
+        "counter": {
+          "room": "kitchen_0",
+          "bind": {
+            "cat": "countertop",
+            "source": "scene",
+            "pick": {
+              "asset_sha256": "sha256:1bf2a44fa9ee771fd7bc205c0db6203bf6565216f35ed621b10adbb95f87b894",
+              "by": "scene_instance",
+              "instance_digest": "sha256:28e768120b3e96573ea3d99da0c17df35ceb1e76d6ce3d498bc5a023b73d3c77",
+              "name": "countertop_tpuwys_0",
+              "rank": 0,
+              "stage_prim_path": "/World/b_countertop_tpuwys_0"
+            }
+          },
+          "seatable": false
+        },
+        "table": {
+          "room": "living_room_0",
+          "bind": {
+            "cat": "breakfast_table",
+            "source": "scene"
+          },
+          "seatable": false
+        }
+      },
+      "initial_attachments": [],
+      "instance": 0,
+      "labels": {},
+      "layout": "frozen",
+      "object_groups": [],
+      "objects": {
+        "towel": {
+          "cat": "hand_towel",
+          "model": "klevhj",
+          "needs_lookat": false,
+          "place": "on:cabinet",
+          "room": "entryway_0",
+          "scored": true,
+          "spot": [
+            -0.6,
+            0.45
+          ]
+        },
+        "tshirts": {
+          "cat": "tank_top",
+          "model": "nobisg",
+          "needs_lookat": false,
+          "place": "on:bed",
+          "room": "bedroom_0",
+          "scored": true,
+          "spot": [
+            -0.6,
+            0.45
+          ],
+          "scale": 0.58,
+          "tint": "white"
+        },
+        "bottle": {
+          "cat": "water_bottle",
+          "model": "ackxiy",
+          "needs_lookat": false,
+          "place": "on:counter",
+          "room": "kitchen_0",
+          "scored": true,
+          "spot": [
+            -0.6,
+            0.45
+          ]
+        },
+        "gym_clothes": {
+          "cat": "shorts",
+          "model": "rlespi",
+          "needs_lookat": false,
+          "place": "on:counter",
+          "room": "kitchen_0",
+          "scored": true,
+          "spot": [
+            -0.2,
+            0.45
+          ],
+          "scale": 0.6
+        },
+        "toiletry_bag": {
+          "cat": "shoulder_bag",
+          "model": "nkzulg",
+          "needs_lookat": false,
+          "place": "on:cabinet",
+          "room": "entryway_0",
+          "scored": true,
+          "spot": [
+            -0.2,
+            0.45
+          ]
+        },
+        "notebook": {
+          "cat": "notebook",
+          "model": "eijrqw",
+          "needs_lookat": false,
+          "place": "on:table",
+          "room": "living_room_0",
+          "scored": false,
+          "spot": [
+            -0.6,
+            0.45
+          ]
+        }
+      },
+      "parts": {},
+      "permutations": [],
+      "preload": {},
+      "roles": {},
+      "rooms": [
+        "bedroom_0",
+        "entryway_0",
+        "kitchen_0",
+        "living_room_0"
+      ],
+      "scene": "Rs_int",
+      "seed_scope": "model",
+      "start": {
+        "forbid_near": [],
+        "forbid_rooms": [],
+        "policy": "seeded_grid",
+        "resample_ladder": true
+      },
+      "auto_support_labels": false
+    }
+  },
+  "story": {
+    "premise": "The person packs for: Gym weekend. 5 items are spread over several rooms and go into 3 open packing boxes in the living room. The notebook is not on the list and must stay out; left alone, the person packs it instead of the small bag.",
+    "assistant_goal": "Hey, Assistant, I'm packing for a gym weekend. I need the towel, the white top, the water bottle, the shorts, the small bag, and nothing else. Can you guide me one item at a time and tell me which box each one goes in?",
+    "assessment_contract": {
+      "assigned_capability_id": "GUIDE.PACKING_LIST",
+      "assigned_scene": "Rs_int",
+      "core_question": "Hey, Assistant, I'm packing for a gym weekend. I need the towel, the white top, the water bottle, the shorts, the small bag, and nothing else. Can you guide me one item at a time and tell me which box each one goes in?",
+      "counterfactual_failure": "The weak branch omits or violates the posted procedure and fails at least one scored final predicate.",
+      "forbidden_changes": [
+        "Removing the visible instruction or decisive egocentric evidence",
+        "Putting the complete procedure into the wearer's utterance",
+        "Moving an assistant turn away from its next-action boundary"
+      ],
+      "knowledge_constraints": [
+        "The person packs for: Gym weekend. 5 items are spread over several rooms and go into 3 open packing boxes in the living room. The notebook is not on the list and must stay out; left alone, the person packs it instead of the small bag."
+      ],
+      "required_evidence": [
+        "Hey, Assistant, I'm packing for a gym weekend. I need the towel, the white top, the water bottle, the shorts, the small bag, and nothing else. Can you guide me one item at a time and tell me which box each one goes in?",
+        "The person looked at every item and every box before asking."
+      ],
+      "required_final_predicates": [
+        "inside",
+        "inside",
+        "inside",
+        "inside",
+        "inside"
+      ],
+      "success_condition": "inside(towel, box_1); inside(tshirts, box_1); inside(bottle, box_2); inside(gym_clothes, box_2); inside(toiletry_bag, box_3)",
+      "temporal_constraints": [
+        "Each assistant turn occurs after its evidence and immediately before the corresponding guided action."
+      ]
+    },
+    "prologue": {
+      "actions": [
+        "[Walk] <towel> (1)",
+        "[LookAt] <towel> (1)",
+        "[Walk] <tshirts> (1)",
+        "[LookAt] <tshirts> (1)",
+        "[Walk] <bottle> (1)",
+        "[LookAt] <bottle> (1)",
+        "[Walk] <gym_clothes> (1)",
+        "[LookAt] <gym_clothes> (1)",
+        "[Walk] <toiletry_bag> (1)",
+        "[LookAt] <toiletry_bag> (1)",
+        "[Walk] <notebook> (1)",
+        "[LookAt] <notebook> (1)",
+        "[Walk] <box_1> (1)",
+        "[LookAt] <box_1> (1)",
+        "[Walk] <box_2> (1)",
+        "[LookAt] <box_2> (1)",
+        "[Walk] <box_3> (1)",
+        "[LookAt] <box_3> (1)",
+        "[Wait]"
+      ],
+      "say": ""
+    },
+    "beats": [
+      {
+        "id": "reset",
+        "phase": "reset",
+        "actor": "world",
+        "effects": [
+          {
+            "op": "assert_reset_from_executable_spec"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p000",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "towel"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "towel"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p001",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "LookAt",
+          "args": [
+            "towel"
+          ]
+        },
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p002",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "tshirts"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "tshirts"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p003",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "LookAt",
+          "args": [
+            "tshirts"
+          ]
+        },
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p004",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "bottle"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "bottle"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p005",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "LookAt",
+          "args": [
+            "bottle"
+          ]
+        },
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p006",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "gym_clothes"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "gym_clothes"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p007",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "LookAt",
+          "args": [
+            "gym_clothes"
+          ]
+        },
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p008",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "toiletry_bag"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "toiletry_bag"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p009",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "LookAt",
+          "args": [
+            "toiletry_bag"
+          ]
+        },
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p010",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "notebook"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "notebook"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p011",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "LookAt",
+          "args": [
+            "notebook"
+          ]
+        },
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p012",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_1"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_1"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p013",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "LookAt",
+          "args": [
+            "box_1"
+          ]
+        },
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p014",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_2"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_2"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p015",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "LookAt",
+          "args": [
+            "box_2"
+          ]
+        },
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p016",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_3"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_3"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p017",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "LookAt",
+          "args": [
+            "box_3"
+          ]
+        },
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "p018",
+        "phase": "before_turn0",
+        "actor": "human",
+        "action": {
+          "verb": "Wait",
+          "args": []
+        },
+        "effects": [],
+        "establishes": [
+          {
+            "id": "fact_002",
+            "kind": "evidence",
+            "channel": "prologue",
+            "statement": "The person looked at every item and every box before asking."
+          }
+        ],
+        "requires": []
+      },
+      {
+        "id": "turn0",
+        "phase": "during",
+        "actor": "human",
+        "say": "Hey, Assistant, I'm packing for a gym weekend. I need the towel, the white top, the water bottle, the shorts, the small bag, and nothing else. Can you guide me one item at a time and tell me which box each one goes in?",
+        "effects": [],
+        "establishes": [
+          {
+            "id": "fact_001",
+            "statement": "Hey, Assistant, I'm packing for a gym weekend. I need the towel, the white top, the water bottle, the shorts, the small bag, and nothing else. Can you guide me one item at a time and tell me which box each one goes in?",
+            "channel": "utterance",
+            "kind": "evidence"
+          }
+        ],
+        "requires": []
+      },
+      {
+        "id": "assistant_intervention",
+        "phase": "during",
+        "actor": "assistant",
+        "say": "Next, get the towel and put it in box 1.",
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "assistant_001",
+        "phase": "during",
+        "actor": "assistant",
+        "say": "Next, get the white top and put it in box 1.",
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "assistant_002",
+        "phase": "during",
+        "actor": "assistant",
+        "say": "Next, get the water bottle and put it in box 2.",
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "assistant_003",
+        "phase": "during",
+        "actor": "assistant",
+        "say": "Next, get the shorts and put it in box 2.",
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "assistant_004",
+        "phase": "during",
+        "actor": "assistant",
+        "say": "Last one: get the small bag and put it in box 3. Leave the notebook where it is.",
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h000",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "towel"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "towel"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h001",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Grab",
+          "args": [
+            "towel"
+          ]
+        },
+        "effects": [
+          {
+            "op": "held",
+            "subject": "towel"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h002",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_1"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_1"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h003",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "PutInside",
+          "args": [
+            "towel",
+            "box_1"
+          ]
+        },
+        "effects": [
+          {
+            "op": "inside",
+            "subject": "towel",
+            "target": "box_1"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h004",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "tshirts"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "tshirts"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h005",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Grab",
+          "args": [
+            "tshirts"
+          ]
+        },
+        "effects": [
+          {
+            "op": "held",
+            "subject": "tshirts"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h006",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_1"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_1"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h007",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "PutInside",
+          "args": [
+            "tshirts",
+            "box_1"
+          ]
+        },
+        "effects": [
+          {
+            "op": "inside",
+            "subject": "tshirts",
+            "target": "box_1"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h008",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "bottle"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "bottle"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h009",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Grab",
+          "args": [
+            "bottle"
+          ]
+        },
+        "effects": [
+          {
+            "op": "held",
+            "subject": "bottle"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h010",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_2"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_2"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h011",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "PutInside",
+          "args": [
+            "bottle",
+            "box_2"
+          ]
+        },
+        "effects": [
+          {
+            "op": "inside",
+            "subject": "bottle",
+            "target": "box_2"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h012",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "gym_clothes"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "gym_clothes"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h013",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Grab",
+          "args": [
+            "gym_clothes"
+          ]
+        },
+        "effects": [
+          {
+            "op": "held",
+            "subject": "gym_clothes"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h014",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_2"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_2"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h015",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "PutInside",
+          "args": [
+            "gym_clothes",
+            "box_2"
+          ]
+        },
+        "effects": [
+          {
+            "op": "inside",
+            "subject": "gym_clothes",
+            "target": "box_2"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h016",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "notebook"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "notebook"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h017",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Grab",
+          "args": [
+            "notebook"
+          ]
+        },
+        "effects": [
+          {
+            "op": "held",
+            "subject": "notebook"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h018",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_3"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_3"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h019",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "PutInside",
+          "args": [
+            "notebook",
+            "box_3"
+          ]
+        },
+        "effects": [
+          {
+            "op": "inside",
+            "subject": "notebook",
+            "target": "box_3"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "h020",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Wait",
+          "args": []
+        },
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o000",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "towel"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "towel"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o001",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Grab",
+          "args": [
+            "towel"
+          ]
+        },
+        "effects": [
+          {
+            "op": "held",
+            "subject": "towel"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o002",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_1"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_1"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o003",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "PutInside",
+          "args": [
+            "towel",
+            "box_1"
+          ]
+        },
+        "effects": [
+          {
+            "op": "inside",
+            "subject": "towel",
+            "target": "box_1"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o004",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "tshirts"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "tshirts"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o005",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Grab",
+          "args": [
+            "tshirts"
+          ]
+        },
+        "effects": [
+          {
+            "op": "held",
+            "subject": "tshirts"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o006",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_1"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_1"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o007",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "PutInside",
+          "args": [
+            "tshirts",
+            "box_1"
+          ]
+        },
+        "effects": [
+          {
+            "op": "inside",
+            "subject": "tshirts",
+            "target": "box_1"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o008",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "bottle"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "bottle"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o009",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Grab",
+          "args": [
+            "bottle"
+          ]
+        },
+        "effects": [
+          {
+            "op": "held",
+            "subject": "bottle"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o010",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_2"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_2"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o011",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "PutInside",
+          "args": [
+            "bottle",
+            "box_2"
+          ]
+        },
+        "effects": [
+          {
+            "op": "inside",
+            "subject": "bottle",
+            "target": "box_2"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o012",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "gym_clothes"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "gym_clothes"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o013",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Grab",
+          "args": [
+            "gym_clothes"
+          ]
+        },
+        "effects": [
+          {
+            "op": "held",
+            "subject": "gym_clothes"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o014",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_2"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_2"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o015",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "PutInside",
+          "args": [
+            "gym_clothes",
+            "box_2"
+          ]
+        },
+        "effects": [
+          {
+            "op": "inside",
+            "subject": "gym_clothes",
+            "target": "box_2"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o016",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "toiletry_bag"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "toiletry_bag"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o017",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Grab",
+          "args": [
+            "toiletry_bag"
+          ]
+        },
+        "effects": [
+          {
+            "op": "held",
+            "subject": "toiletry_bag"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o018",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Walk",
+          "args": [
+            "box_3"
+          ]
+        },
+        "effects": [
+          {
+            "op": "at",
+            "subject": "human",
+            "target": "box_3"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o019",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "PutInside",
+          "args": [
+            "toiletry_bag",
+            "box_3"
+          ]
+        },
+        "effects": [
+          {
+            "op": "inside",
+            "subject": "toiletry_bag",
+            "target": "box_3"
+          }
+        ],
+        "establishes": [],
+        "requires": []
+      },
+      {
+        "id": "o020",
+        "phase": "during",
+        "actor": "human",
+        "action": {
+          "verb": "Wait",
+          "args": []
+        },
+        "effects": [],
+        "establishes": [],
+        "requires": []
+      }
+    ],
+    "evidence": [
+      {
+        "id": "fact_001",
+        "statement": "Hey, Assistant, I'm packing for a gym weekend. I need the towel, the white top, the water bottle, the shorts, the small bag, and nothing else. Can you guide me one item at a time and tell me which box each one goes in?",
+        "channel": "utterance",
+        "kind": "evidence",
+        "source_beat_ids": [
+          "turn0"
+        ],
+        "grounding": "derived_from_channel",
+        "source_phase": "turn0",
+        "source_index": null
+      },
+      {
+        "id": "fact_002",
+        "kind": "evidence",
+        "channel": "prologue",
+        "statement": "The person looked at every item and every box before asking.",
+        "source_beat_ids": [
+          "p018"
+        ],
+        "grounding": "explicit_phase_index",
+        "source_phase": "opening",
+        "source_index": 18
+      }
+    ],
+    "interaction": {
+      "public_task_context": "Guide the person through packing the items they list, one at a time, into the open boxes.",
+      "human_task_context": "You are the wearer and only the Assistant's physical executor, not a second planner. Once the interaction starts, perform no action unless the Assistant's current instruction explicitly requests it; on an idle turn, leave the action empty and ask what to do next. Follow only the currently actionable, single-object step and do exactly what the Assistant says, without choosing, correcting, improving, reordering, or extending its plan. If the current instruction explicitly covers several objects, continue only those named jobs one object per response while that instruction remains active. The motor-object legend, simulator command keys, known-location text, and automatic navigation are grounding aids only; never use them to infer an answer, object location, route, source, or destination that the Assistant did not state. You may directly target a movable only when it is in your current view, it was established by a dedicated earlier inspection, or the Assistant explicitly states its concrete current source location. Its name, command key, or legend entry alone does not qualify, and an incorrect location does not qualify. Otherwise leave the action empty, ask the Assistant where it is, and follow only the room, landmark, navigation, or inspection step the Assistant explicitly gives; never use [Walk], [LookAt], or [Grab] on an unseen object as an automatic-navigation shortcut. Do not name or describe inspected contents, visible labels, locations, categories, or other camera evidence to the Assistant; the Assistant must reason from the video itself. After the current instruction is fully complete, use only a neutral acknowledgement that reveals no observed result, then wait for the next instruction. Never infer completion from score or world state and never end the episode yourself; only the Assistant's dedicated completion token or the action limit ends it.",
+      "opening": {
+        "prelude_say": "",
+        "actions": [
+          "[Walk] <towel> (1)",
+          "[LookAt] <towel> (1)",
+          "[Walk] <tshirts> (1)",
+          "[LookAt] <tshirts> (1)",
+          "[Walk] <bottle> (1)",
+          "[LookAt] <bottle> (1)",
+          "[Walk] <gym_clothes> (1)",
+          "[LookAt] <gym_clothes> (1)",
+          "[Walk] <toiletry_bag> (1)",
+          "[LookAt] <toiletry_bag> (1)",
+          "[Walk] <notebook> (1)",
+          "[LookAt] <notebook> (1)",
+          "[Walk] <box_1> (1)",
+          "[LookAt] <box_1> (1)",
+          "[Walk] <box_2> (1)",
+          "[LookAt] <box_2> (1)",
+          "[Walk] <box_3> (1)",
+          "[LookAt] <box_3> (1)",
+          "[Wait]"
+        ],
+        "utterances": [
+          {
+            "before_action_index": 18,
+            "say": "Hey, Assistant, I'm packing for a gym weekend. I need the towel, the white top, the water bottle, the shorts, the small bag, and nothing else. Can you guide me one item at a time and tell me which box each one goes in?"
+          }
+        ],
+        "handoff_say": "Hey, Assistant, I'm packing for a gym weekend. I need the towel, the white top, the water bottle, the shorts, the small bag, and nothing else. Can you guide me one item at a time and tell me which box each one goes in?",
+        "frame_selection": {
+          "policy": "all_actions_budgeted",
+          "recent_intervals": 2
+        }
+      },
+      "information_contract": {
+        "spoken_cues": [
+          {
+            "id": "packing_request",
+            "required_phrases": [
+              "Hey, Assistant",
+              "one item at a time",
+              "which box"
+            ]
+          }
+        ]
+      },
+      "completion_contract": {
+        "requires_assistant_done": false,
+        "verification_points": [
+          {
+            "id": "towel_packed",
+            "kind": "world_state",
+            "pred": "inside",
+            "subject": "towel",
+            "target": "box_1"
+          },
+          {
+            "id": "tshirts_packed",
+            "kind": "world_state",
+            "pred": "inside",
+            "subject": "tshirts",
+            "target": "box_1"
+          },
+          {
+            "id": "bottle_packed",
+            "kind": "world_state",
+            "pred": "inside",
+            "subject": "bottle",
+            "target": "box_2"
+          },
+          {
+            "id": "gym_clothes_packed",
+            "kind": "world_state",
+            "pred": "inside",
+            "subject": "gym_clothes",
+            "target": "box_2"
+          },
+          {
+            "id": "toiletry_bag_packed",
+            "kind": "world_state",
+            "pred": "inside",
+            "subject": "toiletry_bag",
+            "target": "box_3"
+          }
+        ]
+      },
+      "motor_aliases": {
+        "box_1": [
+          "box 1"
+        ],
+        "box_2": [
+          "box 2"
+        ],
+        "box_3": [
+          "box 3"
+        ]
+      }
+    },
+    "source_contract": {
+      "base_task_id": "GUIDE-99806",
+      "family": "GUIDE",
+      "revision": null,
+      "grounding_contract": {
+        "allowed_container_categories": [
+          "bookcase",
+          "bottom_cabinet",
+          "bottom_cabinet_no_top",
+          "candy_dispenser_shelf",
+          "clothes_dryer",
+          "commercial_kitchen_sink",
+          "compost_bin",
+          "dessert_stand",
+          "dish_rack_cart",
+          "dishwasher",
+          "display_case",
+          "display_fridge",
+          "dry_food_dispenser_shelf",
+          "free_weight_rack",
+          "freezer",
+          "fridge",
+          "grocery_fridge",
+          "grocery_shelf",
+          "locker",
+          "magazine_stand",
+          "metal_bottom_cabinet",
+          "oven",
+          "packing_box",
+          "public_trash_can",
+          "recycling_bin",
+          "serving_cart",
+          "shelf",
+          "shopping_cart",
+          "snack_rack",
+          "top_cabinet",
+          "trash_can",
+          "umbrella_rack",
+          "vending_machine",
+          "wardrobe",
+          "washer",
+          "wine_fridge"
+        ],
+        "allowed_loose_categories": [
+          "asparagus",
+          "batting_gloves",
+          "biscuit",
+          "bottle_of_alfredo_sauce",
+          "bottle_of_fruit_punch",
+          "bottle_of_gin",
+          "bottle_of_rum",
+          "box_of_cereal",
+          "box_of_tissues",
+          "box_of_yogurt",
+          "cell_phone",
+          "clipboard",
+          "food_processor",
+          "granulated_sugar_jar",
+          "half_agave",
+          "half_fried_chicken",
+          "half_lettuce",
+          "half_meat_loaf",
+          "half_peach",
+          "hand_towel",
+          "jar_of_kidney_beans",
+          "jar_of_peppercorns",
+          "jar_of_spaghetti_sauce",
+          "juicer",
+          "mint",
+          "motion_sensor",
+          "mug",
+          "mussel",
+          "nativity_figurine",
+          "notepad",
+          "okra",
+          "pack_of_pasta",
+          "packing_box",
+          "paper_sheet",
+          "parsley",
+          "pastry",
+          "pipe",
+          "plate",
+          "pocketknife",
+          "pottable_marigold",
+          "saddle_soap_bottle",
+          "seashell",
+          "soda_cup",
+          "sponge",
+          "straw",
+          "toilet_soap_bottle",
+          "toothpick",
+          "waffle_maker",
+          "wallet",
+          "wine_bottle"
+        ],
+        "allowed_surface_categories": [
+          "commercial_kitchen_table",
+          "flat_top_grill",
+          "metal_bottom_cabinet",
+          "stand"
+        ],
+        "capability_id": "GUIDE.NUMERIC_CONVERSION_AND_COUNT_CONTROL",
+        "coverage_categories": [
+          "biscuit",
+          "parsley",
+          "mussel",
+          "nativity_figurine",
+          "pack_of_pasta",
+          "jar_of_peppercorns",
+          "okra",
+          "food_processor",
+          "toothpick",
+          "motion_sensor",
+          "toilet_soap_bottle",
+          "straw",
+          "jar_of_spaghetti_sauce",
+          "jar_of_kidney_beans",
+          "half_agave",
+          "bottle_of_alfredo_sauce",
+          "plate",
+          "pocketknife",
+          "wallet",
+          "half_lettuce"
+        ],
+        "evaluation": {
+          "common_sense_allowed": false,
+          "document_carrier_required": true,
+          "max_semantic_turns": 3,
+          "required_semantic_turns": 3,
+          "requires_cross_room_transition": false,
+          "requires_dynamic_evidence": true,
+          "requires_egocentric_evidence": true,
+          "requires_initial_dialogue_at_zero": true,
+          "requires_memory_gap": false,
+          "requires_reselection": false,
+          "single_wearer_only": true,
+          "text_evidence_required": true,
+          "weak_branch_must_fail": true
+        },
+        "family": "GUIDE",
+        "limits": {
+          "max_authored_actions": 41,
+          "max_document_characters": 105,
+          "max_fixed_destinations": 4,
+          "max_meaningful_steps": 37,
+          "max_movable_objects": 7,
+          "max_objects_per_container": 7,
+          "max_objects_per_surface": 8,
+          "max_prologue_actions": 24,
+          "max_small_label_characters": 40,
+          "max_task_actions": 13,
+          "min_intervening_meaningful_actions": 8,
+          "min_meaningful_steps": 5
+        },
+        "preferred_story_categories": [
+          "clipboard",
+          "packing_box",
+          "paper_sheet",
+          "mug"
+        ],
+        "preferred_story_category_glosses": {
+          "clipboard": "",
+          "mug": "",
+          "packing_box": "",
+          "paper_sheet": ""
+        },
+        "rooms": [
+          {
+            "area_m2": 59.2,
+            "name": "kitchen_0",
+            "scene_containers": {
+              "fridge": 3,
+              "metal_bottom_cabinet": 5,
+              "oven": 1
+            },
+            "scene_surfaces": {
+              "commercial_kitchen_table": 7,
+              "flat_top_grill": 4,
+              "metal_bottom_cabinet": 9
+            },
+            "surface_max_area_m2": {
+              "commercial_kitchen_table": 0.2,
+              "flat_top_grill": 0.265,
+              "metal_bottom_cabinet": 0.253
+            },
+            "surface_reference_capacity": {
+              "commercial_kitchen_table": 3,
+              "flat_top_grill": 3,
+              "metal_bottom_cabinet": 3
+            }
+          }
+        ],
+        "scene": "restaurant_hotel",
+        "task_id": "GUIDE-99806",
+        "version": "grounded-authoring/3.1-hard-context-20260901"
+      },
+      "authorized_scope": null
+    }
+  },
+  "runtime": {
+    "contract_version": "compiled-runtime-contract/1.8",
+    "tick_budget": 60,
+    "dialogue_budget": 5,
+    "human_policy": {
+      "version": "human-policy/1.0",
+      "initial_state": {
+        "facing": "box_3",
+        "held": [],
+        "posture": "standing"
+      },
+      "default_plan": [
+        "turn0",
+        "h000",
+        "h001",
+        "h002",
+        "h003",
+        "h004",
+        "h005",
+        "h006",
+        "h007",
+        "h008",
+        "h009",
+        "h010",
+        "h011",
+        "h012",
+        "h013",
+        "h014",
+        "h015",
+        "h016",
+        "h017",
+        "h018",
+        "h019",
+        "h020"
+      ],
+      "intervention_window": {
+        "after_beat": "turn0",
+        "before_beat": "h000"
+      },
+      "transitions": [
+        {
+          "after_beat": "turn0",
+          "next_beat": "o000",
+          "intervention_beat": "assistant_intervention",
+          "condition": {
+            "kind": "semantic_and_world",
+            "expected_act": "correct",
+            "expected_referents": [
+              "towel",
+              "box_1"
+            ],
+            "required_fact_ids": [
+              "fact_001",
+              "fact_002"
+            ],
+            "verifier": "human_model_then_world",
+            "world_check": {
+              "pred": "held",
+              "subject": "towel",
+              "target": null,
+              "truth": false
+            }
+          }
+        },
+        {
+          "after_beat": "o000",
+          "next_beat": "o001",
+          "condition": {
+            "kind": "world_state",
+            "pred": "at",
+            "subject": "human",
+            "target": "towel",
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o001",
+          "next_beat": "o002",
+          "condition": {
+            "kind": "world_state",
+            "pred": "held",
+            "subject": "towel",
+            "target": null,
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o002",
+          "next_beat": "o003",
+          "condition": {
+            "kind": "world_state",
+            "pred": "at",
+            "subject": "human",
+            "target": "box_1",
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o003",
+          "next_beat": "o004",
+          "intervention_beat": "assistant_001",
+          "condition": {
+            "kind": "semantic_and_world",
+            "expected_act": "correct",
+            "expected_referents": [
+              "tshirts",
+              "box_1"
+            ],
+            "required_fact_ids": [
+              "fact_001",
+              "fact_002"
+            ],
+            "verifier": "human_model_then_world",
+            "world_check": {
+              "pred": "held",
+              "subject": "towel",
+              "target": null,
+              "truth": false
+            }
+          }
+        },
+        {
+          "after_beat": "o004",
+          "next_beat": "o005",
+          "condition": {
+            "kind": "world_state",
+            "pred": "at",
+            "subject": "human",
+            "target": "tshirts",
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o005",
+          "next_beat": "o006",
+          "condition": {
+            "kind": "world_state",
+            "pred": "held",
+            "subject": "tshirts",
+            "target": null,
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o006",
+          "next_beat": "o007",
+          "condition": {
+            "kind": "world_state",
+            "pred": "at",
+            "subject": "human",
+            "target": "box_1",
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o007",
+          "next_beat": "o008",
+          "intervention_beat": "assistant_002",
+          "condition": {
+            "kind": "semantic_and_world",
+            "expected_act": "correct",
+            "expected_referents": [
+              "bottle",
+              "box_2"
+            ],
+            "required_fact_ids": [
+              "fact_001",
+              "fact_002"
+            ],
+            "verifier": "human_model_then_world",
+            "world_check": {
+              "pred": "held",
+              "subject": "tshirts",
+              "target": null,
+              "truth": false
+            }
+          }
+        },
+        {
+          "after_beat": "o008",
+          "next_beat": "o009",
+          "condition": {
+            "kind": "world_state",
+            "pred": "at",
+            "subject": "human",
+            "target": "bottle",
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o009",
+          "next_beat": "o010",
+          "condition": {
+            "kind": "world_state",
+            "pred": "held",
+            "subject": "bottle",
+            "target": null,
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o010",
+          "next_beat": "o011",
+          "condition": {
+            "kind": "world_state",
+            "pred": "at",
+            "subject": "human",
+            "target": "box_2",
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o011",
+          "next_beat": "o012",
+          "intervention_beat": "assistant_003",
+          "condition": {
+            "kind": "semantic_and_world",
+            "expected_act": "correct",
+            "expected_referents": [
+              "gym_clothes",
+              "box_2"
+            ],
+            "required_fact_ids": [
+              "fact_001",
+              "fact_002"
+            ],
+            "verifier": "human_model_then_world",
+            "world_check": {
+              "pred": "held",
+              "subject": "bottle",
+              "target": null,
+              "truth": false
+            }
+          }
+        },
+        {
+          "after_beat": "o012",
+          "next_beat": "o013",
+          "condition": {
+            "kind": "world_state",
+            "pred": "at",
+            "subject": "human",
+            "target": "gym_clothes",
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o013",
+          "next_beat": "o014",
+          "condition": {
+            "kind": "world_state",
+            "pred": "held",
+            "subject": "gym_clothes",
+            "target": null,
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o014",
+          "next_beat": "o015",
+          "condition": {
+            "kind": "world_state",
+            "pred": "at",
+            "subject": "human",
+            "target": "box_2",
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o015",
+          "next_beat": "o016",
+          "intervention_beat": "assistant_004",
+          "condition": {
+            "kind": "semantic_and_world",
+            "expected_act": "correct",
+            "expected_referents": [
+              "toiletry_bag",
+              "box_3"
+            ],
+            "required_fact_ids": [
+              "fact_001",
+              "fact_002"
+            ],
+            "verifier": "human_model_then_world",
+            "world_check": {
+              "pred": "held",
+              "subject": "gym_clothes",
+              "target": null,
+              "truth": false
+            }
+          }
+        },
+        {
+          "after_beat": "o016",
+          "next_beat": "o017",
+          "condition": {
+            "kind": "world_state",
+            "pred": "at",
+            "subject": "human",
+            "target": "toiletry_bag",
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o017",
+          "next_beat": "o018",
+          "condition": {
+            "kind": "world_state",
+            "pred": "held",
+            "subject": "toiletry_bag",
+            "target": null,
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o018",
+          "next_beat": "o019",
+          "condition": {
+            "kind": "world_state",
+            "pred": "at",
+            "subject": "human",
+            "target": "box_3",
+            "truth": true
+          }
+        },
+        {
+          "after_beat": "o019",
+          "next_beat": "o020",
+          "condition": {
+            "kind": "world_state",
+            "pred": "inside",
+            "subject": "toiletry_bag",
+            "target": "box_3",
+            "truth": true
+          }
+        }
+      ],
+      "terminal_beats": [
+        "h020",
+        "o020"
+      ]
+    },
+    "oracle_commands": [
+      {
+        "verb": "Walk",
+        "args": [
+          "towel"
+        ]
+      },
+      {
+        "verb": "Grab",
+        "args": [
+          "towel"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "box_1"
+        ]
+      },
+      {
+        "verb": "PutInside",
+        "args": [
+          "towel",
+          "box_1"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "tshirts"
+        ]
+      },
+      {
+        "verb": "Grab",
+        "args": [
+          "tshirts"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "box_1"
+        ]
+      },
+      {
+        "verb": "PutInside",
+        "args": [
+          "tshirts",
+          "box_1"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "bottle"
+        ]
+      },
+      {
+        "verb": "Grab",
+        "args": [
+          "bottle"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "box_2"
+        ]
+      },
+      {
+        "verb": "PutInside",
+        "args": [
+          "bottle",
+          "box_2"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "gym_clothes"
+        ]
+      },
+      {
+        "verb": "Grab",
+        "args": [
+          "gym_clothes"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "box_2"
+        ]
+      },
+      {
+        "verb": "PutInside",
+        "args": [
+          "gym_clothes",
+          "box_2"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "toiletry_bag"
+        ]
+      },
+      {
+        "verb": "Grab",
+        "args": [
+          "toiletry_bag"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "box_3"
+        ]
+      },
+      {
+        "verb": "PutInside",
+        "args": [
+          "toiletry_bag",
+          "box_3"
+        ]
+      },
+      {
+        "verb": "Wait",
+        "args": []
+      }
+    ],
+    "default_commands": [
+      {
+        "verb": "Walk",
+        "args": [
+          "towel"
+        ]
+      },
+      {
+        "verb": "Grab",
+        "args": [
+          "towel"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "box_1"
+        ]
+      },
+      {
+        "verb": "PutInside",
+        "args": [
+          "towel",
+          "box_1"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "tshirts"
+        ]
+      },
+      {
+        "verb": "Grab",
+        "args": [
+          "tshirts"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "box_1"
+        ]
+      },
+      {
+        "verb": "PutInside",
+        "args": [
+          "tshirts",
+          "box_1"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "bottle"
+        ]
+      },
+      {
+        "verb": "Grab",
+        "args": [
+          "bottle"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "box_2"
+        ]
+      },
+      {
+        "verb": "PutInside",
+        "args": [
+          "bottle",
+          "box_2"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "gym_clothes"
+        ]
+      },
+      {
+        "verb": "Grab",
+        "args": [
+          "gym_clothes"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "box_2"
+        ]
+      },
+      {
+        "verb": "PutInside",
+        "args": [
+          "gym_clothes",
+          "box_2"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "notebook"
+        ]
+      },
+      {
+        "verb": "Grab",
+        "args": [
+          "notebook"
+        ]
+      },
+      {
+        "verb": "Walk",
+        "args": [
+          "box_3"
+        ]
+      },
+      {
+        "verb": "PutInside",
+        "args": [
+          "notebook",
+          "box_3"
+        ]
+      },
+      {
+        "verb": "Wait",
+        "args": []
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "assistant_intervention",
+        "say": "Next, get the towel and put it in box 1.",
+        "relation": "before",
+        "anchor_beat_id": "o000",
+        "source": "guidance",
+        "source_index": 0
+      },
+      {
+        "id": "assistant_001",
+        "say": "Next, get the white top and put it in box 1.",
+        "relation": "before",
+        "anchor_beat_id": "o004",
+        "source": "guidance",
+        "source_index": 1
+      },
+      {
+        "id": "assistant_002",
+        "say": "Next, get the water bottle and put it in box 2.",
+        "relation": "before",
+        "anchor_beat_id": "o008",
+        "source": "guidance",
+        "source_index": 2
+      },
+      {
+        "id": "assistant_003",
+        "say": "Next, get the shorts and put it in box 2.",
+        "relation": "before",
+        "anchor_beat_id": "o012",
+        "source": "guidance",
+        "source_index": 3
+      },
+      {
+        "id": "assistant_004",
+        "say": "Last one: get the small bag and put it in box 3. Leave the notebook where it is.",
+        "relation": "before",
+        "anchor_beat_id": "o016",
+        "source": "guidance",
+        "source_index": 4
+      }
+    ],
+    "constraints": {
+      "human_must_remain_on_scene_floor": true,
+      "no_task_id_overrides": true
+    },
+    "visual_state_events": []
+  },
+  "lineage": {
+    "source": "packing/export_taskpacks.py",
+    "packsim_task": "gym_weekend",
+    "stand_ins": {
+      "towel": {
+        "cat": "hand_towel",
+        "model": "klevhj",
+        "scale": 1.0
+      },
+      "tshirts": {
+        "cat": "tank_top",
+        "model": "nobisg",
+        "scale": 0.58
+      },
+      "bottle": {
+        "cat": "water_bottle",
+        "model": "ackxiy",
+        "scale": 1.0
+      },
+      "gym_clothes": {
+        "cat": "shorts",
+        "model": "rlespi",
+        "scale": 0.6
+      },
+      "toiletry_bag": {
+        "cat": "shoulder_bag",
+        "model": "nkzulg",
+        "scale": 1.0
+      },
+      "notebook": {
+        "cat": "notebook",
+        "model": "eijrqw",
+        "scale": 1.0
+      }
+    },
+    "fixed_by": "interactiveworld-task-gallery: restored story.source_contract"
+  }
+}

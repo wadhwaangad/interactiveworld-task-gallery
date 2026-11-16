@@ -1,0 +1,144 @@
+{
+ "GUIDE-14004": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "GUIDE-14011": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "GUIDE-109009": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "ORCHESTRATE-99902": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "ORCHESTRATE-16013": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "ORCHESTRATE-94001": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "NARRATE-87016": {
+  "ok": false,
+  "unmatched_required": [
+   "[PutInside] <broken_glass> (1) <debris_bag> (1)",
+   "[PutInside] <debris_bag> (1) <sharps_bin> (1)"
+  ],
+  "broken_sequences": [
+   [
+    "[Grab] <broken_glass> (1)",
+    "[PutInside] <broken_glass> (1) <debris_bag> (1)",
+    "[Grab] <debris_bag> (1)",
+    "[PutInside] <debris_bag> (1) <sharps_bin> (1)"
+   ]
+  ]
+ },
+ "NARRATE-14005": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "NARRATE-81009": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "ASK-12802": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "ASK-13011": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "ASK-87022": {
+  "ok": false,
+  "unmatched_required": [
+   "[Drop]"
+  ],
+  "broken_sequences": []
+ },
+ "FIND-87004": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "FIND-14015": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "FIND-28003": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "ASK-12802-CF-REPORT": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "ASK-12802-CF-SPOKEN": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "ASK-12802-RETARGET": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "FIND-14015-MOVED": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "GUIDE-14004-REWORDED": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "PACK-BEACH-HOLIDAY": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "PACK-GYM-WEEKEND": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "PACK-MOVE-OUT": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "PACK-WEEKEND-TRIP": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "PACK-WINTER-VISIT": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "PACK-WORK-TRIP": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ }
+}

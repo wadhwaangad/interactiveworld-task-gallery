@@ -1,0 +1,30 @@
+Optional scorer fix for two release tasks under oracle-verbal (NOT applied). It changes benchmark
+scoring, so apply it only if you accept both rules:
+
+  * NARRATE-87016: a PutInside with an authored @place_spot satisfies the same required PutInside
+    without one, exactly as PutOn already does. The helper it calls already exists in this file.
+  * ASK-87022: a bare required [Drop] is satisfied by a successful [Drop] or [PutOnFloor]. The
+    oracle sets the backpack down with [PutOnFloor]; the contract's forbidden commands and its
+    `near` world check still reject a drop at the wrong apparatus.
+
+Both recorded oracle-verbal runs meet their process requirements with this applied (checked
+offline against site/results/*/verbal/results.jsonl).
+
+    cd C:\iw\InteractiveWorld
+    git apply <gallery>\patches\putinside-optional-spot.patch
+    # undo:  git apply -R <same path>
+
+--- a/simulator/interaction/taskpack_interaction.py
++++ b/simulator/interaction/taskpack_interaction.py
+@@ -11301,6 +11301,11 @@
+     def _process_commands_equivalent(self, observed: str, expected: str) -> bool:
+         if self._process_command_key(observed) == self._process_command_key(expected):
+             return True
++        observed_key, expected_key = _command_key(observed), _command_key(expected)
++        if _putinside_args_match_with_optional_spot(observed_key, expected_key):
++            return True
++        if expected_key == ("DROP", (), "") and observed_key[0] in {"DROP", "PUTONFLOOR"}:
++            return True
+         return _surface_placement_args_match(
+             _command_key(observed), _command_key(expected)
+         )

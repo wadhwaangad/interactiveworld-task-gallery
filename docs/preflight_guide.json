@@ -1,0 +1,64 @@
+{
+ "GUIDE-14004": [
+  {
+   "dialogue_index": 2,
+   "instruction": "Take the spatula from the tool table. Use `[Stir] <cooktop> (1) <spatula> (1)`—the flat top, not the tomato, is the Stir target. Return the spatula to that tool table. Then use `[Cook] <sliced_tomato> (1)`—the food, not the appliance, is the Cook target.",
+   "chunk": [
+    "[Grab] <spatula> (1)",
+    "[Stir] <cooktop> (1) <spatula> (1)",
+    "[PutOn] <spatula> (1) <tool_table> (1)",
+    "[Cook] <sliced_tomato> (1)"
+   ],
+   "units": [
+    [
+     "GRAB",
+     [
+      "spatula"
+     ],
+     []
+    ],
+    [
+     "STIR",
+     [
+      "cooktop"
+     ],
+     [
+      "tomato"
+     ]
+    ],
+    [
+     "GRAB",
+     [
+      "spatula"
+     ],
+     []
+    ],
+    [
+     "PLACE",
+     [
+      "spatula"
+     ],
+     [
+      "tool_table"
+     ]
+    ],
+    [
+     "COOK",
+     [
+      "sliced_tomato"
+     ],
+     []
+    ]
+   ]
+  }
+ ],
+ "GUIDE-14011": [],
+ "GUIDE-109009": [],
+ "GUIDE-14004-REWORDED": [],
+ "PACK-BEACH-HOLIDAY": [],
+ "PACK-GYM-WEEKEND": [],
+ "PACK-MOVE-OUT": [],
+ "PACK-WEEKEND-TRIP": [],
+ "PACK-WINTER-VISIT": [],
+ "PACK-WORK-TRIP": []
+}

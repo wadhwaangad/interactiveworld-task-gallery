@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>InteractiveWorld Episode Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a field log. Summary strip, filter rail, then one episode per row: video left, the spoken story right. */
+:root {
+  --bg: #f3f4f1; --surface: #ffffff; --ink: #1b2422; --muted: #5d6b67; --line: #d9ddd8;
+  --accent: #1f6f5c; --accent-soft: #dcebe5;
+  --ok: #1d7a46; --bad: #b3372c; --wait: #8a6a12;
+  --c-guidance: #2f6db5; --c-planning: #7a4fb0; --c-accessibility: #b5562f;
+  --c-decision: #1f7f7a; --c-prevention: #b3372c; --c-finding: #6f7a1f;
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121716; --surface: #1a2120; --ink: #e5ebe8; --muted: #9aa8a3; --line: #2c3633;
+  --accent: #5cc4a6; --accent-soft: #1d3530; --ok: #4fcf86; --bad: #ff7b6e; --wait: #e0b74a;
+  --c-guidance: #7fb0f0; --c-planning: #b796e8; --c-accessibility: #f0976d;
+  --c-decision: #5ccfc8; --c-prevention: #ff7b6e; --c-finding: #c3cf5c; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #121716; --surface: #1a2120; --ink: #e5ebe8; --muted: #9aa8a3; --line: #2c3633;
+  --accent: #5cc4a6; --accent-soft: #1d3530; --ok: #4fcf86; --bad: #ff7b6e; --wait: #e0b74a;
+  --c-guidance: #7fb0f0; --c-planning: #b796e8; --c-accessibility: #f0976d;
+  --c-decision: #5ccfc8; --c-prevention: #ff7b6e; --c-finding: #c3cf5c; color-scheme: dark }
+
+* { box-sizing: border-box }
+html, body { margin: 0 }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-block: 40px 80px; display: grid; gap: 28px }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15 }
+h1 { font-size: clamp(30px, 4.5vw, 46px); font-weight: 700; letter-spacing: -0.02em }
+.lede { color: var(--muted); max-width: 68ch; margin: 10px 0 0 }
+code, .mono { font-family: var(--f-mono); font-size: 12.5px }
+a { color: var(--accent) }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+
+.strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px }
+.stat b { display: block; font: 700 26px/1.1 var(--f-display); font-variant-numeric: tabular-nums }
+.stat span { color: var(--muted); font-size: 13px }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+.filters .label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-right: 4px }
+.chip { font: 500 13px var(--f-body); border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  border-radius: 999px; padding: 5px 12px; cursor: pointer }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
+.sep { width: 1px; height: 22px; background: var(--line); margin: 0 6px }
+
+.list { display: grid; gap: 18px }
+.ep { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) }
+.ep[data-cat] { border-left: 4px solid var(--cat) }
+.media { background: #0b0f0e; aspect-ratio: 16 / 9; max-width: 100%; position: relative; display: grid; place-items: center }
+.media video { width: 100%; height: 100%; object-fit: contain; display: block }
+.pending { color: #b9c6c1; text-align: center; padding: 18px; font-size: 13px; display: grid; gap: 8px; max-width: 42ch }
+.pending code { color: #e5ebe8; background: #1e2826; padding: 6px 8px; border-radius: 6px; overflow-wrap: anywhere }
+.body { padding: 18px 20px; display: grid; gap: 12px; align-content: start; min-width: 0 }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12.5px }
+.cat { color: var(--cat); font-weight: 600; text-transform: uppercase; letter-spacing: .07em; font-size: 12px }
+.tag { border: 1px solid var(--line); border-radius: 5px; padding: 1px 7px; color: var(--muted) }
+.tag.src-derived { border-color: var(--accent); color: var(--accent); background: var(--accent-soft) }
+.ep h3 { font-size: 21px; font-weight: 700; display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline }
+.ep h3 small { font: 400 13px var(--f-mono); color: var(--muted) }
+.why { margin: 0; color: var(--muted) }
+.say { display: grid; gap: 6px }
+.line { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 10px; font-size: 14px }
+.line .who { font: 500 11px var(--f-mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-top: 3px }
+.line.assistant .who { color: var(--accent) }
+.line.assistant .txt { font-weight: 500 }
+.status { display: flex; flex-wrap: wrap; gap: 6px }
+.pill { font: 500 12px var(--f-mono); border-radius: 999px; padding: 2px 9px; border: 1px solid currentColor }
+.pill.ok { color: var(--ok) } .pill.bad { color: var(--bad) } .pill.none { color: var(--muted); border-style: dashed }
+details { border-top: 1px solid var(--line); padding-top: 10px }
+summary { cursor: pointer; font-weight: 600; font-size: 13.5px }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 10px }
+.cols h4 { margin: 0 0 6px; font: 600 12px var(--f-body); text-transform: uppercase; letter-spacing: .07em; color: var(--muted) }
+ol.cmds { margin: 0; padding-left: 22px; font-family: var(--f-mono); font-size: 12px; max-height: 220px; overflow: auto }
+.premise { font-size: 14px; margin: 10px 0 0 }
+.failed { color: var(--bad); font-size: 13px }
+.issue { font-size: 13px; color: var(--ink); border: 1px solid var(--wait); border-radius: 8px; padding: 8px 10px }
+.issue b { color: var(--wait) }
+.empty { color: var(--muted); padding: 30px; text-align: center; border: 1px dashed var(--line); border-radius: 12px }
+.links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 14px; font-size: 14px; font-weight: 500 }
+.dl { font-size: 13px }
+.findings { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px; display: grid; gap: 14px }
+.findings h2 { font-size: 24px }
+.findings ul { margin: 0; padding-left: 20px; display: grid; gap: 10px; max-width: 90ch }
+.findings li b { font-family: var(--f-display) }
+footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
+@media (max-width: 860px) { .ep { grid-template-columns: 1fr } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>InteractiveWorld Episode Gallery</h1>
+    <p class="lede">First-person episodes from the InteractiveWorld simulator, across all six task categories. Each row is one TaskPack. The video replays what the person did before asking, then the oracle's actions. The transcript shows the request and the scripted oracle advice. Status pills report the oracle replay check and the full oracle-verbal run through the interaction runtime.</p>
+    <div class="links"><a href="#findings">What running them found</a><a href="taskpacks/tasks.json">All TaskPacks (tasks.json)</a><a href="https://github.com/wadhwaangad/interactiveworld-task-gallery">Source, tools and README</a><a href="https://github.com/facebookresearch/InteractiveWorld">InteractiveWorld</a></div>
+  </header>
+  <section class="strip" id="strip" aria-label="Summary"></section>
+  <nav class="filters" id="filters" aria-label="Filters"></nav>
+  <main class="list" id="list"></main>
+  <section class="findings" id="findings">
+    <h2>What running them found</h2>
+    <p class="why">Every task was replayed by its oracle and run through <code>run_taskpack --assistant oracle-verbal</code> on one RTX 4060 laptop under Windows. These findings belong to the release, not to the gallery tasks. All but the physics ones reproduce offline.</p>
+    <ul>
+      <li><b>oracle-verbal cannot run WATCH tasks.</b> Under <code>--assistant oracle-verbal</code> the Human is always scripted (<code>human_policy</code> is fixed to <code>auto</code>), and the scripted Human acts only after the Assistant speaks. So it never performs the opening of a WATCH task: the person stands still and the episode ends with <code>eval_valid=false</code>. WATCH cards show oracle-verbal as n/a. Their oracle replays pass.</li>
+      <li><b>GUIDE-14004: handoff parser.</b> The parser reads "not the tomato" in the third oracle line as part of the Stir step, so the scripted person's "That's done" is never accepted. <code>preflight_guide.py</code> finds this offline. <code>GUIDE-14004-REWORDED</code> rewords the line and passes.</li>
+      <li><b>NARRATE-87016 and ASK-87022: process scoring.</b> In both, every action succeeds and the world goal is met, but strict success never comes. <code>_process_commands_equivalent</code> forgives an optional <code>@place_spot</code> only for PutOn, not PutInside, and a required bare <code>[Drop]</code> matches nothing but itself, so the oracle's <code>[PutOnFloor]</code> fails it. <code>preflight_process.py</code> predicted both before any GPU time. A two-rule patch is in the repo, unapplied, because it changes benchmark scoring.</li>
+      <li><b>The public CLI cannot replay runtime commands.</b> <code>Action.parse</code> rejects <code>@place_spot</code> and container-space instance <code>(0)</code>, and dropping them changes what runs. <code>faithful_simulator.py</code> sends only those commands through the release's own unvalidated path. With it, the ORCHESTRATE-16013 replay that had failed now passes.</li>
+      <li><b>Windows physics.</b> GUIDE-109009's order labels never become readable (5.3 px of the 12 needed). FIND-28003's opening PutInside fails to settle in two of four launches. ORCHESTRATE-16013's knife returns settle about 13 cm high under oracle-verbal.</li>
+      <li><b>Packing ports.</b> The world builder cannot site three <code>packing_box</code> bodies in one Rs_int room, although each fits alone. Release tasks never use more than one. Scales below 0.5 were also rejected, and were clamped.</li>
+    </ul>
+  </section>
+  <footer>
+    <div id="generated"></div>
+    <div>Bundled TaskPacks come from <a href="https://github.com/facebookresearch/InteractiveWorld">facebookresearch/InteractiveWorld</a> (CC BY-NC 4.0) and are copied unchanged. Derived variants are new tasks built from bundled ones by <code>build_taskpacks.py</code>. Reused tasks are the earlier packing ports, repaired so they compile. A no-fault "stay silent" control was tried and dropped, because the runtime requires a WATCH task's unguided plan to differ from the oracle plan.</div>
+  </footer>
+</div>
+<script src="catalog.js"></script>
+<script src="results.js"></script>
+<script>
+(function () {
+  const tasks = (window.GALLERY_CATALOG || {}).tasks || [];
+  const results = (window.GALLERY_RESULTS || {}).results || {};
+  const CATS = ["Guidance", "Planning", "Accessibility", "Decision", "Prevention", "Finding"];
+  const SOURCES = { bundled: "Bundled", derived: "Derived variant", reused: "Reused port" };
+  const state = { cat: "all", src: "all" };
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const catVar = (c) => `var(--c-${String(c).toLowerCase()})`;
+
+  function layerPill(name, r) {
+    if (!r) return `<span class="pill none" title="not run yet">${name}: not run</span>`;
+    if (r.ok === null) return `<span class="pill none" title="${esc(r.unsupported || "")}">${name}: n/a</span>`;
+    return `<span class="pill ${r.ok ? "ok" : "bad"}">${name}: ${r.ok ? "pass" : "fail"}</span>`;
+  }
+
+  function card(t) {
+    const r = results[t.task_id] || {};
+    const video = r.story && r.story.video ? `results/${t.task_id}/${r.story.video}` : null;
+    const media = video
+      ? `<video controls preload="metadata" playsinline src="${esc(video)}"></video>`
+      : (r.story && r.story.error) || t.task_id.startsWith("PACK-")
+      ? `<div class="pending"><span>No video: the simulator could not build this world.</span></div>`
+      : `<div class="pending"><span>Video not rendered yet. To render it, run:</span><code>python run_gallery.py --layers story --only ${esc(t.task_id)}</code></div>`;
+    const lines = [];
+    (t.opening_utterances.length ? t.opening_utterances : [t.request]).forEach((s) => lines.push(["person", s]));
+    t.oracle_dialogue.forEach((s) => lines.push(["assistant", s]));
+    if (!t.oracle_dialogue.length) lines.push(["assistant", "(stays silent)"]);
+    const fails = []
+      .concat((r.check && r.check.failed_actions) || [], (r.story && r.story.failed_actions) || [])
+      .slice(0, 3);
+    const transcript = (r.verbal && r.verbal.transcript) || [];
+    return `<article class="ep" data-cat style="--cat:${catVar(t.category)}">
+      <div class="media">${media}</div>
+      <div class="body">
+        <div class="meta"><span class="cat">${esc(t.category)}</span>
+          <span class="tag src-${esc(t.source)}">${esc(SOURCES[t.source] || t.source)}${t.variant ? " · " + esc(t.variant) : ""}</span>
+          <span class="tag">${esc(t.scene)}</span>
+          ${t.tags.map((x) => `<span class="tag">${esc(x)}</span>`).join("")}</div>
+        <h3>${esc(t.task_id)}${t.base_task_id && t.source !== "bundled" ? `<small>from ${esc(t.base_task_id)}</small>` : ""}</h3>
+        <p class="why">${esc(t.why)}</p>
+        <div class="say">${lines.map(([w, s]) => `<div class="line ${w}"><span class="who">${w}</span><span class="txt">${esc(s)}</span></div>`).join("")}</div>
+        <div class="status">${layerPill("oracle replay", r.check)}${layerPill("oracle-verbal", r.verbal)}</div>
+        <a class="dl" href="taskpacks/${esc(t.file)}">Download TaskPack JSON</a>
+        ${fails.length ? `<div class="failed">Failed actions: <code>${fails.map(esc).join(", ")}</code></div>` : ""}
+        ${["check", "story", "verbal"].filter((k) => r[k] && !r[k].ok && r[k].error).map((k) =>
+          `<div class="failed">${k === "verbal" ? "oracle-verbal" : k === "check" ? "Oracle replay" : "Video run"} stopped: <code>${esc(r[k].error.replace(/^simulator\.errors\.\w+:\s*/, ""))}</code></div>`).join("")}
+        ${r.verbal && r.verbal.ok === null && r.verbal.unsupported ? `<div class="issue"><b>oracle-verbal ${esc(r.verbal.unsupported)}.</b> The oracle replay and the video still cover this task.</div>` : ""}
+        ${t.known_issue ? `<div class="issue"><b>Known issue.</b> ${esc(t.known_issue)}</div>` : ""}
+        <details><summary>Story, goal and oracle program</summary>
+          <p class="premise">${esc(t.premise)}</p>
+          <div class="cols">
+            <div><h4>Goal (checked on world state)</h4><ul class="mono">${t.goals.map((g) => `<li>${esc(g)}</li>`).join("")}</ul></div>
+            <div><h4>Oracle actions</h4><ol class="cmds">${t.oracle_commands.map((c) => `<li>${esc(c)}</li>`).join("")}</ol></div>
+            <div><h4>Before the request (${t.prologue.length})</h4><ol class="cmds">${t.prologue.map((c) => `<li>${esc(c)}</li>`).join("")}</ol></div>
+          </div>
+          ${transcript.length ? `<h4 style="margin-top:12px">Recorded oracle-verbal transcript</h4><ol class="cmds">${transcript.map((m) => `<li>${esc(typeof m === "string" ? m : JSON.stringify(m))}</li>`).join("")}</ol>` : ""}
+        </details>
+      </div></article>`;
+  }
+
+  function render() {
+    const shown = tasks.filter((t) => (state.cat === "all" || t.category === state.cat) && (state.src === "all" || t.source === state.src));
+    $("#list").innerHTML = shown.length ? shown.map(card).join("") : `<div class="empty">No tasks match these filters.</div>`;
+    document.querySelectorAll(".chip").forEach((b) => b.setAttribute("aria-pressed", String(state[b.dataset.k] === b.dataset.v)));
+  }
+
+  function stats() {
+    const n = (f) => tasks.filter(f).length;
+    const ran = Object.values(results);
+    // a WATCH task passes on its oracle replay alone: oracle-verbal cannot run WATCH (verbal.ok === null)
+    const passed = ran.filter((r) => r.check && r.check.ok && r.verbal && r.verbal.ok !== false).length;
+    const videos = ran.filter((r) => r.story && r.story.video).length;
+    const items = [[tasks.length, "tasks"], [new Set(tasks.map((t) => t.category)).size, "categories"],
+      [new Set(tasks.map((t) => t.scene)).size, "scenes"], [n((t) => t.source === "derived"), "new variants"],
+      [videos, "videos rendered"], [ran.length ? `${passed}/${ran.length}` : "–", "pass both oracle checks"]];
+    $("#strip").innerHTML = items.map(([b, s]) => `<div class="stat"><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join("");
+    $("#generated").textContent = window.GALLERY_RESULTS ? `Results generated ${window.GALLERY_RESULTS.generated}.` : "No GPU results yet: run run_gallery.py to fill in videos and status.";
+  }
+
+  function filters() {
+    const chip = (k, v, label) => `<button class="chip" type="button" data-k="${k}" data-v="${esc(v)}">${esc(label)}</button>`;
+    $("#filters").innerHTML = `<span class="label">Category</span>${chip("cat", "all", "All")}${CATS.filter((c) => tasks.some((t) => t.category === c)).map((c) => chip("cat", c, c)).join("")}
+      <span class="sep"></span><span class="label">Source</span>${chip("src", "all", "All")}${Object.entries(SOURCES).map(([k, v]) => chip("src", k, v)).join("")}`;
+    $("#filters").addEventListener("click", (e) => {
+      const b = e.target.closest(".chip"); if (!b) return;
+      state[b.dataset.k] = b.dataset.v; render();
+    });
+  }
+
+  if (!tasks.length) { $("#list").innerHTML = `<div class="empty">catalog.js is missing. Run <code>python build_taskpacks.py</code>.</div>`; return; }
+  filters(); stats(); render();
+})();
+</script>
+</body>
+</html>

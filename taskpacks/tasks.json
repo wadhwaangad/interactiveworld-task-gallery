@@ -1,0 +1,164 @@
+{
+  "tasks": [
+    {
+      "task_id": "GUIDE-14004",
+      "taskpack_path": "bundled/GUIDE-14004.taskpack.json",
+      "taskpack_sha256": "sha256:489484afe51fd3f28a323e58e9ca7d2c091c1018862e85d77fcbb058d5dd6d15"
+    },
+    {
+      "task_id": "GUIDE-14011",
+      "taskpack_path": "bundled/GUIDE-14011.taskpack.json",
+      "taskpack_sha256": "sha256:f5bcffdb43515e7eea67bbc709735df6cbe7fda5d522e2810aa537caf555cae0"
+    },
+    {
+      "task_id": "GUIDE-109009",
+      "taskpack_path": "bundled/GUIDE-109009.taskpack.json",
+      "taskpack_sha256": "sha256:5c846e89d3962e47e68088998a12889391994c23de14c6626af787d5a8a8991d"
+    },
+    {
+      "task_id": "ORCHESTRATE-99902",
+      "taskpack_path": "bundled/ORCHESTRATE-99902.taskpack.json",
+      "taskpack_sha256": "sha256:9ed082534c076d523441506e03bcc84683f0f165dc745decd0e6b81c862f83b8"
+    },
+    {
+      "task_id": "ORCHESTRATE-16013",
+      "taskpack_path": "bundled/ORCHESTRATE-16013.taskpack.json",
+      "taskpack_sha256": "sha256:67973da4c5a6d14f96c35750bbce1c86df1637892a1be960a97b514e038eb7fe"
+    },
+    {
+      "task_id": "ORCHESTRATE-94001",
+      "taskpack_path": "bundled/ORCHESTRATE-94001.taskpack.json",
+      "taskpack_sha256": "sha256:e9d0344fe7bca7adaee71acf4e59841bd44e444ce4abe3e9bd400d8e0cd6b66c"
+    },
+    {
+      "task_id": "NARRATE-87016",
+      "taskpack_path": "bundled/NARRATE-87016.taskpack.json",
+      "taskpack_sha256": "sha256:8f0671f78b0e0af84047e3ace39efa62cc85292af5dde67c068bea1928f2ce8d"
+    },
+    {
+      "task_id": "NARRATE-14005",
+      "taskpack_path": "bundled/NARRATE-14005.taskpack.json",
+      "taskpack_sha256": "sha256:25188e4645b5794a844a69de0c5230dc2a581f69cae4121940d118593e578ac5"
+    },
+    {
+      "task_id": "NARRATE-81009",
+      "taskpack_path": "bundled/NARRATE-81009.taskpack.json",
+      "taskpack_sha256": "sha256:fa68bcf4a7773033b54269844fafa851bba65ed847e4202fe1dd6f312e21a875"
+    },
+    {
+      "task_id": "ASK-12802",
+      "taskpack_path": "bundled/ASK-12802.taskpack.json",
+      "taskpack_sha256": "sha256:f07d344911885086560f2a0d05010d8440d94f430ab0c397f5bb0b95a6355416"
+    },
+    {
+      "task_id": "ASK-13011",
+      "taskpack_path": "bundled/ASK-13011.taskpack.json",
+      "taskpack_sha256": "sha256:7749350adaa9fa104c58c0e0fffefe7c5d0e07ae9453f172617d1c28e3a06c03"
+    },
+    {
+      "task_id": "ASK-87022",
+      "taskpack_path": "bundled/ASK-87022.taskpack.json",
+      "taskpack_sha256": "sha256:980dcfae735863cc12ed7aea723b163262440dc5a027a8cc179c3499d8630c54"
+    },
+    {
+      "task_id": "WATCH-28008",
+      "taskpack_path": "bundled/WATCH-28008.taskpack.json",
+      "taskpack_sha256": "sha256:972e96ab0f5bc4ad1b5a71d8d800232db461941101bf94ab8a30da7859f1eae1"
+    },
+    {
+      "task_id": "WATCH-81020",
+      "taskpack_path": "bundled/WATCH-81020.taskpack.json",
+      "taskpack_sha256": "sha256:3860fb31586a03834e377a85778a1740df15cad181bcd65463a6756a59e1d12b"
+    },
+    {
+      "task_id": "WATCH-93005",
+      "taskpack_path": "bundled/WATCH-93005.taskpack.json",
+      "taskpack_sha256": "sha256:cfb755c68eee95c556be74e119064c5ba704da8068510e41ee97608c14315cae"
+    },
+    {
+      "task_id": "WATCH-47003",
+      "taskpack_path": "bundled/WATCH-47003.taskpack.json",
+      "taskpack_sha256": "sha256:bd3d31ab6a4b03090c45f80b5af9553ad2745f65e729e0a5e13e05ddcaa0780e"
+    },
+    {
+      "task_id": "FIND-87004",
+      "taskpack_path": "bundled/FIND-87004.taskpack.json",
+      "taskpack_sha256": "sha256:4fe69c5b7090e1ccf53fc65210af58cd5bad6f5056dcd0d048fcdfb7b2081306"
+    },
+    {
+      "task_id": "FIND-14015",
+      "taskpack_path": "bundled/FIND-14015.taskpack.json",
+      "taskpack_sha256": "sha256:b4dc63856a5f4f04327c1880cdd79a14254970058dcf484b28d5c8573cada163"
+    },
+    {
+      "task_id": "FIND-28003",
+      "taskpack_path": "bundled/FIND-28003.taskpack.json",
+      "taskpack_sha256": "sha256:211aef10c6383426daabde73f092f0ce396faa54476b812fa04ee57843ff4bcb"
+    },
+    {
+      "task_id": "ASK-12802-CF-REPORT",
+      "taskpack_path": "derived/ASK-12802-CF-REPORT.taskpack.json",
+      "taskpack_sha256": "sha256:5f5f3346e44bb6ac4c67b6c2b2a04088898c79c65804eba61684f82d9a9ebb17"
+    },
+    {
+      "task_id": "ASK-12802-CF-SPOKEN",
+      "taskpack_path": "derived/ASK-12802-CF-SPOKEN.taskpack.json",
+      "taskpack_sha256": "sha256:432aadb3f1b50cc47f9fc0deb80ac4de051484736e7cb848fe56dbef9e4ae544"
+    },
+    {
+      "task_id": "ASK-12802-RETARGET",
+      "taskpack_path": "derived/ASK-12802-RETARGET.taskpack.json",
+      "taskpack_sha256": "sha256:661851bc5093bdea1d1bc158e2b638ea034ba7a97568c10b98a90572c563f825"
+    },
+    {
+      "task_id": "WATCH-28008-ES",
+      "taskpack_path": "derived/WATCH-28008-ES.taskpack.json",
+      "taskpack_sha256": "sha256:53ffd30025c1b4dcaceee0a6d121b26647d313bacec13f0747b0714011f986a1"
+    },
+    {
+      "task_id": "WATCH-28008-LONGGAP",
+      "taskpack_path": "derived/WATCH-28008-LONGGAP.taskpack.json",
+      "taskpack_sha256": "sha256:9de2bc1718058cec2d9b758ec5b526c8fcddb28b13d117c781bb35cfdf29a6d0"
+    },
+    {
+      "task_id": "FIND-14015-MOVED",
+      "taskpack_path": "derived/FIND-14015-MOVED.taskpack.json",
+      "taskpack_sha256": "sha256:f9662eacacd697feb11b12b6f40d27fbcc7d1847d1022f6c17c8a3f35e413920"
+    },
+    {
+      "task_id": "GUIDE-14004-REWORDED",
+      "taskpack_path": "derived/GUIDE-14004-REWORDED.taskpack.json",
+      "taskpack_sha256": "sha256:92fa32186807ab5a5b32bb4d99afc7d2c35822904fa79bb9548c2c716cb59783"
+    },
+    {
+      "task_id": "PACK-BEACH-HOLIDAY",
+      "taskpack_path": "pack/PACK-BEACH-HOLIDAY.taskpack.json",
+      "taskpack_sha256": "sha256:ff3d2fc04e8259bf8de0bf494bf75dbb29fa9439aa18dd75ee31a931693dcaf5"
+    },
+    {
+      "task_id": "PACK-GYM-WEEKEND",
+      "taskpack_path": "pack/PACK-GYM-WEEKEND.taskpack.json",
+      "taskpack_sha256": "sha256:260e88b86bb49637f9f3407372e180611fdb2ee0d484df62bcdbf668b8dcd7ac"
+    },
+    {
+      "task_id": "PACK-MOVE-OUT",
+      "taskpack_path": "pack/PACK-MOVE-OUT.taskpack.json",
+      "taskpack_sha256": "sha256:e2d21119694b7e28c2c6078ae9d7f5a7e7378ab90a89a70b417fe965756627a5"
+    },
+    {
+      "task_id": "PACK-WEEKEND-TRIP",
+      "taskpack_path": "pack/PACK-WEEKEND-TRIP.taskpack.json",
+      "taskpack_sha256": "sha256:bbc0435a86431b4cf9af037f9550f5a5fc12caf7221c1cc8110c2c883882d526"
+    },
+    {
+      "task_id": "PACK-WINTER-VISIT",
+      "taskpack_path": "pack/PACK-WINTER-VISIT.taskpack.json",
+      "taskpack_sha256": "sha256:4a378a4e3850706131646d751284da157f9a63d97a54d7bafb452cf3b39e53bd"
+    },
+    {
+      "task_id": "PACK-WORK-TRIP",
+      "taskpack_path": "pack/PACK-WORK-TRIP.taskpack.json",
+      "taskpack_sha256": "sha256:f3e0e20f6bb8be0206da0a56c083dac2e91e920ed7f099a2cdeadd6d9d404fcc"
+    }
+  ]
+}

@@ -1,0 +1,5814 @@
+{
+ "generated": "2026-11-15 03:02",
+ "results": {
+  "ASK-12802": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_3"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_3"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 3,
+    "steps_planned": 3,
+    "seconds": 298.3
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_3"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_3"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 21,
+    "steps_planned": 21,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 483.6
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": false,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 415.9
+   }
+  },
+  "ASK-12802-CF-REPORT": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_3"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_3"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 3,
+    "steps_planned": 3,
+    "seconds": 455.1
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_3"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_3"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 21,
+    "steps_planned": 21,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 457.8
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": false,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 503.9
+   }
+  },
+  "ASK-12802-CF-SPOKEN": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_3"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_3"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 3,
+    "steps_planned": 3,
+    "seconds": 388.4
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_3"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_3"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 21,
+    "steps_planned": 21,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 459.8
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": false,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 461.1
+   }
+  },
+  "ASK-12802-RETARGET": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_call"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_call"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 3,
+    "steps_planned": 3,
+    "seconds": 365.4
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_call"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_call"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 21,
+    "steps_planned": 21,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 467.3
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": false,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 467.7
+   }
+  },
+  "ASK-13011": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_16",
+        "target": "surf_7"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_15",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_17",
+        "target": null
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 2,
+      "n_prohibitions_ok": 2,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_16",
+        "target": "surf_7"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_15",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_17",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 3,
+    "steps_planned": 3,
+    "seed": 0,
+    "seconds": 1962.3
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_16",
+        "target": "surf_7"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_15",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_17",
+        "target": null
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 2,
+      "n_prohibitions_ok": 2,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_16",
+        "target": "surf_7"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_15",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_17",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 64,
+    "steps_planned": 64,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 2092.0
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 2003.5
+   }
+  },
+  "ASK-87022": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "near",
+        "subject": "item_1",
+        "target": "surf_1"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "near",
+        "subject": "item_1",
+        "target": "surf_1"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 2,
+    "steps_planned": 3,
+    "seconds": 349.2
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "near",
+        "subject": "item_1",
+        "target": "surf_1"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "near",
+        "subject": "item_1",
+        "target": "surf_1"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 8,
+    "steps_planned": 10,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 366.4
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": false,
+     "verification_points_met": false,
+     "assistant_declared_done": false,
+     "requires_assistant_done": true,
+     "strict_success": false
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 447.7
+   }
+  },
+  "FIND-14015": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "gift_target",
+        "target": "surf_remote"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "gift_target",
+        "target": "surf_remote"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 4,
+    "steps_planned": 4,
+    "seconds": 639.8
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "gift_target",
+        "target": "surf_remote"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "gift_target",
+        "target": "surf_remote"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 21,
+    "steps_planned": 21,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 770.3
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 770.0
+   }
+  },
+  "FIND-14015-MOVED": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "gift_target",
+        "target": "surf_remote"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "gift_target",
+        "target": "surf_remote"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 4,
+    "steps_planned": 4,
+    "seconds": 759.0
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "gift_target",
+        "target": "surf_remote"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "gift_target",
+        "target": "surf_remote"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 26,
+    "steps_planned": 26,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 942.1
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 915.7
+   }
+  },
+  "FIND-28003": {
+   "check": {
+    "ok": false,
+    "rc": 1,
+    "seed": 1,
+    "error": "simulator.errors.SimulatorError: TaskPack prologue action 3 '[PutInside] <mushrooms> (1) <box> (1)' failed (UNSTABLE_AFTER_RELEASE): live INSIDE relation is false after 3 geometry-backed settle attempt(s): mushrooms -> box; the task was reset",
+    "seconds": 510.9
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "mushrooms",
+        "target": "surf_dining"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "on",
+        "subject": "box",
+        "target": "surf_dining"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "closed",
+        "subject": "unit_fridge",
+        "target": null
+       }
+      ],
+      "n_achievements": 2,
+      "n_achievements_ok": 2,
+      "n_done": 2,
+      "n_positive_done": 2,
+      "n_positive_total": 2,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 2,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "mushrooms",
+        "target": "surf_dining"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "on",
+        "subject": "box",
+        "target": "surf_dining"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "closed",
+        "subject": "unit_fridge",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 2,
+     "n_total": 2,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 26,
+    "steps_planned": 32,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 726.6
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 870.6
+   }
+  },
+  "FIND-87004": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "part_1",
+        "target": "unit_a"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "part_1",
+        "target": "unit_a"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 3,
+    "steps_planned": 4,
+    "seed": 0,
+    "seconds": 691.1
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "part_1",
+        "target": "unit_a"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "part_1",
+        "target": "unit_a"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 24,
+    "steps_planned": 25,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 875.5
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 959.8
+   }
+  },
+  "GUIDE-109009": {
+   "check": {
+    "ok": false,
+    "rc": 1,
+    "seed": 1,
+    "error": "simulator.errors.SimulatorError: TaskPack prologue action 16 '[LookAt] <order_a> (1)' failed (UNREADABLE_LABEL): order_a: too_small; detail=5.3px/12px, pitch=+52.3deg, distance=0.67m, roll=+21.3deg; the task was reset",
+    "seconds": 492.4
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_a",
+         "milk_b",
+         "milk_c"
+        ],
+        "count": 1,
+        "idx": 0,
+        "inside_candidates": [
+         "milk_a"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_a_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "water_a",
+         "water_c"
+        ],
+        "count": 1,
+        "idx": 1,
+        "inside_candidates": [
+         "water_a"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_a_water_100_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_a",
+         "milk_b",
+         "milk_c"
+        ],
+        "count": 1,
+        "idx": 2,
+        "inside_candidates": [
+         "milk_b"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_b_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "juice_b",
+         "juice_c"
+        ],
+        "count": 1,
+        "idx": 3,
+        "inside_candidates": [
+         "juice_b"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_b_juice_200_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_a",
+         "milk_b",
+         "milk_c"
+        ],
+        "count": 1,
+        "idx": 4,
+        "inside_candidates": [
+         "milk_c"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "juice_b",
+         "juice_c"
+        ],
+        "count": 1,
+        "idx": 5,
+        "inside_candidates": [
+         "juice_c"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_juice_200_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "water_a",
+         "water_c"
+        ],
+        "count": 1,
+        "idx": 6,
+        "inside_candidates": [
+         "water_c"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_water_100_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       }
+      ],
+      "goals": [],
+      "n_achievements": 7,
+      "n_achievements_ok": 7,
+      "n_done": 7,
+      "n_positive_done": 7,
+      "n_positive_total": 7,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 7,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_a",
+         "milk_b",
+         "milk_c"
+        ],
+        "count": 1,
+        "idx": 0,
+        "inside_candidates": [
+         "milk_a"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_a_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "water_a",
+         "water_c"
+        ],
+        "count": 1,
+        "idx": 1,
+        "inside_candidates": [
+         "water_a"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_a_water_100_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_a",
+         "milk_b",
+         "milk_c"
+        ],
+        "count": 1,
+        "idx": 2,
+        "inside_candidates": [
+         "milk_b"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_b_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "juice_b",
+         "juice_c"
+        ],
+        "count": 1,
+        "idx": 3,
+        "inside_candidates": [
+         "juice_b"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_b_juice_200_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_a",
+         "milk_b",
+         "milk_c"
+        ],
+        "count": 1,
+        "idx": 4,
+        "inside_candidates": [
+         "milk_c"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "juice_b",
+         "juice_c"
+        ],
+        "count": 1,
+        "idx": 5,
+        "inside_candidates": [
+         "juice_c"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_juice_200_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "water_a",
+         "water_c"
+        ],
+        "count": 1,
+        "idx": 6,
+        "inside_candidates": [
+         "water_c"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_water_100_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 7,
+     "n_total": 7,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [
+     "[LookAt] <order_a> (1) -- UNREADABLE_LABEL: order_a: too_small; detail=5.3px/12px, pitch=+52.3deg, distance=0.67m, roll=+21.3deg",
+     "[LookAt] <order_b> (1) -- UNREADABLE_LABEL: order_b: too_small; detail=5.4px/12px, pitch=+53.6deg, distance=0.72m, roll=-41.9deg",
+     "[LookAt] <order_c> (1) -- UNREADABLE_LABEL: order_c: too_small; detail=5.2px/12px, pitch=+52.4deg, distance=0.67m, roll=+4.1deg"
+    ],
+    "steps_run": 46,
+    "steps_planned": 48,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 1041.5
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 1,
+    "native": {},
+    "human_policy_status": null,
+    "validity": {},
+    "transcript": [],
+    "seconds": 714.6,
+    "error": "EvalConfigError: TaskPack setup command '[LookAt] <order_a> (1)' failed: UNREADABLE_LABEL (same prologue grasp as the oracle replay)"
+   }
+  },
+  "GUIDE-14004": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "tomato",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "sliced_tomato",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "cooked_tomato",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "held",
+        "subject": "plate",
+        "target": null
+       }
+      ],
+      "n_achievements": 4,
+      "n_achievements_ok": 4,
+      "n_done": 4,
+      "n_positive_done": 4,
+      "n_positive_total": 4,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 4,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "tomato",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "sliced_tomato",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "cooked_tomato",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "held",
+        "subject": "plate",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 4,
+     "n_total": 4,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 15,
+    "steps_planned": 15,
+    "seconds": 639.3
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "tomato",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "sliced_tomato",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "cooked_tomato",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "held",
+        "subject": "plate",
+        "target": null
+       }
+      ],
+      "n_achievements": 4,
+      "n_achievements_ok": 4,
+      "n_done": 4,
+      "n_positive_done": 4,
+      "n_positive_total": 4,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 4,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "tomato",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "sliced_tomato",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "cooked_tomato",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "held",
+        "subject": "plate",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 4,
+     "n_total": 4,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 28,
+    "steps_planned": 28,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 867.3
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 0,
+    "native": {
+     "contract_world_success": false,
+     "process_requirements_met": false,
+     "verification_points_met": false,
+     "assistant_declared_done": false,
+     "requires_assistant_done": true,
+     "strict_success": false
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 858.3
+   }
+  },
+  "GUIDE-14004-REWORDED": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "tomato",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "sliced_tomato",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "cooked_tomato",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "held",
+        "subject": "plate",
+        "target": null
+       }
+      ],
+      "n_achievements": 4,
+      "n_achievements_ok": 4,
+      "n_done": 4,
+      "n_positive_done": 4,
+      "n_positive_total": 4,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 4,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "tomato",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "sliced_tomato",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "cooked_tomato",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "held",
+        "subject": "plate",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 4,
+     "n_total": 4,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 15,
+    "steps_planned": 15,
+    "seconds": 620.0
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "tomato",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "sliced_tomato",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "cooked_tomato",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "held",
+        "subject": "plate",
+        "target": null
+       }
+      ],
+      "n_achievements": 4,
+      "n_achievements_ok": 4,
+      "n_done": 4,
+      "n_positive_done": 4,
+      "n_positive_total": 4,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 4,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "tomato",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "sliced_tomato",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "cooked_tomato",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "held",
+        "subject": "plate",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 4,
+     "n_total": 4,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 28,
+    "steps_planned": 28,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 817.8
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 800.4
+   }
+  },
+  "GUIDE-14011": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "lemonade",
+        "target": "fridge"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "puree",
+        "target": "fridge"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "closed",
+        "subject": "fridge",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "phone",
+        "target": "cooling_counter"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "running",
+        "subject": "fan",
+        "target": null
+       }
+      ],
+      "n_achievements": 4,
+      "n_achievements_ok": 4,
+      "n_done": 4,
+      "n_positive_done": 4,
+      "n_positive_total": 4,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 4,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "lemonade",
+        "target": "fridge"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "puree",
+        "target": "fridge"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "closed",
+        "subject": "fridge",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "phone",
+        "target": "cooling_counter"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "running",
+        "subject": "fan",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 4,
+     "n_total": 4,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 10,
+    "steps_planned": 10,
+    "seconds": 538.5
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "lemonade",
+        "target": "fridge"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "puree",
+        "target": "fridge"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "closed",
+        "subject": "fridge",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "phone",
+        "target": "cooling_counter"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "running",
+        "subject": "fan",
+        "target": null
+       }
+      ],
+      "n_achievements": 4,
+      "n_achievements_ok": 4,
+      "n_done": 4,
+      "n_positive_done": 4,
+      "n_positive_total": 4,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 4,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "lemonade",
+        "target": "fridge"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "puree",
+        "target": "fridge"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "closed",
+        "subject": "fridge",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "phone",
+        "target": "cooling_counter"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "running",
+        "subject": "fan",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 4,
+     "n_total": 4,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 12,
+    "steps_planned": 12,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 901.9
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 1155.3
+   }
+  },
+  "NARRATE-14005": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "held",
+        "subject": "spray",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cactus",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "skin_cream",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 3,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "sponge",
+        "target": null
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 3,
+      "n_prohibitions_ok": 3,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "held",
+        "subject": "spray",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cactus",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "skin_cream",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 3,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "sponge",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 4,
+    "steps_planned": 5,
+    "seconds": 85.2
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "held",
+        "subject": "spray",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cactus",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "skin_cream",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 3,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "sponge",
+        "target": null
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 3,
+      "n_prohibitions_ok": 3,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "held",
+        "subject": "spray",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cactus",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "skin_cream",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 3,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "sponge",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 8,
+    "steps_planned": 9,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 181.2
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 174.4
+   }
+  },
+  "NARRATE-81009": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "new_mug",
+        "target": "hazard_table"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cup_left",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cup_right",
+        "target": null
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 2,
+      "n_prohibitions_ok": 2,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "new_mug",
+        "target": "hazard_table"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cup_left",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cup_right",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 6,
+    "steps_planned": 6,
+    "seed": 0,
+    "seconds": 254.8
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "new_mug",
+        "target": "hazard_table"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cup_left",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cup_right",
+        "target": null
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 2,
+      "n_prohibitions_ok": 2,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "new_mug",
+        "target": "hazard_table"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cup_left",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 2,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "cup_right",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 11,
+    "steps_planned": 11,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 350.1
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 341.8
+   }
+  },
+  "NARRATE-87016": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "a_cleanup_guide",
+        "target": "guide_table"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "debris_bag",
+        "target": "sharps_bin"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "inside",
+        "subject": "apple",
+        "target": "fridge"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "inside",
+        "subject": "milk",
+        "target": "fridge"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "on",
+        "subject": "cup",
+        "target": "hazard_counter"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "bowl",
+        "target": "hazard_counter"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 6,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "sponge",
+        "target": null
+       }
+      ],
+      "n_achievements": 5,
+      "n_achievements_ok": 5,
+      "n_done": 5,
+      "n_positive_done": 5,
+      "n_positive_total": 5,
+      "n_prohibitions": 2,
+      "n_prohibitions_ok": 2,
+      "n_total": 5,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "a_cleanup_guide",
+        "target": "guide_table"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "debris_bag",
+        "target": "sharps_bin"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "inside",
+        "subject": "apple",
+        "target": "fridge"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "inside",
+        "subject": "milk",
+        "target": "fridge"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "on",
+        "subject": "cup",
+        "target": "hazard_counter"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "bowl",
+        "target": "hazard_counter"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 6,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "sponge",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 5,
+     "n_total": 5,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [
+     "[PutInside] <broken_glass> (1) <debris_bag> (1) @place_spot=0.0:0.0 -- UNSTABLE_AFTER_RELEASE: live INSIDE relation is false after 1 geometry-backed settle attempt(s): broken_glass -> debris_bag"
+    ],
+    "steps_run": 16,
+    "steps_planned": 17,
+    "seed": 0,
+    "seconds": 452.5
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "a_cleanup_guide",
+        "target": "guide_table"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "debris_bag",
+        "target": "sharps_bin"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "inside",
+        "subject": "apple",
+        "target": "fridge"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "inside",
+        "subject": "milk",
+        "target": "fridge"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "on",
+        "subject": "cup",
+        "target": "hazard_counter"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "bowl",
+        "target": "hazard_counter"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 6,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "sponge",
+        "target": null
+       }
+      ],
+      "n_achievements": 5,
+      "n_achievements_ok": 5,
+      "n_done": 5,
+      "n_positive_done": 5,
+      "n_positive_total": 5,
+      "n_prohibitions": 2,
+      "n_prohibitions_ok": 2,
+      "n_total": 5,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "a_cleanup_guide",
+        "target": "guide_table"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "debris_bag",
+        "target": "sharps_bin"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "inside",
+        "subject": "apple",
+        "target": "fridge"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "inside",
+        "subject": "milk",
+        "target": "fridge"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "on",
+        "subject": "cup",
+        "target": "hazard_counter"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "bowl",
+        "target": "hazard_counter"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 6,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "sponge",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 5,
+     "n_total": 5,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 25,
+    "steps_planned": 26,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 594.6
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": false,
+     "verification_points_met": false,
+     "assistant_declared_done": false,
+     "requires_assistant_done": true,
+     "strict_success": false
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 611.0
+   }
+  },
+  "ORCHESTRATE-16013": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_banana",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_orange",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_mango",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_apple",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_kiwi",
+        "target": null
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_pear",
+        "target": null
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_banana_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 7,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_orange_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 8,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_mango_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 9,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_apple_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 10,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_kiwi_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 11,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_pear_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 12,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_guest_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 13,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_guest_2",
+        "target": "surf_3"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 14,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_cheesecake",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 15,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_grape",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 16,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_pineapple",
+        "target": null
+       }
+      ],
+      "n_achievements": 14,
+      "n_achievements_ok": 14,
+      "n_done": 14,
+      "n_positive_done": 14,
+      "n_positive_total": 14,
+      "n_prohibitions": 3,
+      "n_prohibitions_ok": 3,
+      "n_total": 14,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_banana",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_orange",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_mango",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_apple",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_kiwi",
+        "target": null
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_pear",
+        "target": null
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_banana_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 7,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_orange_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 8,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_mango_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 9,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_apple_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 10,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_kiwi_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 11,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_pear_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 12,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_guest_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 13,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_guest_2",
+        "target": "surf_3"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 14,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_cheesecake",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 15,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_grape",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 16,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_pineapple",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 14,
+     "n_total": 14,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 37,
+    "steps_planned": 37,
+    "seed": 0,
+    "seconds": 1194.5
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_banana",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_orange",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_mango",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_apple",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_kiwi",
+        "target": null
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_pear",
+        "target": null
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_banana_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 7,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_orange_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 8,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_mango_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 9,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_apple_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 10,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_kiwi_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 11,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_pear_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 12,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_guest_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 13,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_guest_2",
+        "target": "surf_3"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 14,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_cheesecake",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 15,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_grape",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 16,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_pineapple",
+        "target": null
+       }
+      ],
+      "n_achievements": 14,
+      "n_achievements_ok": 14,
+      "n_done": 14,
+      "n_positive_done": 14,
+      "n_positive_total": 14,
+      "n_prohibitions": 3,
+      "n_prohibitions_ok": 3,
+      "n_total": 14,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_banana",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_orange",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_mango",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_apple",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_kiwi",
+        "target": null
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "cut",
+        "subject": "item_pear",
+        "target": null
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_banana_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 7,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_orange_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 8,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_mango_sliced",
+        "target": "plate_guest_1"
+       },
+       {
+        "idx": 9,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_apple_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 10,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_kiwi_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 11,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_pear_sliced",
+        "target": "plate_guest_2"
+       },
+       {
+        "idx": 12,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_guest_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 13,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_guest_2",
+        "target": "surf_3"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 14,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_cheesecake",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 15,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_grape",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 16,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "item_pineapple",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 14,
+     "n_total": 14,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [
+     "[PutOn] <item_knife> (1) <surf_tool> (1) @place_spot=0.0:0.0 -- UNSTABLE_AFTER_RELEASE: live ON relation is false after 1 geometry-backed settle attempt(s): item_knife -> surf_tool",
+     "[PutOn] <item_knife> (1) <surf_tool> (1) @place_spot=0.0:0.0 -- UNSTABLE_AFTER_RELEASE: live ON relation is false after 1 geometry-backed settle attempt(s): item_knife -> surf_tool",
+     "[PutOn] <item_knife> (1) <surf_tool> (1) @place_spot=0.0:0.0 -- UNSTABLE_AFTER_RELEASE: live ON relation is false after 1 geometry-backed settle attempt(s): item_knife -> surf_tool",
+     "[PutOn] <item_knife> (1) <surf_tool> (1) @place_spot=0.0:0.0 -- UNSTABLE_AFTER_RELEASE: live ON relation is false after 1 geometry-backed settle attempt(s): item_knife -> surf_tool",
+     "[PutOn] <item_knife> (1) <surf_tool> (1) @place_spot=0.0:0.0 -- UNSTABLE_AFTER_RELEASE: live ON relation is false after 1 geometry-backed settle attempt(s): item_knife -> surf_tool"
+    ],
+    "steps_run": 41,
+    "steps_planned": 41,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 1435.6
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 0,
+    "native": {
+     "contract_world_success": false,
+     "process_requirements_met": false,
+     "verification_points_met": false,
+     "assistant_declared_done": false,
+     "requires_assistant_done": true,
+     "strict_success": false
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 1079.2,
+    "error": "ran out of ticks (162/162): the scripted human's 2nd and 3rd '[PutOn] <item_knife> (1) <surf_tool> (1) @place_spot=0.0:0.0' were refused ('placement failed closed: live ON relation is false': the knife settled ~13 cm above the tool counter), so the guest-one instruction never completed and the assistant never spoke again"
+   }
+  },
+  "ORCHESTRATE-94001": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_3"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_5"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_4",
+        "target": "surf_1"
+       }
+      ],
+      "n_achievements": 4,
+      "n_achievements_ok": 4,
+      "n_done": 4,
+      "n_positive_done": 4,
+      "n_positive_total": 4,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 4,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_3"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_5"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_4",
+        "target": "surf_1"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 4,
+     "n_total": 4,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 13,
+    "steps_planned": 13,
+    "seconds": 225.1
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_3"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_5"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_4",
+        "target": "surf_1"
+       }
+      ],
+      "n_achievements": 4,
+      "n_achievements_ok": 4,
+      "n_done": 4,
+      "n_positive_done": 4,
+      "n_positive_total": 4,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 4,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_2",
+        "target": "surf_3"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_5"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_4",
+        "target": "surf_1"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 4,
+     "n_total": 4,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 16,
+    "steps_planned": 16,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 356.6
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 300.3
+   }
+  },
+  "ORCHESTRATE-99902": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_1",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_3",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_4",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 5,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_5",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 6,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_6",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 7,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_7",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 8,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_8",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 9,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_9",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 10,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_5",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 11,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_6",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 12,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_7",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 13,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_8",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 14,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_9",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 15,
+        "ok": true,
+        "pred": "off",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 16,
+        "ok": true,
+        "pred": "closed",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 17,
+        "ok": true,
+        "pred": "off",
+        "subject": "surf_3",
+        "target": null
+       }
+      ],
+      "n_achievements": 5,
+      "n_achievements_ok": 5,
+      "n_done": 5,
+      "n_positive_done": 5,
+      "n_positive_total": 5,
+      "n_prohibitions": 13,
+      "n_prohibitions_ok": 13,
+      "n_total": 5,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_1",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_3",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_4",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 5,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_5",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 6,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_6",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 7,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_7",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 8,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_8",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 9,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_9",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 10,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_5",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 11,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_6",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 12,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_7",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 13,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_8",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 14,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_9",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 15,
+        "ok": true,
+        "pred": "off",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 16,
+        "ok": true,
+        "pred": "closed",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 17,
+        "ok": true,
+        "pred": "off",
+        "subject": "surf_3",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 5,
+     "n_total": 5,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 41,
+    "steps_planned": 45,
+    "seed": 0,
+    "seconds": 1315.1
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_1",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_3",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_4",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 5,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_5",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 6,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_6",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 7,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_7",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 8,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_8",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 9,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_9",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 10,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_5",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 11,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_6",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 12,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_7",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 13,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_8",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 14,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_9",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 15,
+        "ok": true,
+        "pred": "off",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 16,
+        "ok": true,
+        "pred": "closed",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 17,
+        "ok": true,
+        "pred": "off",
+        "subject": "surf_3",
+        "target": null
+       }
+      ],
+      "n_achievements": 5,
+      "n_achievements_ok": 5,
+      "n_done": 5,
+      "n_positive_done": 5,
+      "n_positive_total": 5,
+      "n_prohibitions": 13,
+      "n_prohibitions_ok": 13,
+      "n_total": 5,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_1",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_3",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_4",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 5,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_5",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 6,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_6",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 7,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_7",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 8,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_8",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 9,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "plate_9",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 10,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_5",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 11,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_6",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 12,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_7",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 13,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_8",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 14,
+        "ok": true,
+        "pred": "unmoved",
+        "subject": "food_9",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 15,
+        "ok": true,
+        "pred": "off",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 16,
+        "ok": true,
+        "pred": "closed",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 17,
+        "ok": true,
+        "pred": "off",
+        "subject": "surf_3",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 5,
+     "n_total": 5,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 45,
+    "steps_planned": 49,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 1666.9
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 1616.0
+   }
+  },
+  "PACK-BEACH-HOLIDAY": {
+   "check": {
+    "ok": false,
+    "rc": 1,
+    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-BEACH-HOLIDAY' left the worker unusable",
+    "seconds": 82.2
+   },
+   "story": {
+    "ok": false,
+    "rc": 1,
+    "seed": 0,
+    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-BEACH-HOLIDAY' left the worker unusable",
+    "video": null,
+    "seconds": 94.5
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 0,
+    "native": {},
+    "human_policy_status": null,
+    "validity": {},
+    "transcript": [],
+    "seconds": 87.6
+   }
+  },
+  "PACK-GYM-WEEKEND": {
+   "check": {
+    "ok": false,
+    "rc": 1,
+    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-GYM-WEEKEND' left the worker unusable",
+    "seconds": 85.2
+   },
+   "story": {
+    "ok": false,
+    "rc": 1,
+    "seed": 0,
+    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-GYM-WEEKEND' left the worker unusable",
+    "video": null,
+    "seconds": 88.3
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 0,
+    "native": {},
+    "human_policy_status": null,
+    "validity": {},
+    "transcript": [],
+    "seconds": 96.4
+   }
+  },
+  "PACK-MOVE-OUT": {
+   "check": {
+    "ok": false,
+    "rc": 1,
+    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-MOVE-OUT' left the worker unusable",
+    "seconds": 54.3
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 0,
+    "native": {},
+    "human_policy_status": null,
+    "validity": {},
+    "transcript": [],
+    "seconds": 55.6
+   }
+  },
+  "PACK-WEEKEND-TRIP": {
+   "check": {
+    "ok": false,
+    "rc": 1,
+    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-WEEKEND-TRIP' left the worker unusable",
+    "seconds": 49.2
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 0,
+    "native": {},
+    "human_policy_status": null,
+    "validity": {},
+    "transcript": [],
+    "seconds": 55.7
+   }
+  },
+  "PACK-WINTER-VISIT": {
+   "check": {
+    "ok": false,
+    "rc": 1,
+    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-WINTER-VISIT' left the worker unusable",
+    "seconds": 48.6
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 0,
+    "native": {},
+    "human_policy_status": null,
+    "validity": {},
+    "transcript": [],
+    "seconds": 56.1
+   }
+  },
+  "PACK-WORK-TRIP": {
+   "check": {
+    "ok": false,
+    "rc": 1,
+    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-WORK-TRIP' left the worker unusable",
+    "seconds": 48.6
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 0,
+    "native": {},
+    "human_policy_status": null,
+    "validity": {},
+    "transcript": [],
+    "seconds": 55.6
+   }
+  },
+  "WATCH-28008": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "n_achievements": 2,
+      "n_achievements_ok": 2,
+      "n_done": 2,
+      "n_positive_done": 2,
+      "n_positive_total": 2,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 2,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 2,
+     "n_total": 2,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 10,
+    "steps_planned": 10,
+    "seconds": 318.2
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "n_achievements": 2,
+      "n_achievements_ok": 2,
+      "n_done": 2,
+      "n_positive_done": 2,
+      "n_positive_total": 2,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 2,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 2,
+     "n_total": 2,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 10,
+    "steps_planned": 10,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 462.9
+   },
+   "verbal": {
+    "ok": null,
+    "unsupported": "not supported in this release: oracle-verbal always scripts the Human, and the scripted Human only acts after the Assistant speaks, so it never performs a WATCH opening (the person stands still and the episode times out, eval_valid=false)",
+    "observed": {
+     "ok": false,
+     "native": {
+      "contract_world_success": false,
+      "process_requirements_met": false,
+      "verification_points_met": false,
+      "assistant_declared_done": false,
+      "requires_assistant_done": true,
+      "strict_success": false
+     },
+     "validity": {
+      "episode_valid": true,
+      "eval_valid": false
+     },
+     "seconds": 277.8,
+     "note": "ran once to confirm: 0/8 opening actions executed in 18 ticks"
+    },
+    "seconds": 277.8
+   }
+  },
+  "WATCH-28008-ES": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "n_achievements": 2,
+      "n_achievements_ok": 2,
+      "n_done": 2,
+      "n_positive_done": 2,
+      "n_positive_total": 2,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 2,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 2,
+     "n_total": 2,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 10,
+    "steps_planned": 10,
+    "seconds": 325.4
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "n_achievements": 2,
+      "n_achievements_ok": 2,
+      "n_done": 2,
+      "n_positive_done": 2,
+      "n_positive_total": 2,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 2,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 2,
+     "n_total": 2,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 10,
+    "steps_planned": 10,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 440.7
+   },
+   "verbal": {
+    "ok": null,
+    "unsupported": "not supported in this release: oracle-verbal always scripts the Human, and the scripted Human only acts after the Assistant speaks, so it never performs a WATCH opening (the person stands still and the episode times out, eval_valid=false)",
+    "seconds": 277.4,
+    "observed": {
+     "ok": false,
+     "native": {
+      "contract_world_success": false,
+      "process_requirements_met": false,
+      "verification_points_met": false,
+      "assistant_declared_done": false,
+      "requires_assistant_done": true,
+      "strict_success": false
+     },
+     "validity": {
+      "episode_valid": true,
+      "eval_valid": false
+     },
+     "note": "ran once to confirm: 0/8 opening actions executed"
+    }
+   }
+  },
+  "WATCH-28008-LONGGAP": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "n_achievements": 2,
+      "n_achievements_ok": 2,
+      "n_done": 2,
+      "n_positive_done": 2,
+      "n_positive_total": 2,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 2,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 2,
+     "n_total": 2,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 14,
+    "steps_planned": 14,
+    "seconds": 331.9
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "n_achievements": 2,
+      "n_achievements_ok": 2,
+      "n_done": 2,
+      "n_positive_done": 2,
+      "n_positive_total": 2,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 2,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "pie",
+        "target": "oven"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "oven",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "running",
+        "subject": "oven",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 2,
+     "n_total": 2,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 14,
+    "steps_planned": 14,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 464.3
+   },
+   "verbal": {
+    "ok": null,
+    "unsupported": "not supported in this release: oracle-verbal always scripts the Human, and the scripted Human only acts after the Assistant speaks, so it never performs a WATCH opening (the person stands still and the episode times out, eval_valid=false)",
+    "seconds": 272.1,
+    "observed": {
+     "ok": false,
+     "native": {
+      "contract_world_success": false,
+      "process_requirements_met": false,
+      "verification_points_met": false,
+      "assistant_declared_done": false,
+      "requires_assistant_done": true,
+      "strict_success": false
+     },
+     "validity": {
+      "episode_valid": true,
+      "eval_valid": false
+     },
+     "note": "ran once to confirm: 0/12 opening actions executed"
+    }
+   }
+  },
+  "WATCH-47003": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "closed",
+        "subject": "window",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "fridge",
+        "target": null
+       }
+      ],
+      "n_achievements": 0,
+      "n_achievements_ok": 0,
+      "n_done": 0,
+      "n_positive_done": 0,
+      "n_positive_total": 0,
+      "n_prohibitions": 2,
+      "n_prohibitions_ok": 2,
+      "n_total": 0,
+      "neg": [],
+      "outcomes": [],
+      "progress": 0.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 0.0,
+      "prohibitions_ok": true,
+      "scoreable": false,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "closed",
+        "subject": "window",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "fridge",
+        "target": null
+       }
+      ],
+      "success": false
+     },
+     "n_done": 0,
+     "n_total": 0,
+     "progress": 0.0,
+     "prohibitions_ok": true,
+     "scoreable": false,
+     "success": false
+    },
+    "failed_actions": [],
+    "steps_run": 26,
+    "steps_planned": 26,
+    "seconds": 333.3,
+    "note": "unprepared replay: every goal holds but is baseline-excluded; passed by replay_ok"
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "closed",
+        "subject": "window",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "fridge",
+        "target": null
+       }
+      ],
+      "n_achievements": 0,
+      "n_achievements_ok": 0,
+      "n_done": 0,
+      "n_positive_done": 0,
+      "n_positive_total": 0,
+      "n_prohibitions": 2,
+      "n_prohibitions_ok": 2,
+      "n_total": 0,
+      "neg": [],
+      "outcomes": [],
+      "progress": 0.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 0.0,
+      "prohibitions_ok": true,
+      "scoreable": false,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "closed",
+        "subject": "window",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 1,
+        "ok": true,
+        "pred": "closed",
+        "subject": "fridge",
+        "target": null
+       }
+      ],
+      "success": false
+     },
+     "n_done": 0,
+     "n_total": 0,
+     "progress": 0.0,
+     "prohibitions_ok": true,
+     "scoreable": false,
+     "success": false
+    },
+    "failed_actions": [],
+    "steps_run": 26,
+    "steps_planned": 26,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 496.3
+   },
+   "verbal": {
+    "ok": null,
+    "unsupported": "not supported in this release: oracle-verbal always scripts the Human, and the scripted Human only acts after the Assistant speaks, so it never performs a WATCH opening (the person stands still and the episode times out, eval_valid=false)",
+    "seconds": 289.2,
+    "observed": {
+     "ok": false,
+     "native": {
+      "contract_world_success": false,
+      "process_requirements_met": false,
+      "verification_points_met": false,
+      "assistant_declared_done": false,
+      "requires_assistant_done": true,
+      "strict_success": false
+     },
+     "validity": {
+      "episode_valid": true,
+      "eval_valid": false
+     },
+     "note": "ran once to confirm: 0/21 opening actions executed"
+    }
+   }
+  },
+  "WATCH-81020": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "failed_actions": [],
+    "steps_run": 26,
+    "steps_planned": 26,
+    "seconds": 445.4,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "off",
+        "subject": "sink",
+        "target": null
+       }
+      ],
+      "n_achievements": 0,
+      "n_achievements_ok": 0,
+      "n_done": 0,
+      "n_positive_done": 0,
+      "n_positive_total": 0,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 0,
+      "neg": [],
+      "outcomes": [],
+      "progress": 0.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 0.0,
+      "prohibitions_ok": true,
+      "scoreable": false,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "off",
+        "subject": "sink",
+        "target": null
+       }
+      ],
+      "success": false
+     },
+     "n_done": 0,
+     "n_total": 0,
+     "progress": 0.0,
+     "prohibitions_ok": true,
+     "scoreable": false,
+     "success": false
+    },
+    "note": "unprepared replay: the only goal (sink off) holds but is baseline-excluded, so score.success is false; passed on all goals holding and no failed step"
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "off",
+        "subject": "sink",
+        "target": null
+       }
+      ],
+      "n_achievements": 0,
+      "n_achievements_ok": 0,
+      "n_done": 0,
+      "n_positive_done": 0,
+      "n_positive_total": 0,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 0,
+      "neg": [],
+      "outcomes": [],
+      "progress": 0.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 0.0,
+      "prohibitions_ok": true,
+      "scoreable": false,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "baseline_excluded": true,
+        "idx": 0,
+        "ok": true,
+        "pred": "off",
+        "subject": "sink",
+        "target": null
+       }
+      ],
+      "success": false
+     },
+     "n_done": 0,
+     "n_total": 0,
+     "progress": 0.0,
+     "prohibitions_ok": true,
+     "scoreable": false,
+     "success": false
+    },
+    "failed_actions": [],
+    "steps_run": 26,
+    "steps_planned": 26,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 467.0
+   },
+   "verbal": {
+    "ok": null,
+    "unsupported": "not supported in this release: oracle-verbal always scripts the Human, and the scripted Human only acts after the Assistant speaks, so it never performs a WATCH opening (the person stands still and the episode times out, eval_valid=false)",
+    "observed": {
+     "ok": false,
+     "native": {
+      "contract_world_success": false,
+      "process_requirements_met": false,
+      "verification_points_met": false,
+      "assistant_declared_done": false,
+      "requires_assistant_done": true,
+      "strict_success": false
+     },
+     "validity": {
+      "episode_valid": true,
+      "eval_valid": false
+     },
+     "note": "ran once to confirm: 0/18 opening actions executed"
+    },
+    "seconds": 327.6
+   }
+  },
+  "WATCH-93005": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_2"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_2"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [
+     "[LookAt] <item_1> (1) -- UNREADABLE_LABEL: item_1: occluded; detail=0.1px/12px, pitch=+10.2deg, distance=5.28m, roll=-92.2deg, occluder=/World/b_armchair_hfydou_0/base_link/collisions/hfydou__base_link__collision__18"
+    ],
+    "steps_run": 10,
+    "steps_planned": 11,
+    "seconds": 129.8
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_2"
+       }
+      ],
+      "n_achievements": 1,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 1,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 1,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "on",
+        "subject": "item_3",
+        "target": "surf_2"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 1,
+     "n_total": 1,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [
+     "[LookAt] <item_1> (1) -- UNREADABLE_LABEL: item_1: occluded; detail=0.1px/12px, pitch=+10.2deg, distance=5.28m, roll=-92.2deg, occluder=/World/b_armchair_hfydou_0/base_link/collisions/hfydou__base_link__collision__18"
+    ],
+    "steps_run": 10,
+    "steps_planned": 11,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 273.6
+   },
+   "verbal": {
+    "ok": null,
+    "unsupported": "not supported in this release: oracle-verbal always scripts the Human, and the scripted Human only acts after the Assistant speaks, so it never performs a WATCH opening (the person stands still and the episode times out, eval_valid=false)",
+    "seconds": 232.5,
+    "observed": {
+     "ok": false,
+     "native": {
+      "contract_world_success": false,
+      "process_requirements_met": false,
+      "verification_points_met": false,
+      "assistant_declared_done": false,
+      "requires_assistant_done": true,
+      "strict_success": false
+     },
+     "validity": {
+      "episode_valid": true,
+      "eval_valid": false
+     },
+     "note": "ran once to confirm: 0/8 opening actions executed"
+    }
+   }
+  }
+ }
+}
