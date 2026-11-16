@@ -21,27 +21,34 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 
 # ---------------------------------------------------------------- curated bundled tasks
-# (task_id, why it is in the gallery). Chosen to cover every mechanic the release uses.
+# (task_id, theme, why it is in the gallery). Long-horizon tasks: the release's longest cooking and
+# packing tasks by oracle length, plus its longest household chore. COVERAGE_GALLERY is the earlier
+# one-of-each-mechanic set, kept for reference.
 CURATED = [
-    ("GUIDE-14004", "Step-by-step cooking from a recipe card: cut, stir, cook, appliance on/off, visual state changes."),
-    ("GUIDE-14011", "Guided appliance use: load, close and start a machine (running predicate)."),
-    ("GUIDE-109009", "Sorting by capacity labels with aggregate goals and nested containers (27 actions)."),
-    ("ORCHESTRATE-99902", "Plan an allergy-safe menu within 30 minutes from a scanned allergen sheet (45 actions)."),
-    ("ORCHESTRATE-16013", "Long cutting plan with 12 visual state events (slices appear as the work proceeds)."),
-    ("ORCHESTRATE-94001", "Route planning from a printed floor map across Rs_int."),
-    ("NARRATE-87016", "Blind user: the Human gets no images; the Assistant describes a kitchen clean-up."),
-    ("NARRATE-14005", "Blind user: orient (TurnAround) and pick up the right object by description."),
-    ("NARRATE-81009", "Blind user: wipe a surface and place objects; a visual state event marks the clean."),
-    ("ASK-12802", "Numeric decision across time: a report, a spoken lunch and three package labels."),
-    ("ASK-13011", "Decision from 15 scanned receipts and price lists (164-tick budget)."),
-    ("ASK-87022", "Spatial decision: place an object near a target on the floor (near predicate)."),
-    ("WATCH-28008", "Continuous watch: the oven door was left open off-screen; stop START until it is closed."),
-    ("WATCH-81020", "Continuous watch with an interruption: a phone call while an appliance is on."),
-    ("WATCH-93005", "Continuous watch: a Confirm step the person must not skip."),
-    ("WATCH-47003", "Continuous watch at the exit: check the departure board before leaving."),
-    ("FIND-87004", "Memory: where was the red cola left before a seated phone call?"),
-    ("FIND-14015", "Memory with identical decoys: which of two gift boxes was left behind?"),
-    ("FIND-28003", "Memory across nested containers in a two-floor house."),
+    # cooking: multi-dish plans, appliance scheduling, recipes followed end to end
+    ("ORCHESTRATE-46000", "cooking", "Nine recipe panels, thirty minutes: cook the four-dish optimum, overlapping oven and frying pan (45 oracle steps)."),
+    ("ORCHESTRATE-99902", "cooking", "Allergy-safe menu: filter nine dishes against four guests' restrictions, then schedule oven and stove (45 steps)."),
+    ("ORCHESTRATE-44001", "cooking", "Four recipes, two appliances: start the long oven dish first and prepare the rest during it (43 steps)."),
+    ("ORCHESTRATE-28005", "cooking", "Timing sheet with prep and oven times: minimise oven idle across four plates (41 steps)."),
+    ("ORCHESTRATE-16013", "cooking", "Two guest plates from eight fruits and a cheesecake, with dairy and sugar limits; slices appear as cutting proceeds (37 steps)."),
+    ("GUIDE-99502", "cooking", "Low-vision cook, end-to-end stir-fry: clear the cooktop, follow a liftable recipe, cut, cook, power off (28 steps)."),
+    ("ORCHESTRATE-107002", "cooking", "Two complete plates through one oven, then intact to the service cabinet (25 steps)."),
+    ("GUIDE-108005", "cooking", "Lunch-pass ticket: reheat a schnitzel, cook broccolini, stir, plate, switch off (24 steps)."),
+    ("GUIDE-87017", "cooking", "Snack plate under a six-line safety checklist; a mould patch on one roll only shows up close (18 steps)."),
+    ("ORCHESTRATE-14003", "cooking", "Rice porridge in a garden kitchen: rice and water in before heat, a visible porridge surface forms (17 steps)."),
+    ("GUIDE-14004", "cooking", "Griddled tomato from a recipe card: slice, return the tool, griddle, stir, cook, power off (15 steps)."),
+    # packing: boxes, bins, fridges and kits filled to a manifest or a rule
+    ("GUIDE-102000", "packing", "Shipment manifest: two mandatory volume groups plus one add-on, packed from nine drinks across three counters (29 steps)."),
+    ("GUIDE-109009", "packing", "Sort seven sealed drinks into three storage boxes by their 100/200/500 mL labels (27 steps)."),
+    ("GUIDE-110011", "packing", "Seven milk cartons into boxes by capacity, with a phone call in the middle (26 steps)."),
+    ("GUIDE-14015", "packing", "Grocery delivery: read the freezer and fridge labels, classify five foods, store the whole batch (24 steps)."),
+    ("ASK-14011", "packing", "Two matching cabinets, ten items: decide what goes where and repack (20 steps)."),
+    ("ASK-13000", "packing", "Event gift bags: read a check-in table and an allocation sheet, then fill four units (20 steps)."),
+    ("FIND-97003", "packing", "Pack a box with three near-identical squeegees told apart only by tint, then find the one left out (15 steps)."),
+    ("GUIDE-14010", "packing", "Pantry light-exposure guide: sort four deliveries into the right storage by class (15 steps)."),
+    ("GUIDE-99806", "packing", "Tasting kit: exactly one gin, rum and wine bottle totalling 1.0 litre, by label (13 steps)."),
+    # long household chore
+    ("GUIDE-17001", "chores", "Utility-room cleaning sheet: six mixed objects, two cleaning tools, five wipes (32 steps)."),
 ]
 
 
@@ -420,7 +427,30 @@ def guide_reworded(ctx):
 
 # watch_nofault is kept for reference but not built: the compiler requires a WATCH default plan that
 # diverges from the oracle plan, so a no-fault restraint control cannot be expressed.
-DERIVED = [cf_report, cf_spoken, retarget, watch_spanish, watch_longgap, find_moved, guide_reworded]
+def guide17001_reworded(ctx):
+    """GUIDE-17001 with its first oracle line reworded for the handoff parser.
+
+    The release line ends "...do not use that sponge on the electronics or paper", which the parser
+    reads as a Wipe of the paper form with the blue sponge; the executed chunk never matches it and
+    oracle-verbal stalls on the first handoff (preflight_guide.py). Spelling out each wipe ("wipe the
+    mug with the blue sponge, ...") parses into the right units but is still rejected by the completion
+    matcher; this wording is accepted.
+    """
+    p = ctx.pack("GUIDE-17001")
+    set_dialogue(p, "The matrix assigns the mug, water bottle, and oil bottle to the BLUE sponge. Wipe those three "
+                    "with it, then put the sponge back on the workbench.", index=0)
+    # line 2 of the release never says to return the cloth, but its chunk ends with that PutOn
+    set_dialogue(p, "Switch to the YELLOW microfiber cloth for the camera and phone, then put it back on the "
+                    "workbench.", index=1)
+    return set_id(p, "GUIDE-17001-REWORDED", "GUIDE-17001", "repaired-dialogue",
+                  "Same cleaning task; the oracle's first two instructions are reworded, because the release wording "
+                  "stalls oracle-verbal: the parser reads 'not on the electronics or paper' as a wipe of the form, and "
+                  "line 2 omits returning the cloth that its actions include.")
+
+
+# Long-horizon gallery: only the reworded GUIDE tasks. The earlier short variants (cf_report ...) are
+# kept above for reference.
+DERIVED = [guide_reworded, guide17001_reworded]
 
 
 def fix_pack(ctx, pack):
@@ -440,7 +470,21 @@ def fix_pack(ctx, pack):
         if "scale" in row and not 0.5 <= float(row["scale"]) <= 2.0:
             clamped.append(f"{key} {row['scale']}->{min(2.0, max(0.5, float(row['scale'])))}")
             row["scale"] = min(2.0, max(0.5, float(row["scale"])))
+    # Rs_int's living-room breakfast tables sit among five chairs: their approach stand never lands
+    # on walkable floor, so _layout_ok rejects every layout ("cannot site declared multi-room
+    # layout", blamed on the boxes). preflight_siting.py found it; the room's bottom_cabinet sites.
+    rebound = []
+    world = pack["executable_spec"]["world"]
+    for key, row in world.get("fixtures", {}).items():
+        if world.get("scene") == "Rs_int" and row.get("room") == "living_room_0" and row["bind"].get("cat") == "breakfast_table":
+            row["bind"]["cat"] = "bottom_cabinet"
+            rebound.append(key)
+    if rebound:
+        for part in ("story", "runtime"):
+            pack[part] = replace_strings(pack[part], [("on the table", "on the cabinet"), ("living-room table", "living-room cabinet")])
     note = "interactiveworld-task-gallery: restored story.source_contract"
+    if rebound:
+        note += f"; rebound {', '.join(rebound)} breakfast_table->bottom_cabinet (unreachable stand in Rs_int living_room_0)"
     pack.setdefault("lineage", {})["fixed_by"] = note + (f"; clamped scale {', '.join(clamped)}" if clamped else "")
     return pack
 
@@ -482,7 +526,7 @@ def replay_actions(p):
             "story_actions": list(opening) + oracle}
 
 
-def entry(p, *, source, why, base=None, kind=None, file):
+def entry(p, *, source, why, base=None, kind=None, file, theme=None):
     s, r = p["story"], p["runtime"]
     fam = (s.get("source_contract") or {}).get("family") or p["executable_spec"]["meta"].get("family")
     inter = s.get("interaction") or {}
@@ -497,7 +541,8 @@ def entry(p, *, source, why, base=None, kind=None, file):
             "oracle_commands": [cmd_text(c) for c in r["oracle_commands"]],
             "goals": [f"{x['pred']}({x['subject']}, {x.get('target')})" for x in p["executable_spec"]["goal"]["goals"]],
             "tick_budget": r["tick_budget"], "replay": replay_actions(p), "file": file,
-            "known_issue": KNOWN_ISSUES.get(p["task_id"]) or (PACK_ISSUE if p["task_id"].startswith("PACK-") else None), **mechanics(p)}
+            "known_issue": KNOWN_ISSUES.get(p["task_id"]) or (PACK_ISSUE if p["task_id"].startswith("PACK-") else None),
+            "theme": theme, "oracle_steps": len(r["oracle_commands"]), **mechanics(p)}
 
 
 # Release behaviour found while running the gallery; shown on the site next to the task.
@@ -532,9 +577,10 @@ KNOWN_ISSUES = {
                      "prepared runs stop there; the video continues past the failed reads, so it shows them. "
                      "The release's own Linux render of this task passed. Seed 1 fails the same way."),
 }
-PACK_ISSUE = ("The world cannot be built yet: the builder cannot site three packing_box bodies in Rs_int "
-              "living_room_0, although each fits alone (release tasks never use more than one). "
-              "pack_layout_probe.py tries spreading them across rooms.")
+# preflight_siting.py: five 0.23 m-radius boxes fit no room combination of Rs_int (living room takes
+# four at most with the stands it needs; bedroom 0 cells, kitchen 5, entryway 11).
+EXCLUDED_PACKS = {"PACK-MOVE-OUT": "five packing boxes do not fit any room layout of Rs_int"}
+PACK_ISSUE = None  # fixed in fix_pack (living-room support rebound); see preflight_siting.py
 
 
 # ---------------------------------------------------------------- main
@@ -605,10 +651,10 @@ def main():
         batch.append({"task_id": pack["task_id"], "taskpack_path": rel, "taskpack_sha256": digest})
         catalog.append(dict(entry(pack, file=rel, **meta), sha256=digest, static_check=status))
 
-    for tid, why in CURATED:
+    for tid, theme, why in CURATED:
         data = ctx.lf_bytes(tid)
         assert "sha256:" + hashlib.sha256(data).hexdigest() == ctx.rows[tid]["taskpack_sha256"], tid
-        emit(json.loads(data), data, f"bundled/{tid}.taskpack.json", ctx.openings, source="bundled", why=why)
+        emit(json.loads(data), data, f"bundled/{tid}.taskpack.json", ctx.openings, source="bundled", why=why, theme=theme)
 
     for fn in DERIVED:
         pack = fn(ctx)
@@ -618,10 +664,13 @@ def main():
              base=lin["base_task_id"], kind=lin["variant"])
 
     for path in sorted(args.packs.glob("PACK-*.taskpack.json")):
+        if path.name.split(".")[0] in EXCLUDED_PACKS:
+            print(f"skip {path.name.split('.')[0]:26} {EXCLUDED_PACKS[path.name.split('.')[0]]}")
+            continue
         pack = fix_pack(ctx, json.loads(path.read_text(encoding="utf-8")))
         data = (json.dumps(pack, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
         emit(pack, data, f"pack/{pack['task_id']}.taskpack.json", {}, source="reused",
-             why=pack["executable_spec"]["meta"]["design"]["premise"], base="GUIDE-99806", kind="packing-port")
+             why=pack["executable_spec"]["meta"]["design"]["premise"], base="GUIDE-99806", kind="packing-port", theme="packing")
 
     (out / "tasks.json").write_bytes((json.dumps({"tasks": batch}, indent=2) + "\n").encode())
     site = HERE / "site"

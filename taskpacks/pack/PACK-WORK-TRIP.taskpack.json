@@ -592,7 +592,7 @@
         "table": {
           "room": "living_room_0",
           "bind": {
-            "cat": "breakfast_table",
+            "cat": "bottom_cabinet",
             "source": "scene"
           },
           "seatable": false
@@ -2995,6 +2995,6 @@
         "scale": 1.0
       }
     },
-    "fixed_by": "interactiveworld-task-gallery: restored story.source_contract; clamped scale trousers 0.44->0.5"
+    "fixed_by": "interactiveworld-task-gallery: restored story.source_contract; rebound table breakfast_table->bottom_cabinet (unreachable stand in Rs_int living_room_0); clamped scale trousers 0.44->0.5"
   }
 }

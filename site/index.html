@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>InteractiveWorld Episode Gallery</title>
+<title>Long-Horizon Episode Gallery</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
@@ -66,6 +66,7 @@ a { color: var(--accent) }
 .meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12.5px }
 .cat { color: var(--cat); font-weight: 600; text-transform: uppercase; letter-spacing: .07em; font-size: 12px }
 .tag { border: 1px solid var(--line); border-radius: 5px; padding: 1px 7px; color: var(--muted) }
+.tag.steps { color: var(--ink); font-weight: 600; font-family: var(--f-mono) }
 .tag.src-derived { border-color: var(--accent); color: var(--accent); background: var(--accent-soft) }
 .ep h3 { font-size: 21px; font-weight: 700; display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline }
 .ep h3 small { font: 400 13px var(--f-mono); color: var(--muted) }
@@ -102,8 +103,8 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
 <body>
 <div class="wrap">
   <header>
-    <h1>InteractiveWorld Episode Gallery</h1>
-    <p class="lede">First-person episodes from the InteractiveWorld simulator, across all six task categories. Each row is one TaskPack. The video replays what the person did before asking, then the oracle's actions. The transcript shows the request and the scripted oracle advice. Status pills report the oracle replay check and the full oracle-verbal run through the interaction runtime.</p>
+    <h1>Long-Horizon Episode Gallery</h1>
+    <p class="lede">Long first-person cooking, packing and household episodes from the InteractiveWorld simulator, longest first. Each row is one TaskPack. The video replays what the person did before asking, then the oracle's actions. The transcript shows the request and the scripted oracle advice. Status pills report the oracle replay check and the full oracle-verbal run through the interaction runtime.</p>
     <div class="links"><a href="#findings">What running them found</a><a href="taskpacks/tasks.json">All TaskPacks (tasks.json)</a><a href="https://github.com/wadhwaangad/interactiveworld-task-gallery">Source, tools and README</a><a href="https://github.com/facebookresearch/InteractiveWorld">InteractiveWorld</a></div>
   </header>
   <section class="strip" id="strip" aria-label="Summary"></section>
@@ -114,11 +115,12 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
     <p class="why">Every task was replayed by its oracle and run through <code>run_taskpack --assistant oracle-verbal</code> on one RTX 4060 laptop under Windows. These findings belong to the release, not to the gallery tasks. All but the physics ones reproduce offline.</p>
     <ul>
       <li><b>oracle-verbal cannot run WATCH tasks.</b> Under <code>--assistant oracle-verbal</code> the Human is always scripted (<code>human_policy</code> is fixed to <code>auto</code>), and the scripted Human acts only after the Assistant speaks. So it never performs the opening of a WATCH task: the person stands still and the episode ends with <code>eval_valid=false</code>. WATCH cards show oracle-verbal as n/a. Their oracle replays pass.</li>
+      <li><b>GUIDE-17001: handoff parser.</b> Two of its four oracle lines stall. Line 1 ends "do not use that sponge on the electronics or paper", which the parser reads as a wipe of the paper form. Line 2 never mentions returning the cloth, although its actions do. Spelling each wipe out ("wipe the mug with the blue sponge") parses into the right steps but is still rejected by the completion matcher. <code>GUIDE-17001-REWORDED</code> passes the check.</li>
       <li><b>GUIDE-14004: handoff parser.</b> The parser reads "not the tomato" in the third oracle line as part of the Stir step, so the scripted person's "That's done" is never accepted. <code>preflight_guide.py</code> finds this offline. <code>GUIDE-14004-REWORDED</code> rewords the line and passes.</li>
       <li><b>NARRATE-87016 and ASK-87022: process scoring.</b> In both, every action succeeds and the world goal is met, but strict success never comes. <code>_process_commands_equivalent</code> forgives an optional <code>@place_spot</code> only for PutOn, not PutInside, and a required bare <code>[Drop]</code> matches nothing but itself, so the oracle's <code>[PutOnFloor]</code> fails it. <code>preflight_process.py</code> predicted both before any GPU time. A two-rule patch is in the repo, unapplied, because it changes benchmark scoring.</li>
       <li><b>The public CLI cannot replay runtime commands.</b> <code>Action.parse</code> rejects <code>@place_spot</code> and container-space instance <code>(0)</code>, and dropping them changes what runs. <code>faithful_simulator.py</code> sends only those commands through the release's own unvalidated path. With it, the ORCHESTRATE-16013 replay that had failed now passes.</li>
       <li><b>Windows physics.</b> GUIDE-109009's order labels never become readable (5.3 px of the 12 needed). FIND-28003's opening PutInside fails to settle in two of four launches. ORCHESTRATE-16013's knife returns settle about 13 cm high under oracle-verbal.</li>
-      <li><b>Packing ports.</b> The world builder cannot site three <code>packing_box</code> bodies in one Rs_int room, although each fits alone. Release tasks never use more than one. Scales below 0.5 were also rejected, and were clamped.</li>
+      <li><b>Packing ports.</b> These never built. The error blamed the packing boxes, but the release's own offline siting predictor (wrapped in <code>preflight_siting.py</code>) showed the real cause. The person's standing spot at Rs_int's living-room <code>breakfast_table</code>, which sits among five chairs, is never on walkable floor, so every layout was rejected. Rebinding that support to the room's <code>bottom_cabinet</code> makes five of the six ports build. PACK-MOVE-OUT needs five boxes, which no room layout of Rs_int holds. Garment scales below 0.5 were also rejected and were clamped.</li>
     </ul>
   </section>
   <footer>
@@ -134,7 +136,8 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
   const results = (window.GALLERY_RESULTS || {}).results || {};
   const CATS = ["Guidance", "Planning", "Accessibility", "Decision", "Prevention", "Finding"];
   const SOURCES = { bundled: "Bundled", derived: "Derived variant", reused: "Reused port" };
-  const state = { cat: "all", src: "all" };
+  const state = { theme: "all", src: "all" };
+  const THEMES = { cooking: "Cooking", packing: "Packing", chores: "Chores" };
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const catVar = (c) => `var(--c-${String(c).toLowerCase()})`;
@@ -147,7 +150,10 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
 
   function card(t) {
     const r = results[t.task_id] || {};
-    const video = r.story && r.story.video ? `results/${t.task_id}/${r.story.video}` : null;
+    // a reworded task runs the same world and actions as its original, so it shows the original's video
+    const b = t.variant === "repaired-dialogue" ? results[t.base_task_id] || {} : {};
+    const video = r.story && r.story.video ? `results/${t.task_id}/${r.story.video}`
+      : b.story && b.story.video ? `results/${t.base_task_id}/${b.story.video}` : null;
     const media = video
       ? `<video controls preload="metadata" playsinline src="${esc(video)}"></video>`
       : (r.story && r.story.error) || t.task_id.startsWith("PACK-")
@@ -164,7 +170,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
     return `<article class="ep" data-cat style="--cat:${catVar(t.category)}">
       <div class="media">${media}</div>
       <div class="body">
-        <div class="meta"><span class="cat">${esc(t.category)}</span>
+        <div class="meta"><span class="cat">${esc(THEMES[t.theme] || t.category)} · ${esc(t.category)}</span><span class="tag steps">${esc(t.oracle_steps)} oracle steps</span>
           <span class="tag src-${esc(t.source)}">${esc(SOURCES[t.source] || t.source)}${t.variant ? " · " + esc(t.variant) : ""}</span>
           <span class="tag">${esc(t.scene)}</span>
           ${t.tags.map((x) => `<span class="tag">${esc(x)}</span>`).join("")}</div>
@@ -191,7 +197,8 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
   }
 
   function render() {
-    const shown = tasks.filter((t) => (state.cat === "all" || t.category === state.cat) && (state.src === "all" || t.source === state.src));
+    const shown = tasks.filter((t) => (state.theme === "all" || t.theme === state.theme) && (state.src === "all" || t.source === state.src))
+      .sort((a, b) => (b.oracle_steps || 0) - (a.oracle_steps || 0));
     $("#list").innerHTML = shown.length ? shown.map(card).join("") : `<div class="empty">No tasks match these filters.</div>`;
     document.querySelectorAll(".chip").forEach((b) => b.setAttribute("aria-pressed", String(state[b.dataset.k] === b.dataset.v)));
   }
@@ -202,8 +209,9 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
     // a WATCH task passes on its oracle replay alone: oracle-verbal cannot run WATCH (verbal.ok === null)
     const passed = ran.filter((r) => r.check && r.check.ok && r.verbal && r.verbal.ok !== false).length;
     const videos = ran.filter((r) => r.story && r.story.video).length;
-    const items = [[tasks.length, "tasks"], [new Set(tasks.map((t) => t.category)).size, "categories"],
-      [new Set(tasks.map((t) => t.scene)).size, "scenes"], [n((t) => t.source === "derived"), "new variants"],
+    const steps = tasks.map((t) => t.oracle_steps || 0);
+    const items = [[tasks.length, "tasks"], [n((t) => t.theme === "cooking"), "cooking"], [n((t) => t.theme === "packing"), "packing"],
+      [steps.length ? Math.round(steps.reduce((a, b) => a + b, 0) / steps.length) : "–", "mean oracle steps"],
       [videos, "videos rendered"], [ran.length ? `${passed}/${ran.length}` : "–", "pass both oracle checks"]];
     $("#strip").innerHTML = items.map(([b, s]) => `<div class="stat"><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join("");
     $("#generated").textContent = window.GALLERY_RESULTS ? `Results generated ${window.GALLERY_RESULTS.generated}.` : "No GPU results yet: run run_gallery.py to fill in videos and status.";
@@ -211,7 +219,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
 
   function filters() {
     const chip = (k, v, label) => `<button class="chip" type="button" data-k="${k}" data-v="${esc(v)}">${esc(label)}</button>`;
-    $("#filters").innerHTML = `<span class="label">Category</span>${chip("cat", "all", "All")}${CATS.filter((c) => tasks.some((t) => t.category === c)).map((c) => chip("cat", c, c)).join("")}
+    $("#filters").innerHTML = `<span class="label">Theme</span>${chip("theme", "all", "All")}${Object.entries(THEMES).filter(([k]) => tasks.some((t) => t.theme === k)).map(([k, v]) => chip("theme", k, v)).join("")}
       <span class="sep"></span><span class="label">Source</span>${chip("src", "all", "All")}${Object.entries(SOURCES).map(([k, v]) => chip("src", k, v)).join("")}`;
     $("#filters").addEventListener("click", (e) => {
       const b = e.target.closest(".chip"); if (!b) return;

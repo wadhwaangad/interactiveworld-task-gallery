@@ -1,4 +1,7 @@
 {
+ "GUIDE-99502": [],
+ "GUIDE-108005": [],
+ "GUIDE-87017": [],
  "GUIDE-14004": [
   {
    "dialogue_index": 2,
@@ -52,12 +55,50 @@
    ]
   }
  ],
- "GUIDE-14011": [],
+ "GUIDE-102000": [],
  "GUIDE-109009": [],
+ "GUIDE-110011": [],
+ "GUIDE-14015": [],
+ "GUIDE-14010": [],
+ "GUIDE-99806": [],
+ "GUIDE-17001": [
+  {
+   "dialogue_index": 0,
+   "instruction": "The matrix assigns the mug, water bottle, and oil bottle to the BLUE sponge. Wipe those three, and do not use that sponge on the electronics or paper.",
+   "chunk": [
+    "[Grab] <blue_sponge> (1)",
+    "[Wipe] <blue_sponge> (1) <mug> (1)",
+    "[Wipe] <blue_sponge> (1) <water_bottle> (1)",
+    "[Wipe] <blue_sponge> (1) <oil_bottle> (1)",
+    "[PutOn] <blue_sponge> (1) <workbench> (1)"
+   ],
+   "units": [
+    [
+     "WIPE",
+     [],
+     [
+      "blue_sponge",
+      "form"
+     ]
+    ]
+   ]
+  },
+  {
+   "dialogue_index": 1,
+   "instruction": "The blue-sponge group is complete. Switch to the YELLOW microfiber cloth for the camera and phone.",
+   "chunk": [
+    "[Grab] <microfiber> (1)",
+    "[Wipe] <microfiber> (1) <camera> (1)",
+    "[Wipe] <microfiber> (1) <phone> (1)",
+    "[PutOn] <microfiber> (1) <workbench> (1)"
+   ],
+   "units": []
+  }
+ ],
  "GUIDE-14004-REWORDED": [],
+ "GUIDE-17001-REWORDED": [],
  "PACK-BEACH-HOLIDAY": [],
  "PACK-GYM-WEEKEND": [],
- "PACK-MOVE-OUT": [],
  "PACK-WEEKEND-TRIP": [],
  "PACK-WINTER-VISIT": [],
  "PACK-WORK-TRIP": []

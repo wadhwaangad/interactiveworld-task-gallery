@@ -57,7 +57,8 @@ def main():
         if (SITE / f).exists():
             shutil.copy2(SITE / f, DOCS / f)
     results = {}
-    for d in sorted(p for p in (SITE / "results").iterdir() if p.is_dir()):
+    in_gallery = {t["task_id"] for t in json.loads((SITE / "catalog.json").read_text(encoding="utf-8"))["tasks"]}
+    for d in sorted(p for p in (SITE / "results").iterdir() if p.is_dir() and p.name in in_gallery):
         rec = {k: v for k in rg.LAYERS if (v := layer(d, k)) is not None}
         if (d / "story.mp4").exists():
             (DOCS / "results" / d.name).mkdir(parents=True)

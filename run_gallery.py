@@ -192,7 +192,8 @@ def main():
             out.write_text(json.dumps(res, indent=1, default=str))
             print(f" {'n/a' if res['ok'] is None else 'PASS' if res['ok'] else 'FAIL'} ({res['seconds']}s)")
     summary = {}
-    for d in sorted(p for p in root.iterdir() if p.is_dir()) if root.exists() else []:
+    in_gallery = {t["task_id"] for t in json.loads((HERE / "site/catalog.json").read_text(encoding="utf-8"))["tasks"]}
+    for d in sorted(p for p in root.iterdir() if p.is_dir() and p.name in in_gallery) if root.exists() else []:
         summary[d.name] = {layer: json.loads((d / f"{layer}.json").read_text())
                            for layer in LAYERS if (d / f"{layer}.json").exists()}
     blob = {"generated": time.strftime("%Y-%m-%d %H:%M"), "results": summary}
