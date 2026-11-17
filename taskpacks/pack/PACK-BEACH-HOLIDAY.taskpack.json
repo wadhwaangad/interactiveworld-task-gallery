@@ -71,19 +71,16 @@
       ],
       "negatives": [
         {
-          "pred": "inside",
-          "subject": "sweatshirts",
-          "target": "box_1"
-        },
-        {
-          "pred": "inside",
-          "subject": "sweatshirts",
-          "target": "box_2"
-        },
-        {
-          "pred": "inside",
-          "subject": "sweatshirts",
-          "target": "box_3"
+          "kind": "not_inside",
+          "objs": [
+            "sweatshirts"
+          ],
+          "containers": [
+            "box_1",
+            "box_2",
+            "box_3"
+          ],
+          "label": "no_sweatshirts_packed"
         }
       ],
       "roster": {
@@ -3414,6 +3411,6 @@
         "scale": 0.5
       }
     },
-    "fixed_by": "interactiveworld-task-gallery: restored story.source_contract; rebound table breakfast_table->bottom_cabinet (unreachable stand in Rs_int living_room_0)"
+    "fixed_by": "interactiveworld-task-gallery: restored story.source_contract; negatives rewritten as not_inside constraints; rebound table breakfast_table->bottom_cabinet (unreachable stand in Rs_int living_room_0)"
   }
 }

@@ -482,7 +482,21 @@ def fix_pack(ctx, pack):
     if rebound:
         for part in ("story", "runtime"):
             pack[part] = replace_strings(pack[part], [("on the table", "on the cabinet"), ("living-room table", "living-room cabinet")])
+    # The ports wrote "never pack X" as goal-shaped {pred: inside, subject, target} rows; the scorer
+    # and the stage only know {kind: not_inside, objs, containers} ("unimplemented negative-constraint
+    # kind(s) ['None']", which leaves the worker unusable).
+    goal = pack["executable_spec"]["goal"]
+    old_negs = goal.get("negatives") or []
+    if old_negs and all("pred" in n and "kind" not in n for n in old_negs):
+        by_subject = {}
+        for n in old_negs:
+            assert n["pred"] == "inside", n
+            by_subject.setdefault(n["subject"], []).append(n["target"])
+        goal["negatives"] = [{"kind": "not_inside", "objs": [s], "containers": sorted(t), "label": f"no_{s}_packed"}
+                             for s, t in by_subject.items()]
     note = "interactiveworld-task-gallery: restored story.source_contract"
+    if old_negs and goal["negatives"] is not old_negs:
+        note += "; negatives rewritten as not_inside constraints"
     if rebound:
         note += f"; rebound {', '.join(rebound)} breakfast_table->bottom_cabinet (unreachable stand in Rs_int living_room_0)"
     pack.setdefault("lineage", {})["fixed_by"] = note + (f"; clamped scale {', '.join(clamped)}" if clamped else "")
@@ -615,6 +629,9 @@ def derive_world_recipe(pack):
     from simulator.physical_world import task_world_builder as twb
     try:
         spec, digest = builder_spec_from_taskpack(pack)
+        # The stage rejects an unknown negative-constraint kind only at build time, after Isaac boots.
+        import constraint_evaluator
+        constraint_evaluator.validate_neg_kinds(list(spec.get("negs") or []))
         register_runtime_builder_spec(f"spec:{pack['task_id']}", spec, digest)
         with contextlib.redirect_stdout(io.StringIO()):
             twb.recipe_for(pack["task_id"])

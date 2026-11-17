@@ -91,24 +91,17 @@
       ],
       "negatives": [
         {
-          "pred": "inside",
-          "subject": "gym_clothes",
-          "target": "box_1"
-        },
-        {
-          "pred": "inside",
-          "subject": "gym_clothes",
-          "target": "box_2"
-        },
-        {
-          "pred": "inside",
-          "subject": "gym_clothes",
-          "target": "box_3"
-        },
-        {
-          "pred": "inside",
-          "subject": "gym_clothes",
-          "target": "box_4"
+          "kind": "not_inside",
+          "objs": [
+            "gym_clothes"
+          ],
+          "containers": [
+            "box_1",
+            "box_2",
+            "box_3",
+            "box_4"
+          ],
+          "label": "no_gym_clothes_packed"
         }
       ],
       "roster": {
@@ -4313,6 +4306,6 @@
         "scale": 0.6
       }
     },
-    "fixed_by": "interactiveworld-task-gallery: restored story.source_contract; rebound table breakfast_table->bottom_cabinet (unreachable stand in Rs_int living_room_0); clamped scale trousers 0.44->0.5"
+    "fixed_by": "interactiveworld-task-gallery: restored story.source_contract; negatives rewritten as not_inside constraints; rebound table breakfast_table->bottom_cabinet (unreachable stand in Rs_int living_room_0); clamped scale trousers 0.44->0.5"
   }
 }
