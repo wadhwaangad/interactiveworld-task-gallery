@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17 04:16",
+ "generated": "2026-11-17 12:53",
  "results": {
   "ASK-13000": {
    "check": {
@@ -7934,27 +7934,331 @@
   "PACK-BEACH-HOLIDAY": {
    "check": {
     "ok": false,
-    "rc": 1,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": false,
+        "pred": "inside",
+        "subject": "camera",
+        "target": "box_1"
+       },
+       {
+        "idx": 1,
+        "ok": false,
+        "pred": "inside",
+        "subject": "towel_stack",
+        "target": "box_1"
+       },
+       {
+        "idx": 2,
+        "ok": false,
+        "pred": "inside",
+        "subject": "striped_shirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 3,
+        "ok": false,
+        "pred": "inside",
+        "subject": "tshirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 4,
+        "ok": false,
+        "pred": "inside",
+        "subject": "bottle",
+        "target": "box_3"
+       },
+       {
+        "idx": 5,
+        "ok": false,
+        "pred": "inside",
+        "subject": "toiletry_bag",
+        "target": "box_3"
+       }
+      ],
+      "n_achievements": 6,
+      "n_achievements_ok": 0,
+      "n_done": 0,
+      "n_positive_done": 0,
+      "n_positive_total": 6,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 6,
+      "neg": [
+       {
+        "idx": 0,
+        "kind": "not_inside",
+        "label": "no_sweatshirts_packed",
+        "offenders": [],
+        "ok": true
+       }
+      ],
+      "outcomes": [],
+      "progress": 0.0,
+      "progress_achievements": 0.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 0.0,
+      "progress_sub_goals": 0.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": false,
+        "pred": "inside",
+        "subject": "camera",
+        "target": "box_1"
+       },
+       {
+        "idx": 1,
+        "ok": false,
+        "pred": "inside",
+        "subject": "towel_stack",
+        "target": "box_1"
+       },
+       {
+        "idx": 2,
+        "ok": false,
+        "pred": "inside",
+        "subject": "striped_shirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 3,
+        "ok": false,
+        "pred": "inside",
+        "subject": "tshirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 4,
+        "ok": false,
+        "pred": "inside",
+        "subject": "bottle",
+        "target": "box_3"
+       },
+       {
+        "idx": 5,
+        "ok": false,
+        "pred": "inside",
+        "subject": "toiletry_bag",
+        "target": "box_3"
+       },
+       {
+        "idx": 6,
+        "kind": "not_inside",
+        "label": "no_sweatshirts_packed",
+        "offenders": [],
+        "ok": true
+       }
+      ],
+      "success": false
+     },
+     "n_done": 0,
+     "n_total": 6,
+     "progress": 0.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": false
+    },
+    "failed_actions": [
+     "[PutInside] <camera> (1) <box_1> (1) -- NO_FREE_PLACEMENT: box_1 has no free interior footprint for camera (selection tier 1)",
+     "[Grab] <towel_stack> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <towel_stack> (1) <box_1> (1) -- PRECONDITION_UNMET: PLACE target 'towel_stack' is not the held object 'camera'",
+     "[Grab] <striped_shirts> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <striped_shirts> (1) <box_2> (1) -- PRECONDITION_UNMET: PLACE target 'striped_shirts' is not the held object 'camera'",
+     "[Walk] <tshirts> (1) -- PATH_BLOCKED: generated walk intersects /World/b_floor_lamp_vdxlda_0/base_link/collisions/vdxlda__base_link__collision__5 with the FPV eye at action frame 7",
+     "[Grab] <tshirts> (1) -- PATH_BLOCKED: generated walk intersects /World/b_floor_lamp_vdxlda_0/base_link/collisions/vdxlda__base_link__collision__5 with the FPV eye at action frame 7",
+     "[PutInside] <tshirts> (1) <box_2> (1) -- PRECONDITION_UNMET: PLACE target 'tshirts' is not the held object 'camera'",
+     "[Grab] <bottle> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <bottle> (1) <box_3> (1) -- PRECONDITION_UNMET: PLACE target 'bottle' is not the held object 'camera'",
+     "[Grab] <toiletry_bag> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <toiletry_bag> (1) <box_3> (1) -- PRECONDITION_UNMET: PLACE target 'toiletry_bag' is not the held object 'camera'"
+    ],
+    "steps_run": 25,
+    "steps_planned": 25,
     "seed": 0,
-    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-BEACH-HOLIDAY' left the worker unusable",
-    "seconds": 214.1
+    "seconds": 377.1
    },
    "story": {
     "ok": false,
-    "rc": 1,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "camera",
+        "target": "box_1"
+       },
+       {
+        "idx": 1,
+        "ok": false,
+        "pred": "inside",
+        "subject": "towel_stack",
+        "target": "box_1"
+       },
+       {
+        "idx": 2,
+        "ok": false,
+        "pred": "inside",
+        "subject": "striped_shirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 3,
+        "ok": false,
+        "pred": "inside",
+        "subject": "tshirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 4,
+        "ok": false,
+        "pred": "inside",
+        "subject": "bottle",
+        "target": "box_3"
+       },
+       {
+        "idx": 5,
+        "ok": false,
+        "pred": "inside",
+        "subject": "toiletry_bag",
+        "target": "box_3"
+       }
+      ],
+      "n_achievements": 6,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 6,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 6,
+      "neg": [
+       {
+        "idx": 0,
+        "kind": "not_inside",
+        "label": "no_sweatshirts_packed",
+        "offenders": [],
+        "ok": true
+       }
+      ],
+      "outcomes": [],
+      "progress": 0.16666666666666666,
+      "progress_achievements": 0.16666666666666666,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 0.16666666666666666,
+      "progress_sub_goals": 0.16666666666666666,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "camera",
+        "target": "box_1"
+       },
+       {
+        "idx": 1,
+        "ok": false,
+        "pred": "inside",
+        "subject": "towel_stack",
+        "target": "box_1"
+       },
+       {
+        "idx": 2,
+        "ok": false,
+        "pred": "inside",
+        "subject": "striped_shirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 3,
+        "ok": false,
+        "pred": "inside",
+        "subject": "tshirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 4,
+        "ok": false,
+        "pred": "inside",
+        "subject": "bottle",
+        "target": "box_3"
+       },
+       {
+        "idx": 5,
+        "ok": false,
+        "pred": "inside",
+        "subject": "toiletry_bag",
+        "target": "box_3"
+       },
+       {
+        "idx": 6,
+        "kind": "not_inside",
+        "label": "no_sweatshirts_packed",
+        "offenders": [],
+        "ok": true
+       }
+      ],
+      "success": false
+     },
+     "n_done": 1,
+     "n_total": 6,
+     "progress": 0.16666666666666666,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": false
+    },
+    "failed_actions": [
+     "[PutInside] <towel_stack> (1) <box_1> (1) -- NO_FREE_PLACEMENT: box_1 has no free interior footprint for towel_stack (selection tier 1)",
+     "[Grab] <striped_shirts> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <striped_shirts> (1) <box_2> (1) -- PRECONDITION_UNMET: PLACE target 'striped_shirts' is not the held object 'towel_stack'",
+     "[Walk] <tshirts> (1) -- PATH_BLOCKED: generated walk intersects /World/b_floor_lamp_vdxlda_0/base_link/collisions/vdxlda__base_link__collision__5 with the FPV eye at action frame 8",
+     "[Grab] <tshirts> (1) -- PATH_BLOCKED: generated walk intersects /World/b_floor_lamp_vdxlda_0/base_link/collisions/vdxlda__base_link__collision__5 with the FPV eye at action frame 8",
+     "[PutInside] <tshirts> (1) <box_2> (1) -- PRECONDITION_UNMET: PLACE target 'tshirts' is not the held object 'towel_stack'",
+     "[Grab] <bottle> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <bottle> (1) <box_3> (1) -- PRECONDITION_UNMET: PLACE target 'bottle' is not the held object 'towel_stack'",
+     "[Grab] <toiletry_bag> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <toiletry_bag> (1) <box_3> (1) -- PRECONDITION_UNMET: PLACE target 'toiletry_bag' is not the held object 'towel_stack'"
+    ],
+    "steps_run": 46,
+    "steps_planned": 46,
     "seed": 0,
-    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-BEACH-HOLIDAY' left the worker unusable",
-    "video": null,
-    "seconds": 60.6
+    "video": "story.mp4",
+    "seconds": 550.0
    },
    "verbal": {
     "ok": false,
     "rc": 0,
-    "native": {},
-    "human_policy_status": null,
-    "validity": {},
+    "native": {
+     "contract_world_success": false,
+     "process_requirements_met": true,
+     "verification_points_met": false,
+     "assistant_declared_done": false,
+     "requires_assistant_done": false,
+     "strict_success": false
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
     "transcript": [],
-    "seconds": 73.8
+    "seconds": 390.3
    }
   },
   "PACK-GYM-WEEKEND": {
@@ -7963,7 +8267,7 @@
     "rc": 1,
     "seed": 0,
     "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-GYM-WEEKEND' left the worker unusable",
-    "seconds": 59.9
+    "seconds": 49.1
    },
    "story": {
     "ok": false,
@@ -7971,7 +8275,7 @@
     "seed": 0,
     "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-GYM-WEEKEND' left the worker unusable",
     "video": null,
-    "seconds": 61.0
+    "seconds": 37.6
    },
    "verbal": {
     "ok": false,
@@ -7980,7 +8284,7 @@
     "human_policy_status": null,
     "validity": {},
     "transcript": [],
-    "seconds": 68.0
+    "seconds": 88.9
    }
   },
   "PACK-WEEKEND-TRIP": {
@@ -7989,7 +8293,7 @@
     "rc": 1,
     "seed": 0,
     "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-WEEKEND-TRIP' left the worker unusable",
-    "seconds": 102.9
+    "seconds": 79.9
    },
    "story": {
     "ok": false,
@@ -7997,7 +8301,7 @@
     "seed": 0,
     "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-WEEKEND-TRIP' left the worker unusable",
     "video": null,
-    "seconds": 102.6
+    "seconds": 79.7
    },
    "verbal": {
     "ok": false,
@@ -8006,33 +8310,337 @@
     "human_policy_status": null,
     "validity": {},
     "transcript": [],
-    "seconds": 107.3
+    "seconds": 107.6
    }
   },
   "PACK-WINTER-VISIT": {
    "check": {
     "ok": false,
-    "rc": 1,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": false,
+        "pred": "inside",
+        "subject": "notebook",
+        "target": "box_1"
+       },
+       {
+        "idx": 1,
+        "ok": false,
+        "pred": "inside",
+        "subject": "sweater_pile",
+        "target": "box_1"
+       },
+       {
+        "idx": 2,
+        "ok": false,
+        "pred": "inside",
+        "subject": "sweatshirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 3,
+        "ok": false,
+        "pred": "inside",
+        "subject": "trousers",
+        "target": "box_2"
+       },
+       {
+        "idx": 4,
+        "ok": false,
+        "pred": "inside",
+        "subject": "bottle",
+        "target": "box_3"
+       },
+       {
+        "idx": 5,
+        "ok": false,
+        "pred": "inside",
+        "subject": "toiletry_bag",
+        "target": "box_3"
+       }
+      ],
+      "n_achievements": 6,
+      "n_achievements_ok": 0,
+      "n_done": 0,
+      "n_positive_done": 0,
+      "n_positive_total": 6,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 6,
+      "neg": [
+       {
+        "idx": 0,
+        "kind": "not_inside",
+        "label": "no_towel_packed",
+        "offenders": [],
+        "ok": true
+       }
+      ],
+      "outcomes": [],
+      "progress": 0.0,
+      "progress_achievements": 0.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 0.0,
+      "progress_sub_goals": 0.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": false,
+        "pred": "inside",
+        "subject": "notebook",
+        "target": "box_1"
+       },
+       {
+        "idx": 1,
+        "ok": false,
+        "pred": "inside",
+        "subject": "sweater_pile",
+        "target": "box_1"
+       },
+       {
+        "idx": 2,
+        "ok": false,
+        "pred": "inside",
+        "subject": "sweatshirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 3,
+        "ok": false,
+        "pred": "inside",
+        "subject": "trousers",
+        "target": "box_2"
+       },
+       {
+        "idx": 4,
+        "ok": false,
+        "pred": "inside",
+        "subject": "bottle",
+        "target": "box_3"
+       },
+       {
+        "idx": 5,
+        "ok": false,
+        "pred": "inside",
+        "subject": "toiletry_bag",
+        "target": "box_3"
+       },
+       {
+        "idx": 6,
+        "kind": "not_inside",
+        "label": "no_towel_packed",
+        "offenders": [],
+        "ok": true
+       }
+      ],
+      "success": false
+     },
+     "n_done": 0,
+     "n_total": 6,
+     "progress": 0.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": false
+    },
+    "failed_actions": [
+     "[PutInside] <notebook> (1) <box_1> (1) -- NO_FREE_PLACEMENT: box_1 has no free interior footprint for notebook (selection tier 1)",
+     "[Grab] <sweater_pile> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <sweater_pile> (1) <box_1> (1) -- PRECONDITION_UNMET: PLACE target 'sweater_pile' is not the held object 'notebook'",
+     "[Grab] <sweatshirts> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <sweatshirts> (1) <box_2> (1) -- PRECONDITION_UNMET: PLACE target 'sweatshirts' is not the held object 'notebook'",
+     "[Walk] <trousers> (1) -- PATH_BLOCKED: generated walk intersects /World/b_floor_lamp_vdxlda_0/base_link/collisions/vdxlda__base_link__collision__5 with the FPV eye at action frame 7",
+     "[Grab] <trousers> (1) -- PATH_BLOCKED: generated walk intersects /World/b_floor_lamp_vdxlda_0/base_link/collisions/vdxlda__base_link__collision__5 with the FPV eye at action frame 7",
+     "[PutInside] <trousers> (1) <box_2> (1) -- PRECONDITION_UNMET: PLACE target 'trousers' is not the held object 'notebook'",
+     "[Grab] <bottle> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <bottle> (1) <box_3> (1) -- PRECONDITION_UNMET: PLACE target 'bottle' is not the held object 'notebook'",
+     "[Grab] <toiletry_bag> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <toiletry_bag> (1) <box_3> (1) -- PRECONDITION_UNMET: PLACE target 'toiletry_bag' is not the held object 'notebook'"
+    ],
+    "steps_run": 25,
+    "steps_planned": 25,
     "seed": 0,
-    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-WINTER-VISIT' left the worker unusable",
-    "seconds": 101.6
+    "seconds": 263.1
    },
    "story": {
     "ok": false,
-    "rc": 1,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "notebook",
+        "target": "box_1"
+       },
+       {
+        "idx": 1,
+        "ok": false,
+        "pred": "inside",
+        "subject": "sweater_pile",
+        "target": "box_1"
+       },
+       {
+        "idx": 2,
+        "ok": false,
+        "pred": "inside",
+        "subject": "sweatshirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 3,
+        "ok": false,
+        "pred": "inside",
+        "subject": "trousers",
+        "target": "box_2"
+       },
+       {
+        "idx": 4,
+        "ok": false,
+        "pred": "inside",
+        "subject": "bottle",
+        "target": "box_3"
+       },
+       {
+        "idx": 5,
+        "ok": false,
+        "pred": "inside",
+        "subject": "toiletry_bag",
+        "target": "box_3"
+       }
+      ],
+      "n_achievements": 6,
+      "n_achievements_ok": 1,
+      "n_done": 1,
+      "n_positive_done": 1,
+      "n_positive_total": 6,
+      "n_prohibitions": 1,
+      "n_prohibitions_ok": 1,
+      "n_total": 6,
+      "neg": [
+       {
+        "idx": 0,
+        "kind": "not_inside",
+        "label": "no_towel_packed",
+        "offenders": [],
+        "ok": true
+       }
+      ],
+      "outcomes": [],
+      "progress": 0.16666666666666666,
+      "progress_achievements": 0.16666666666666666,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 0.16666666666666666,
+      "progress_sub_goals": 0.16666666666666666,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "notebook",
+        "target": "box_1"
+       },
+       {
+        "idx": 1,
+        "ok": false,
+        "pred": "inside",
+        "subject": "sweater_pile",
+        "target": "box_1"
+       },
+       {
+        "idx": 2,
+        "ok": false,
+        "pred": "inside",
+        "subject": "sweatshirts",
+        "target": "box_2"
+       },
+       {
+        "idx": 3,
+        "ok": false,
+        "pred": "inside",
+        "subject": "trousers",
+        "target": "box_2"
+       },
+       {
+        "idx": 4,
+        "ok": false,
+        "pred": "inside",
+        "subject": "bottle",
+        "target": "box_3"
+       },
+       {
+        "idx": 5,
+        "ok": false,
+        "pred": "inside",
+        "subject": "toiletry_bag",
+        "target": "box_3"
+       },
+       {
+        "idx": 6,
+        "kind": "not_inside",
+        "label": "no_towel_packed",
+        "offenders": [],
+        "ok": true
+       }
+      ],
+      "success": false
+     },
+     "n_done": 1,
+     "n_total": 6,
+     "progress": 0.16666666666666666,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": false
+    },
+    "failed_actions": [
+     "[PutInside] <sweater_pile> (1) <box_1> (1) -- NO_FREE_PLACEMENT: box_1 has no free interior footprint for sweater_pile (selection tier 1)",
+     "[Grab] <sweatshirts> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <sweatshirts> (1) <box_2> (1) -- PRECONDITION_UNMET: PLACE target 'sweatshirts' is not the held object 'sweater_pile'",
+     "[Walk] <trousers> (1) -- PATH_BLOCKED: generated walk intersects /World/b_floor_lamp_vdxlda_0/base_link/collisions/vdxlda__base_link__collision__5 with the FPV eye at action frame 8",
+     "[Grab] <trousers> (1) -- PATH_BLOCKED: generated walk intersects /World/b_floor_lamp_vdxlda_0/base_link/collisions/vdxlda__base_link__collision__5 with the FPV eye at action frame 8",
+     "[PutInside] <trousers> (1) <box_2> (1) -- PRECONDITION_UNMET: PLACE target 'trousers' is not the held object 'sweater_pile'",
+     "[Grab] <bottle> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <bottle> (1) <box_3> (1) -- PRECONDITION_UNMET: PLACE target 'bottle' is not the held object 'sweater_pile'",
+     "[Grab] <toiletry_bag> (1) -- GRASP_FAILED: PICK while already holding an object",
+     "[PutInside] <toiletry_bag> (1) <box_3> (1) -- PRECONDITION_UNMET: PLACE target 'toiletry_bag' is not the held object 'sweater_pile'"
+    ],
+    "steps_run": 46,
+    "steps_planned": 46,
     "seed": 0,
-    "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-WINTER-VISIT' left the worker unusable",
-    "video": null,
-    "seconds": 66.5
+    "video": "story.mp4",
+    "seconds": 491.1
    },
    "verbal": {
     "ok": false,
     "rc": 0,
-    "native": {},
-    "human_policy_status": null,
-    "validity": {},
+    "native": {
+     "contract_world_success": false,
+     "process_requirements_met": true,
+     "verification_points_met": false,
+     "assistant_declared_done": false,
+     "requires_assistant_done": false,
+     "strict_success": false
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
     "transcript": [],
-    "seconds": 72.7
+    "seconds": 355.0
    }
   },
   "PACK-WORK-TRIP": {
@@ -8041,7 +8649,7 @@
     "rc": 1,
     "seed": 0,
     "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-WORK-TRIP' left the worker unusable",
-    "seconds": 60.0
+    "seconds": 38.3
    },
    "story": {
     "ok": false,
@@ -8049,7 +8657,7 @@
     "seed": 0,
     "error": "simulator.errors.SimulatorRemoteError: ENVIRONMENT_FAILED: EnvironmentStateError: opening task 'PACK-WORK-TRIP' left the worker unusable",
     "video": null,
-    "seconds": 61.4
+    "seconds": 37.1
    },
    "verbal": {
     "ok": false,
@@ -8058,7 +8666,7 @@
     "human_policy_status": null,
     "validity": {},
     "transcript": [],
-    "seconds": 64.7
+    "seconds": 67.4
    }
   }
  }
