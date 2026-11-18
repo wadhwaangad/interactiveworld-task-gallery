@@ -114,6 +114,26 @@
   "unmatched_required": [],
   "broken_sequences": []
  },
+ "GUIDE-102000-NM": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "GUIDE-110011-NM": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "ORCHESTRATE-28005-NM": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
+ "GUIDE-108005-NM": {
+  "ok": true,
+  "unmatched_required": [],
+  "broken_sequences": []
+ },
  "PACK-BEACH-HOLIDAY": {
   "ok": true,
   "unmatched_required": [],

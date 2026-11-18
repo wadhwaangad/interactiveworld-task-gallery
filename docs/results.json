@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17 12:53",
+ "generated": "2026-11-17 20:44",
  "results": {
   "ASK-13000": {
    "check": {
@@ -959,6 +959,302 @@
     "seconds": 759.6
    }
   },
+  "GUIDE-102000-NM": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_3a",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_3b",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_2",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_4",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_3",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_2",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "inside",
+        "subject": "lemonade_3",
+        "target": "shipment_box"
+       }
+      ],
+      "n_achievements": 7,
+      "n_achievements_ok": 7,
+      "n_done": 7,
+      "n_positive_done": 7,
+      "n_positive_total": 7,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 7,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_3a",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_3b",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_2",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_4",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_3",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_2",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "inside",
+        "subject": "lemonade_3",
+        "target": "shipment_box"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 7,
+     "n_total": 7,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 28,
+    "steps_planned": 29,
+    "seed": 0,
+    "seconds": 926.1
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_3a",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_3b",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_2",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_4",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_3",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_2",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "inside",
+        "subject": "lemonade_3",
+        "target": "shipment_box"
+       }
+      ],
+      "n_achievements": 7,
+      "n_achievements_ok": 7,
+      "n_done": 7,
+      "n_positive_done": 7,
+      "n_positive_total": 7,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 7,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_3a",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_3b",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "inside",
+        "subject": "water_2",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_4",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_3",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "inside",
+        "subject": "juice_2",
+        "target": "shipment_box"
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "inside",
+        "subject": "lemonade_3",
+        "target": "shipment_box"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 7,
+     "n_total": 7,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [
+     "[LookAt] <lemonade_3> (1) -- UNREADABLE_LABEL: lemonade_3: too_small; detail=5.0px/12px, pitch=+62.0deg, distance=0.67m, roll=+0.0deg"
+    ],
+    "steps_run": 61,
+    "steps_planned": 62,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 1286.9
+   },
+   "verbal": {
+    "ok": false,
+    "rc": 1,
+    "native": {},
+    "human_policy_status": null,
+    "validity": {},
+    "transcript": [],
+    "seconds": 857.3
+   }
+  },
   "GUIDE-108005": {
    "check": {
     "ok": true,
@@ -1233,6 +1529,282 @@
     },
     "transcript": [],
     "seconds": 1047.7
+   }
+  },
+  "GUIDE-108005-NM": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "steak",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "broccolini",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "browned_steak",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "browned_broccolini",
+        "target": "plate"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate",
+        "target": "plating_pass"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "sauce",
+        "target": "plating_pass"
+       }
+      ],
+      "n_achievements": 6,
+      "n_achievements_ok": 6,
+      "n_done": 6,
+      "n_positive_done": 6,
+      "n_positive_total": 6,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 6,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "steak",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "broccolini",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "browned_steak",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "browned_broccolini",
+        "target": "plate"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate",
+        "target": "plating_pass"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "sauce",
+        "target": "plating_pass"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 6,
+     "n_total": 6,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 22,
+    "steps_planned": 24,
+    "seed": 0,
+    "seconds": 854.3
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "steak",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "broccolini",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "browned_steak",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "browned_broccolini",
+        "target": "plate"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate",
+        "target": "plating_pass"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "sauce",
+        "target": "plating_pass"
+       }
+      ],
+      "n_achievements": 6,
+      "n_achievements_ok": 6,
+      "n_done": 6,
+      "n_positive_done": 6,
+      "n_positive_total": 6,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 6,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "steak",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "broccolini",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "on",
+        "subject": "browned_steak",
+        "target": "plate"
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "on",
+        "subject": "browned_broccolini",
+        "target": "plate"
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate",
+        "target": "plating_pass"
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "sauce",
+        "target": "plating_pass"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 6,
+     "n_total": 6,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 28,
+    "steps_planned": 30,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 1145.2
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": false,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 1015.1
    }
   },
   "GUIDE-109009": {
@@ -2460,6 +3032,610 @@
     },
     "transcript": [],
     "seconds": 1014.1
+   }
+  },
+  "GUIDE-110011-NM": {
+   "check": {
+    "ok": false,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 0,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_a_milk_500_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_100a",
+         "milk_100b"
+        ],
+        "count": 1,
+        "idx": 1,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_a_milk_100_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 2,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_b_milk_500_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_250a",
+         "milk_250b"
+        ],
+        "count": 1,
+        "idx": 3,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_b_milk_250_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 4,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_500_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_250a",
+         "milk_250b"
+        ],
+        "count": 1,
+        "idx": 5,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_250_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_100a",
+         "milk_100b"
+        ],
+        "count": 1,
+        "idx": 6,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_100_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_c"
+       }
+      ],
+      "goals": [],
+      "n_achievements": 7,
+      "n_achievements_ok": 0,
+      "n_done": 0,
+      "n_positive_done": 0,
+      "n_positive_total": 7,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 7,
+      "neg": [],
+      "outcomes": [],
+      "progress": 0.0,
+      "progress_achievements": 0.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 0.0,
+      "progress_sub_goals": 0.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 0,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_a_milk_500_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_100a",
+         "milk_100b"
+        ],
+        "count": 1,
+        "idx": 1,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_a_milk_100_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 2,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_b_milk_500_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_250a",
+         "milk_250b"
+        ],
+        "count": 1,
+        "idx": 3,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_b_milk_250_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 4,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_500_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_250a",
+         "milk_250b"
+        ],
+        "count": 1,
+        "idx": 5,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_250_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 0,
+        "candidates": [
+         "milk_100a",
+         "milk_100b"
+        ],
+        "count": 1,
+        "idx": 6,
+        "inside_candidates": [],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_100_count",
+        "ok": false,
+        "pred": "exact_count_inside",
+        "progress": 0.0,
+        "target": "order_c"
+       }
+      ],
+      "success": false
+     },
+     "n_done": 0,
+     "n_total": 7,
+     "progress": 0.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": false
+    },
+    "failed_actions": [
+     "[PutInside] <milk_500a> (1) <order_a> (1) -- UNSTABLE_AFTER_RELEASE: live INSIDE relation is false after 3 geometry-backed settle attempt(s): milk_500a -> order_a",
+     "[PutInside] <milk_100a> (1) <order_a> (1) -- UNSTABLE_AFTER_RELEASE: live INSIDE relation is false after 3 geometry-backed settle attempt(s): milk_100a -> order_a",
+     "[PutInside] <milk_500b> (1) <order_b> (1) -- UNSTABLE_AFTER_RELEASE: live INSIDE relation is false after 3 geometry-backed settle attempt(s): milk_500b -> order_b",
+     "[PutInside] <milk_250a> (1) <order_b> (1) -- UNSTABLE_AFTER_RELEASE: live INSIDE relation is false after 3 geometry-backed settle attempt(s): milk_250a -> order_b",
+     "[PutInside] <milk_500c> (1) <order_c> (1) -- UNSTABLE_AFTER_RELEASE: live INSIDE relation is false after 3 geometry-backed settle attempt(s): milk_500c -> order_c",
+     "[PutInside] <milk_250b> (1) <order_c> (1) -- UNSTABLE_AFTER_RELEASE: live INSIDE relation is false after 3 geometry-backed settle attempt(s): milk_250b -> order_c",
+     "[PutInside] <milk_100b> (1) <order_c> (1) -- NO_FREE_PLACEMENT: order_c has no free interior footprint for milk_100b (selection tier 1)"
+    ],
+    "steps_run": 26,
+    "steps_planned": 26,
+    "seed": 0,
+    "seconds": 888.9
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 0,
+        "inside_candidates": [
+         "milk_500a"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_a_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_100a",
+         "milk_100b"
+        ],
+        "count": 1,
+        "idx": 1,
+        "inside_candidates": [
+         "milk_100a"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_a_milk_100_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 2,
+        "inside_candidates": [
+         "milk_500b"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_b_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_250a",
+         "milk_250b"
+        ],
+        "count": 1,
+        "idx": 3,
+        "inside_candidates": [
+         "milk_250a"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_b_milk_250_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 4,
+        "inside_candidates": [
+         "milk_500c"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_250a",
+         "milk_250b"
+        ],
+        "count": 1,
+        "idx": 5,
+        "inside_candidates": [
+         "milk_250b"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_250_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_100a",
+         "milk_100b"
+        ],
+        "count": 1,
+        "idx": 6,
+        "inside_candidates": [
+         "milk_100b"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_100_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       }
+      ],
+      "goals": [],
+      "n_achievements": 7,
+      "n_achievements_ok": 7,
+      "n_done": 7,
+      "n_positive_done": 7,
+      "n_positive_total": 7,
+      "n_prohibitions": 0,
+      "n_prohibitions_ok": 0,
+      "n_total": 7,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 0,
+        "inside_candidates": [
+         "milk_500a"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_a_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_100a",
+         "milk_100b"
+        ],
+        "count": 1,
+        "idx": 1,
+        "inside_candidates": [
+         "milk_100a"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_a_milk_100_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_a"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 2,
+        "inside_candidates": [
+         "milk_500b"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_b_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_250a",
+         "milk_250b"
+        ],
+        "count": 1,
+        "idx": 3,
+        "inside_candidates": [
+         "milk_250a"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_b_milk_250_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_b"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_500a",
+         "milk_500b",
+         "milk_500c"
+        ],
+        "count": 1,
+        "idx": 4,
+        "inside_candidates": [
+         "milk_500c"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_500_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_250a",
+         "milk_250b"
+        ],
+        "count": 1,
+        "idx": 5,
+        "inside_candidates": [
+         "milk_250b"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_250_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       },
+       {
+        "actual": 1,
+        "candidates": [
+         "milk_100a",
+         "milk_100b"
+        ],
+        "count": 1,
+        "idx": 6,
+        "inside_candidates": [
+         "milk_100b"
+        ],
+        "kind": "exact_count_inside",
+        "label": "order_c_milk_100_count",
+        "ok": true,
+        "pred": "exact_count_inside",
+        "progress": 1.0,
+        "target": "order_c"
+       }
+      ],
+      "success": true
+     },
+     "n_done": 7,
+     "n_total": 7,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 42,
+    "steps_planned": 43,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 1196.2
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 1015.5
    }
   },
   "GUIDE-14004": {
@@ -6257,6 +7433,430 @@
     },
     "transcript": [],
     "seconds": 1194.2
+   }
+  },
+  "ORCHESTRATE-28005-NM": {
+   "check": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_1",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_3",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_4",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_2",
+        "target": "surf_2"
+       },
+       {
+        "idx": 7,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_3",
+        "target": "surf_2"
+       },
+       {
+        "idx": 8,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_4",
+        "target": "surf_2"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 9,
+        "ok": true,
+        "pred": "closed",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 10,
+        "ok": true,
+        "pred": "off",
+        "subject": "unit_a",
+        "target": null
+       }
+      ],
+      "n_achievements": 9,
+      "n_achievements_ok": 9,
+      "n_done": 9,
+      "n_positive_done": 9,
+      "n_positive_total": 9,
+      "n_prohibitions": 2,
+      "n_prohibitions_ok": 2,
+      "n_total": 9,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_1",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_3",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_4",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_2",
+        "target": "surf_2"
+       },
+       {
+        "idx": 7,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_3",
+        "target": "surf_2"
+       },
+       {
+        "idx": 8,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_4",
+        "target": "surf_2"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 9,
+        "ok": true,
+        "pred": "closed",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 10,
+        "ok": true,
+        "pred": "off",
+        "subject": "unit_a",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 9,
+     "n_total": 9,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 41,
+    "steps_planned": 41,
+    "seed": 0,
+    "seconds": 1340.9
+   },
+   "story": {
+    "ok": true,
+    "rc": 0,
+    "score": {
+     "details": {
+      "aggregates": [],
+      "goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_1",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_3",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_4",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_2",
+        "target": "surf_2"
+       },
+       {
+        "idx": 7,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_3",
+        "target": "surf_2"
+       },
+       {
+        "idx": 8,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_4",
+        "target": "surf_2"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 9,
+        "ok": true,
+        "pred": "closed",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 10,
+        "ok": true,
+        "pred": "off",
+        "subject": "unit_a",
+        "target": null
+       }
+      ],
+      "n_achievements": 9,
+      "n_achievements_ok": 9,
+      "n_done": 9,
+      "n_positive_done": 9,
+      "n_positive_total": 9,
+      "n_prohibitions": 2,
+      "n_prohibitions_ok": 2,
+      "n_total": 9,
+      "neg": [],
+      "outcomes": [],
+      "progress": 1.0,
+      "progress_achievements": 1.0,
+      "progress_denominator": "achievements_gated_by_prohibitions",
+      "progress_positive": 1.0,
+      "progress_sub_goals": 1.0,
+      "prohibitions_ok": true,
+      "scoreable": true,
+      "sub_goal_scoring": "achievements_only_gated_by_prohibitions",
+      "sub_goals": [
+       {
+        "idx": 0,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_1",
+        "target": null
+       },
+       {
+        "idx": 1,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 2,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_3",
+        "target": null
+       },
+       {
+        "idx": 3,
+        "ok": true,
+        "pred": "cooked",
+        "subject": "food_4",
+        "target": null
+       },
+       {
+        "idx": 4,
+        "ok": true,
+        "pred": "cut",
+        "subject": "food_2",
+        "target": null
+       },
+       {
+        "idx": 5,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_1",
+        "target": "surf_2"
+       },
+       {
+        "idx": 6,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_2",
+        "target": "surf_2"
+       },
+       {
+        "idx": 7,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_3",
+        "target": "surf_2"
+       },
+       {
+        "idx": 8,
+        "ok": true,
+        "pred": "on",
+        "subject": "plate_4",
+        "target": "surf_2"
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 9,
+        "ok": true,
+        "pred": "closed",
+        "subject": "unit_a",
+        "target": null
+       },
+       {
+        "baseline_excluded": true,
+        "idx": 10,
+        "ok": true,
+        "pred": "off",
+        "subject": "unit_a",
+        "target": null
+       }
+      ],
+      "success": true
+     },
+     "n_done": 9,
+     "n_total": 9,
+     "progress": 1.0,
+     "prohibitions_ok": true,
+     "scoreable": true,
+     "success": true
+    },
+    "failed_actions": [],
+    "steps_run": 46,
+    "steps_planned": 46,
+    "seed": 0,
+    "video": "story.mp4",
+    "seconds": 1447.0
+   },
+   "verbal": {
+    "ok": true,
+    "rc": 0,
+    "native": {
+     "contract_world_success": true,
+     "process_requirements_met": true,
+     "verification_points_met": true,
+     "assistant_declared_done": true,
+     "requires_assistant_done": true,
+     "strict_success": true
+    },
+    "human_policy_status": "LEGACY",
+    "validity": {
+     "episode_valid": true,
+     "eval_valid": true
+    },
+    "transcript": [],
+    "seconds": 1193.5
    }
   },
   "ORCHESTRATE-44001": {
