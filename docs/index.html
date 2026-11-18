@@ -105,6 +105,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
   <header>
     <h1>Long-Horizon Episode Gallery</h1>
     <p class="lede">Long first-person cooking, packing and household episodes from the InteractiveWorld simulator, longest first. Each row is one TaskPack. The video replays what the person did before asking, then the oracle's actions. The transcript shows the request and the scripted oracle advice. Status pills report the oracle replay check and the full oracle-verbal run through the interaction runtime.</p>
+    <p class="lede"><b>Non-Markov tasks.</b> In most tasks, everything the Assistant needs is still in view when it acts. The <code>-NM</code> variants take the labels away once they have been read: a shipment manifest, carton sizes read before a phone call, a roast timing sheet, a lunch ticket. The right next step then depends on what was seen earlier, not on the current frame. Each one is paired with its unchanged base task as a Markov control. The scripted oracle already knows the plan, so these runs show only that each task is solvable and scored correctly. Measuring memory needs a model as the Assistant.</p>
     <div class="links"><a href="#findings">What running them found</a><a href="taskpacks/tasks.json">All TaskPacks (tasks.json)</a><a href="https://github.com/wadhwaangad/interactiveworld-task-gallery">Source, tools and README</a><a href="https://github.com/facebookresearch/InteractiveWorld">InteractiveWorld</a></div>
   </header>
   <section class="strip" id="strip" aria-label="Summary"></section>
@@ -137,7 +138,12 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
   const results = (window.GALLERY_RESULTS || {}).results || {};
   const CATS = ["Guidance", "Planning", "Accessibility", "Decision", "Prevention", "Finding"];
   const SOURCES = { bundled: "Bundled", derived: "Derived variant", reused: "Reused port" };
-  const state = { theme: "all", src: "all" };
+  const state = { theme: "all", src: "all", mem: "all" };
+  // non-Markov variants hide their labels once read; their base task is the control with the labels kept
+  const NM = tasks.filter((t) => t.variant === "non-markov");
+  const CONTROLS = new Set(NM.map((t) => t.base_task_id));
+  const MEMORY = { nm: "Non-Markov", control: "Their controls" };
+  const memOf = (t) => (t.variant === "non-markov" ? "nm" : CONTROLS.has(t.task_id) ? "control" : "");
   const THEMES = { cooking: "Cooking", packing: "Packing", chores: "Chores" };
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
@@ -168,7 +174,11 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
       .concat((r.check && r.check.failed_actions) || [], (r.story && r.story.failed_actions) || [])
       .slice(0, 3);
     const transcript = (r.verbal && r.verbal.transcript) || [];
-    return `<article class="ep" data-cat style="--cat:${catVar(t.category)}">
+    const nmNote = t.variant === "non-markov"
+      ? `<div class="issue nm"><b>Non-Markov.</b> Same world, goal and oracle plan as <a href="#${esc(t.base_task_id)}">${esc(t.base_task_id)}</a>, its control, except that the labels vanish once they have been read.</div>`
+      : CONTROLS.has(t.task_id)
+      ? `<div class="issue nm"><b>Markov control</b> for <a href="#${esc(t.task_id)}-NM">${esc(t.task_id)}-NM</a>: here the labels stay readable throughout.</div>` : "";
+    return `<article class="ep" id="${esc(t.task_id)}" data-cat style="--cat:${catVar(t.category)}">
       <div class="media">${media}</div>
       <div class="body">
         <div class="meta"><span class="cat">${esc(THEMES[t.theme] || t.category)} · ${esc(t.category)}</span><span class="tag steps">${esc(t.oracle_steps)} oracle steps</span>
@@ -177,6 +187,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
           ${t.tags.map((x) => `<span class="tag">${esc(x)}</span>`).join("")}</div>
         <h3>${esc(t.task_id)}${t.base_task_id && t.source !== "bundled" ? `<small>from ${esc(t.base_task_id)}</small>` : ""}</h3>
         <p class="why">${esc(t.why)}</p>
+        ${nmNote}
         <div class="say">${lines.map(([w, s]) => `<div class="line ${w}"><span class="who">${w}</span><span class="txt">${esc(s)}</span></div>`).join("")}</div>
         <div class="status">${layerPill("oracle replay", r.check)}${layerPill("oracle-verbal", r.verbal)}</div>
         <a class="dl" href="taskpacks/${esc(t.file)}">Download TaskPack JSON</a>
@@ -198,7 +209,8 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
   }
 
   function render() {
-    const shown = tasks.filter((t) => (state.theme === "all" || t.theme === state.theme) && (state.src === "all" || t.source === state.src))
+    const shown = tasks.filter((t) => (state.theme === "all" || t.theme === state.theme) && (state.src === "all" || t.source === state.src)
+        && (state.mem === "all" || memOf(t) === state.mem))
       .sort((a, b) => (b.oracle_steps || 0) - (a.oracle_steps || 0));
     $("#list").innerHTML = shown.length ? shown.map(card).join("") : `<div class="empty">No tasks match these filters.</div>`;
     document.querySelectorAll(".chip").forEach((b) => b.setAttribute("aria-pressed", String(state[b.dataset.k] === b.dataset.v)));
@@ -212,6 +224,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
     const videos = ran.filter((r) => r.story && r.story.video).length;
     const steps = tasks.map((t) => t.oracle_steps || 0);
     const items = [[tasks.length, "tasks"], [n((t) => t.theme === "cooking"), "cooking"], [n((t) => t.theme === "packing"), "packing"],
+      [NM.length, "non-Markov"],
       [steps.length ? Math.round(steps.reduce((a, b) => a + b, 0) / steps.length) : "–", "mean oracle steps"],
       [videos, "videos rendered"], [ran.length ? `${passed}/${ran.length}` : "–", "pass both oracle checks"]];
     $("#strip").innerHTML = items.map(([b, s]) => `<div class="stat"><b>${esc(b)}</b><span>${esc(s)}</span></div>`).join("");
@@ -221,7 +234,8 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 6px }
   function filters() {
     const chip = (k, v, label) => `<button class="chip" type="button" data-k="${k}" data-v="${esc(v)}">${esc(label)}</button>`;
     $("#filters").innerHTML = `<span class="label">Theme</span>${chip("theme", "all", "All")}${Object.entries(THEMES).filter(([k]) => tasks.some((t) => t.theme === k)).map(([k, v]) => chip("theme", k, v)).join("")}
-      <span class="sep"></span><span class="label">Source</span>${chip("src", "all", "All")}${Object.entries(SOURCES).map(([k, v]) => chip("src", k, v)).join("")}`;
+      <span class="sep"></span><span class="label">Source</span>${chip("src", "all", "All")}${Object.entries(SOURCES).map(([k, v]) => chip("src", k, v)).join("")}
+      ${NM.length ? `<span class="sep"></span><span class="label">Memory</span>${chip("mem", "all", "All")}${Object.entries(MEMORY).map(([k, v]) => chip("mem", k, v)).join("")}` : ""}`;
     $("#filters").addEventListener("click", (e) => {
       const b = e.target.closest(".chip"); if (!b) return;
       state[b.dataset.k] = b.dataset.v; render();

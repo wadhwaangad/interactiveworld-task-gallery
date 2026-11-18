@@ -116,6 +116,26 @@
       "taskpack_sha256": "sha256:3a8b30a6cf963ef5776410e6e56a367cd6e84059e0f8d66d4e9eab9bd5af8518"
     },
     {
+      "task_id": "GUIDE-102000-NM",
+      "taskpack_path": "derived/GUIDE-102000-NM.taskpack.json",
+      "taskpack_sha256": "sha256:88cebb4a000110328e59adfacac94c444ef03b5ce58357385faa5090ae37b1b5"
+    },
+    {
+      "task_id": "GUIDE-110011-NM",
+      "taskpack_path": "derived/GUIDE-110011-NM.taskpack.json",
+      "taskpack_sha256": "sha256:2682361522af6c19a88fbd22887df1bdc5f1041d5603b653d2b77ed248b2dbba"
+    },
+    {
+      "task_id": "ORCHESTRATE-28005-NM",
+      "taskpack_path": "derived/ORCHESTRATE-28005-NM.taskpack.json",
+      "taskpack_sha256": "sha256:068fefff33bad7faef985626fc5534b1c21a6985d5657952dedd210e34038f62"
+    },
+    {
+      "task_id": "GUIDE-108005-NM",
+      "taskpack_path": "derived/GUIDE-108005-NM.taskpack.json",
+      "taskpack_sha256": "sha256:339d229a638d61fb9e49985e0214119c02e81bcde4e95cd6021432701cdb6cc0"
+    },
+    {
       "task_id": "PACK-BEACH-HOLIDAY",
       "taskpack_path": "pack/PACK-BEACH-HOLIDAY.taskpack.json",
       "taskpack_sha256": "sha256:6e91739c128c94a33e3f832fb5894da449232a9e95f67ca4c79d676b6b14a376"

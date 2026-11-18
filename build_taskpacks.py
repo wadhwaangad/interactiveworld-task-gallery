@@ -448,9 +448,94 @@ def guide17001_reworded(ctx):
                   "line 2 omits returning the cloth that its actions include.")
 
 
-# Long-horizon gallery: only the reworded GUIDE tasks. The earlier short variants (cf_report ...) are
-# kept above for reference.
-DERIVED = [guide_reworded, guide17001_reworded]
+# ---------------------------------------------------------------- non-Markov variants
+# Each one is its base task with the labels taken away once they have been read, via the release's
+# own runtime.visual_state_events (label_visibility). World, goals, oracle plan and dialogue are
+# unchanged, so the base task is the Markov control: the same episode with the evidence still in view.
+# Only labels on world.objects can be hidden (runtime_adapter._visual_runtime_entities); signs on
+# fixtures and containers (GUIDE-14015's FREEZER/CHILLER, ORCHESTRATE-46000's prep board) cannot.
+def hide_labels(pack, objects, after_command, occurrence=1):
+    world = pack["executable_spec"]["world"]
+    owners = {v["mount"]["on"] for v in (world.get("labels") or {}).values()}
+    missing = sorted(set(objects) - owners)
+    assert not missing and set(objects) <= set(world["objects"]), (pack["task_id"], missing)
+    prologue = pack["story"]["interaction"]["opening"]["actions"]
+    oracle = [cmd_text(c) for c in pack["runtime"]["oracle_commands"]]
+    seen = [a for a in prologue + oracle if a == after_command]
+    assert len(seen) >= occurrence, (pack["task_id"], after_command)
+    # a re-read of a hidden label after the trigger would fail UNREADABLE_LABEL
+    trigger = (prologue + oracle).index(after_command)
+    later = (prologue + oracle)[trigger + 1:]
+    assert not [a for a in later if a.startswith("[LookAt]") and any(f"<{o}>" in a for o in objects)], pack["task_id"]
+    pack["runtime"]["visual_state_events"] = list(pack["runtime"].get("visual_state_events") or []) + [{
+        "type": "label_visibility", "objects": sorted(objects), "visible": False, "initially_visible": True,
+        "after_command": after_command, "occurrence": occurrence, "require_offscreen": False}]
+    return pack
+
+
+def non_markov(ctx, base, new_id, hides, context_note, note):
+    p = ctx.pack(base)
+    for objects, after in hides:
+        hide_labels(p, objects, after)
+    inter = p["story"]["interaction"]
+    inter["public_task_context"] = inter["public_task_context"].rstrip() + " " + context_note
+    return set_id(p, new_id, base, "non-markov", note)
+
+
+def label_owners(ctx, base, prefix=""):
+    return sorted(v["mount"]["on"] for v in ctx.pack(base)["executable_spec"]["world"]["labels"].values()
+                  if v["mount"]["on"].startswith(prefix))
+
+
+def nm_manifest(ctx):
+    return non_markov(
+        ctx, "GUIDE-102000", "GUIDE-102000-NM",
+        [(label_owners(ctx, "GUIDE-102000"), "[LookAt] <lemonade_3> (1)")],
+        "The manifest and every bottle label become unreadable once the person has finished checking them, so "
+        "the plan has to come from what was read then.",
+        "Disappearing manifest. The supply manifest and all nine bottle labels vanish after the person's last "
+        "inspection, before the Assistant gives any instruction. All 29 packing steps must be planned from the "
+        "remembered manifest and label-to-bottle pairing. Control: GUIDE-102000.")
+
+
+def nm_phone(ctx):
+    return non_markov(
+        ctx, "GUIDE-110011", "GUIDE-110011-NM",
+        [(label_owners(ctx, "GUIDE-110011", "milk_"), "[AnswerPhone] <phone> (1)"),
+         (label_owners(ctx, "GUIDE-110011", "order_"), "[LookAt] <order_c> (1)")],
+        "The carton labels become unreadable when the phone call starts, and the order labels after they have "
+        "been read, so carton sizes and order totals have to be remembered.",
+        "Interrupted by a phone call. The carton sizes are read, then a call interrupts and the carton labels "
+        "vanish; the three order totals are read and then vanish too. Filling the orders exactly (26 steps) "
+        "needs both, from memory, across the interruption. Control: GUIDE-110011.")
+
+
+def nm_timing_sheet(ctx):
+    return non_markov(
+        ctx, "ORCHESTRATE-28005", "ORCHESTRATE-28005-NM",
+        [(["item_doc"], "[LookAt] <surf_2> (1)")],
+        "The timing sheet becomes unreadable once it has been read, so the schedule has to be planned and "
+        "kept from memory.",
+        "Timing sheet read once. The four-dish roast timing sheet vanishes right after the person reads it, so "
+        "the 41-step single-oven schedule (cut, preheat, oil, four roasts in sequence) runs from memory. "
+        "Control: ORCHESTRATE-28005.")
+
+
+def nm_ticket(ctx):
+    return non_markov(
+        ctx, "GUIDE-108005", "GUIDE-108005-NM",
+        [(["ticket"], "[LookAround]")],
+        "The order ticket becomes unreadable once the person has read it, so the order has to be remembered.",
+        "Ticket read once. The lunch ticket vanishes after the person reads it and looks over the prep table, so "
+        "the 24-step order (sear, cook, plate, serve with the sealed sauce) is guided from memory. "
+        "Control: GUIDE-108005.")
+
+
+NON_MARKOV = [nm_manifest, nm_phone, nm_timing_sheet, nm_ticket]
+
+# Long-horizon gallery: the reworded GUIDE tasks and the non-Markov variants. The earlier short
+# variants (cf_report ...) are kept above for reference.
+DERIVED = [guide_reworded, guide17001_reworded] + NON_MARKOV
 
 
 def fix_pack(ctx, pack):
@@ -678,7 +763,8 @@ def main():
         data = (json.dumps(pack, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
         lin = pack["lineage"]
         emit(pack, data, f"derived/{pack['task_id']}.taskpack.json", {}, source="derived", why=lin["note"],
-             base=lin["base_task_id"], kind=lin["variant"])
+             base=lin["base_task_id"], kind=lin["variant"],
+             theme={t: th for t, th, _ in CURATED}.get(lin["base_task_id"]))
 
     for path in sorted(args.packs.glob("PACK-*.taskpack.json")):
         if path.name.split(".")[0] in EXCLUDED_PACKS:
